@@ -8,7 +8,7 @@
   top:20px;
   width:70px;
   height:50px;
-  background:red;
+  background-color:#607d8b;
   border-radius:15px;
 }
 #encoche-btn-change-theme {
@@ -31,4 +31,20 @@ button {
 .toRight {
     left: initial;
     right:0;
+    
+}
+.toLeft {
+  left:0;
+  animation: 300ms toLeft ease-in-out;
+  
+}
+@keyframes toLeft {
+  0%{
+    left: initial;
+
+  }
+  100%{
+    left:0;
+    right: initial;
+  }
 }

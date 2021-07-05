@@ -17,9 +17,10 @@ const ChangeTheme = () => {
                 header.style.backgroundColor = colorPrimary;
                 body.style.backgroundColor = colorSecondary;
                 logoHeaderImg.src = logoHeaderWhite;
+                btnChangeTheme.className= 'toRight';
             }
             else {
-                btnChangeTheme.className= 'toRight';
+                btnChangeTheme.className= 'toLeft';
                 header.style.backgroundColor = colorSecondary;
                 body.style.backgroundColor = colorPrimary;
                 logoHeaderImg.src = logoHeader;
@@ -33,7 +34,7 @@ const ChangeTheme = () => {
         <div id="content-btn-change-theme">
             <div id="back-btn-change-theme">
                 <div id="encoche-btn-change-theme">
-                    <button id='button-change-theme' onClick={ChangeThemeOnClick}></button>
+                    <button id='button-change-theme' className='toLeft' onClick={ChangeThemeOnClick}></button>
                 </div>  
             </div>
         </div>

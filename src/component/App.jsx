@@ -23,8 +23,8 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <Header/>
         <ChangeTheme/>
+        <Header/>
         <div>{ onMaintenance === true ? 
           <Route path="/" exact component={Maintenance}/> :""}
           </div>
