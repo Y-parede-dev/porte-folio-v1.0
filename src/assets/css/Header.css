@@ -1,7 +1,11 @@
 header {
-    background: white;
+    background: var(--color-secondary);
+}
+.header-inside {
+    z-index: 5;
+
 }
 .logo-header {
-    width: 30vh;
+    width: 20vh;
     border-radius: 300px;
 }

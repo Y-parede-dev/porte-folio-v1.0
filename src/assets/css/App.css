@@ -1,13 +1,19 @@
 * {
-  --color-primary: rgb(5, 116, 187);
-  --color-secondary: white;
+  --color-primary: rgb(5, 116, 187);/**/
+  --color-secondary: white;/**/
   margin:0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-body {
-  height: 100vh;
+
+html,body,.App {
+  height: 100%;
+}
+html,body {
   background-color: var(--color-primary);
+}
+main {
+  position: relative;
 }
 .App {
   text-align: center;

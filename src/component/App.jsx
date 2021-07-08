@@ -1,8 +1,9 @@
 import './../assets/css/App.css';
 import React,  { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Maintenance from './Maintenance';
+import Maintaining from './Maintaining';
 import Header from './Header';
+import Nav from './Nav';
 import ChangeTheme from '../themes/original/Theme';
 
 const App = () => {
@@ -25,9 +26,13 @@ const App = () => {
       <Router>
         <ChangeTheme/>
         <Header/>
-        <div>{ onMaintenance === true ? 
-          <Route path="/" exact component={Maintenance}/> :""}
+        <Nav />
+        <main>
+          <div>{ onMaintenance === true ? 
+            <Route path="/" exact component={Maintaining}/> : <Route path="/" exact component={Maintaining}/>}
           </div>
+        </main>
+        <footer>Je suis legion!!!</footer>
       </Router>
     </div>
   );
