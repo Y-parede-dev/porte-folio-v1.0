@@ -1,20 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import{Link} from 'react-router-dom'
 import './../assets/css/Nav.css';
 
-const Nav = () => {
-    let  xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    let  yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    
+const Nav = ({largeur, hauteur}) => {
     let [isOpen, setIsOpen] = useState(false);
     const btnNav = (e) => {
-        console.log(isOpen)
         try{
-            if(isOpen !== false){
-                setIsOpen(false);
-
-            }else {
-                setIsOpen(true)
-            }
+            setIsOpen(!isOpen)
         }
         catch(error){
             console.log(error)
@@ -22,25 +14,62 @@ const Nav = () => {
         e.preventDefault();
         e.stopPropagation();
     };
+    useEffect(()=>{
+       window.onscroll = function () {
+        try{
+            if(document.documentElement.scrollTop > 125){
+                document.getElementById('navNotMobile').style.position = "fixed";
+                document.getElementById('navNotMobile').style.top = 0;
+                document.getElementById('navNotMobile').style.padding = "34px 0";
+
+            }else{
+                document.getElementById('navNotMobile').style.position = "absolute";
+                document.getElementById('navNotMobile').style.top = '168px';
+                document.getElementById('navNotMobile').style.padding = "0 0 20px";
+
+            }
+        }catch{
+
+        }
+       }
+
+    },[])
     return(
         <div className = 'nav-content'>
-            { xMax < 850 ? <button onClick={btnNav} className='test'>///</button> :
-                 <nav id = "navNotMobile"> 
+            { largeur < 850 ? <button onClick={btnNav} className='button-open-nav-mobile'>///</button> :
+                 <nav id = "navNotMobile" > 
                     <ul className = 'list-nav list-nav-not-mobile'>
-                        <li className='list-nav-content'><a className='list-nav-link' href='./'>accueil</a></li>
-                        <li className='list-nav-content'><a className='list-nav-link' href='./test'>mes projets</a></li>
-                        <li className='list-nav-content'><a className='list-nav-link' href=''>mes languages préféré</a></li>
-                        <li className='list-nav-content'><a className='list-nav-link' href=''>contact</a></li>
+                        <Link to='/'>
+                            <li className='list-nav-content'>accueil</li>
+                        </Link>
+                        <Link to='/projects'>
+                            <li className='list-nav-content'>mes projets</li>
+                        </Link>
+                        <Link to="/lang">
+                            <li className='list-nav-content'>mes languages préféré</li>
+                        </Link>
+                        <Link to="/about">
+                            <li className='list-nav-content'>contact</li>
+                        </Link>
                     </ul>
                 </nav>}
 
             {isOpen ?
-                <nav id = "navMobileFirst"> 
+                <nav id = "navMobileFirst">
+                    
                     <ul className = 'list-nav'>
-                        <li className='list-nav-content'><a className='list-nav-link' href='./'>accueil</a></li>
-                        <li className='list-nav-content'><a className='list-nav-link' href='./test'>mes projets</a></li>
-                        <li className='list-nav-content'><a className='list-nav-link' href=''>mes languages préféré</a></li>
-                        <li className='list-nav-content'><a className='list-nav-link' href=''>contact</a></li>
+                        <Link to='/'>
+                            <li className='list-nav-content'>accueil</li>
+                        </Link>
+                        <Link to='/projects'>
+                            <li className='list-nav-content'>mes projets</li>
+                        </Link>
+                        <Link to="/lang">
+                            <li className='list-nav-content'>mes languages préféré</li>
+                        </Link>
+                        <Link to="/about">
+                            <li className='list-nav-content'>contact</li>
+                        </Link>
                     </ul>
                 </nav>
             :''}

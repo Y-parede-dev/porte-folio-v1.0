@@ -1,0 +1,5 @@
+.component-present{
+    margin: 217px auto 800px; /*800px pour les test sur la barre de nav a suprimer*/
+    padding: 20px;
+    border-bottom: solid white 2px;
+}

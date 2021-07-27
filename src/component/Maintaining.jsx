@@ -7,7 +7,7 @@ const Maintaining = () => {
             <img src={logoMaintenance} className="App-logo" alt="logo de maintenance" />
             <div className="in-progress">
                 <p className="en-cours-de-creation">
-                    En cours de création 
+                    En cours de Maintenance 
                 <span className="one">.</span>
                 <span className="two">.</span>
                 <span className="three">.</span>

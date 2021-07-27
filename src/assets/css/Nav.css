@@ -1,29 +1,40 @@
 nav {
+    z-index: 3;
 	background-color: var(--color-secondary);
     padding: 21px;
+    border-bottom: solid 3px var(--color-primary);
 }
 nav#navMobileFirst {
     z-index: 4;
     text-align: left;
-	position: absolute;
+	position: fixed;
 	top: 0%;
 	height: 75vh;
 	top: 20.4%;
-    box-shadow: black 0px 0px 10px -6px;	
+    box-shadow: black 0px 5px 10px -6px;	
 }
 
 .list-nav {
+    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.test {
-    position:absolute;
+
+.list-nav-content {
+    font-size: 1.35rem;
+    text-decoration: none;
+}
+nav#navMobileFirst .list-nav-content {
+    padding: 10px 0;
+}
+.button-open-nav-mobile {
+    position:fixed;
     z-index: 6;
     top: 130px;
     font-size: 1.5rem;
     left: 20px;
-}
+}   
 .display-nav-none {
     display: none;
 }

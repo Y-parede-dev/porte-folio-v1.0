@@ -1,8 +1,10 @@
+import "../assets/css/ProjectCustomer.css";
+
 const ProjectCustomer = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            
+        </>
     )
 }
 

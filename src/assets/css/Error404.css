@@ -1,0 +1,18 @@
+.content-error-404 {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 34vh;
+}
+.content-error-404 h4{
+    font-size: 2rem;
+}
+.content-error-404 p {
+	font-size: 1.2rem;
+	padding: 0 20px;
+}
+.mail.developeur {
+	color: Blue;
+}

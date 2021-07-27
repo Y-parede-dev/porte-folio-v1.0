@@ -1,39 +1,55 @@
 import './../assets/css/App.css';
 import React,  { useState, useEffect } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Maintaining from './Maintaining';
 import Header from './Header';
 import Nav from './Nav';
 import ChangeTheme from '../themes/original/Theme';
+import Main from './Main';
+import Erreur404 from './Erreur404';
 
 const App = () => {
-  // Block d'activation maintenance
-    //  TO DO :
-    //    Déplace la fonction dans un dossier 
-    //    spécialement conçus a cet effet
-
+ 
+  let  xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  let  yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  
+  
   const [onMaintenance, setOnMaintenance] = useState(false)
+  
+  
   useEffect(()=>{
-    const MaintenanceActivate = () => {
-      setOnMaintenance(true)
+
+     // Block d'activation maintenance
+    //  TO DO :
+    //    Déplace la fonction de maintenance dans un dossier 
+    //    spécialement conçus a cet effet
+    //    crée un bouton sur le profil de l'admin pour activer ou desactiver la maintenance
+    const MaintainingActivate = () => {
+      //setOnMaintenance(true)
     };
-    MaintenanceActivate();
+    MaintainingActivate();
   },[]);
  // fin block d'activation maintenance
-
+ 
   return (
     <div className="App">
-      <Router>
-        <ChangeTheme/>
-        <Header/>
-        <Nav />
-        <main>
-          <div>{ onMaintenance === true ? 
-            <Route path="/" exact component={Maintaining}/> : <Route path="/" exact component={Maintaining}/>}
-          </div>
-        </main>
-        <footer>Je suis legion!!!</footer>
+      <ChangeTheme/>
+      
+      <Router
+        forceRefresh={true}
+      >
+        <Header largeur={xMax} hauteur={yMax} />
+        <Nav largeur={xMax} hauteur={yMax}/>
+        <Switch>{onMaintenance?
+          <Route path="/" exact component={Maintaining}/>:
+          
+          <Route path="/" exact component={Main}/>
+          }
+          <Route path='/projects'/>
+          <Route component={Erreur404}/> 
+        </Switch>
       </Router>
+      <footer>magin code - 2021</footer>
     </div>
   );
 }
