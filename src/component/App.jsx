@@ -13,7 +13,7 @@ const App = () => {
   let  xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   let  yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   
-  
+  const url = 'http://localhost:3001/api/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
   const [onMaintenance, setOnMaintenance] = useState(false)
   
   
@@ -43,7 +43,7 @@ const App = () => {
         <Switch>{onMaintenance?
           <Route path="/" exact component={Maintaining}/>:
           
-          <Route path="/" exact component={Main}/>
+          <Route path="/" exact component={()=><Main ConnectApiUrl={url} />}/>
           }
           <Route path='/projects'/>
           <Route component={Erreur404}/> 

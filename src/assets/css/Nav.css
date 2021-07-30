@@ -2,7 +2,7 @@ nav {
     z-index: 3;
 	background-color: var(--color-secondary);
     padding: 21px;
-    border-bottom: solid 3px var(--color-primary);
+    border-bottom: solid 3px var(--color-third);
 }
 nav#navMobileFirst {
     z-index: 4;

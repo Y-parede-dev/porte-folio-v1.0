@@ -1,10 +1,12 @@
 import Developpeur from './Developpeur';
 import Present from './Present';
 import '../assets/css/Main.css';
-const Main = () => {
+const Main = ({ConnectApiUrl}) => {
+    const profilDev = `${ConnectApiUrl}profil/1`
+    
     return(
         <div className="component-main">
-            <Developpeur/>
+            <Developpeur connectApiUrlDev={profilDev}/>
             <Present/>
         </div>
     )
