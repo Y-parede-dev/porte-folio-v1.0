@@ -6,6 +6,7 @@ import Header from './Header';
 import Nav from './Nav';
 import ChangeTheme from '../themes/original/Theme';
 import Main from './Main';
+import ProjectCustomer from './ProjectCustomer';
 import Erreur404 from './Erreur404';
 
 const App = () => {
@@ -43,9 +44,9 @@ const App = () => {
         <Switch>{onMaintenance?
           <Route path="/" exact component={Maintaining}/>:
           
-          <Route path="/" exact component={()=><Main ConnectApiUrl={url} />}/>
+          <Route path="/" exact component={()=>< Main ConnectApiUrl={url} />}/>
           }
-          <Route path='/projects'/>
+          <Route path='/projects' exact component={()=> <ProjectCustomer connectApiUrlProjects={url} />}/>
           <Route component={Erreur404}/> 
         </Switch>
       </Router>

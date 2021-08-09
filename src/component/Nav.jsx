@@ -36,8 +36,8 @@ const Nav = ({largeur, hauteur}) => {
     },[])
     return(
         <div className = 'nav-content'>
-            { largeur < 850 ? <button onClick={btnNav} className='button-open-nav-mobile'>///</button> :
-                 <nav id = "navNotMobile" > 
+            { largeur < 850 ? <button onClick={btnNav} className='button-open-nav-mobile'><span>/</span><span>/</span><span>/</span></button> :
+                 <nav className='nav-custom'  id = "navNotMobile" > 
                     <ul className = 'list-nav list-nav-not-mobile'>
                         <Link to='/'>
                             <li className='list-nav-content'>accueil</li>

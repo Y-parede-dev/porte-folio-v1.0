@@ -1,0 +1,12 @@
+.test-pc{
+    margin-top: 80px;
+}
+.test-count{
+
+}
+.content-all-projects{
+    display: grid;
+    grid-gap: 1rem;
+    padding: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
