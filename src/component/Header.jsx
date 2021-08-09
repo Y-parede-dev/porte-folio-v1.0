@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import logoHeader from '../assets/images/logo-magin-code.svg';
+import logoHeader from '../assets/images/logo-magin-code-white.svg';
 import '../assets/css/Header.css';
 
 const Header = ({largeur, hauteur}) => {
@@ -19,7 +19,7 @@ const Header = ({largeur, hauteur}) => {
     },[])
     
     return (
-        <header id="header">
+        <header className='header-principal' id="header">
             <div id='header-inside' className='header-inside'>
                 <Link to="/"><img id="logo-header" className='logo-header' alt='logo-header' src={logoHeader}/></Link>
             </div>

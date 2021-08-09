@@ -1,11 +1,10 @@
 .component-main {
-    color: var(--color-secondary);
+    color: var(--color-default);
     margin-top:250px;
 }
 /* Layout */
 @media screen and (min-width:851px){
     .component-main {
-        color: white;
         margin-top:0px;
     }
 }

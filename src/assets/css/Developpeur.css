@@ -7,7 +7,7 @@
                         '. name .'
                         '. text .';
     margin-top: 60px;
-    color: var(--color-secondary)
+    color: var(--color-default)
 }
 .component-developpeur img {
 	grid-area: img;

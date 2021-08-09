@@ -1,4 +1,4 @@
-header {
+.header-principal {
     z-index: 3;
     background: var(--color-secondary);
 }

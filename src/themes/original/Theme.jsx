@@ -26,7 +26,7 @@ const ChangeTheme = () => {
         console.log('first : ', themeChoise)
         setThemeChoise(!themeChoise);
         console.log('second : ',themeChoise)
-        
+        /*
         try {
             console.log('third : ', themeChoise)
             localStorage.setItem('theme-choisi', themeChoise);
@@ -56,7 +56,7 @@ const ChangeTheme = () => {
             };
         } catch (error) {
             console.log(error);
-        };
+        };*/
         e.stopPropagation();
     }
     return(
