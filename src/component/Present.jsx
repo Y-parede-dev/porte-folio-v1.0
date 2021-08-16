@@ -1,4 +1,4 @@
-import '../assets/css/Present.css';
+import '../assets/css/Present.scss';
 const Present = () => {
     return(
         <div className="component-present">

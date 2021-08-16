@@ -8,22 +8,27 @@ nav#navMobileFirst {
     z-index: 4;
     text-align: left;
 	position: fixed;
+    grid-template-columns: 1fr ;
 	top: 0%;
 	height: 75vh;
 	top: 20.4%;
     box-shadow: black 0px 5px 10px -6px;	
 }
-
 .list-nav {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-
 .list-nav-content {
     font-size: 1.35rem;
     text-decoration: none;
+   
+}
+.list-nav-content:hover{
+    box-shadow: 0 0 0 0 #fff;	
+
+    animation: 300ms ease-out pulse 400ms infinite;
 }
 nav#navMobileFirst .list-nav-content {
     padding: 10px 0;
@@ -48,10 +53,20 @@ nav#navMobileFirst .list-nav-content {
 	left: 0;
 	right: 0;
 	top: 168px;
-	padding: 0 0 20px;
+	padding: 0 35px 20px;
 }
 .list-nav-not-mobile{
-    flex-direction: row;
-    justify-content: space-evenly;
+    min-height: 50px;
+    padding: 0 30px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+}
+@keyframes pulse {
+    to{
+        font-weight: 900;
+        font-size: 1.6rem;
+        box-shadow: 0 0 0 12px rgba(255,255,255,.1);
+    }
 }

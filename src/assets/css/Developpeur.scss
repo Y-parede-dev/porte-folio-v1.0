@@ -10,11 +10,13 @@
     color: var(--color-default)
 }
 .component-developpeur img {
-	grid-area: img;
-	margin: auto;
 	border-radius: 50%;
 	background-color: var(--color-secondary);
 	box-shadow: 0 0 10px -6px var(--color-secondary);
+}
+.component-developpeur .img-profil {
+	margin: auto;
+	grid-area: img;
 }
 .component-developpeur h4{
     grid-area: name;

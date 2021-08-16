@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import{Link} from 'react-router-dom'
-import './../assets/css/Nav.css';
+import './../assets/css/Nav.scss';
 
 const Nav = ({largeur, hauteur}) => {
     let [isOpen, setIsOpen] = useState(false);
@@ -46,7 +46,7 @@ const Nav = ({largeur, hauteur}) => {
                             <li className='list-nav-content'>mes projets</li>
                         </Link>
                         <Link to="/lang">
-                            <li className='list-nav-content'>mes languages préféré</li>
+                            <li className='list-nav-content'>techno favorite</li>
                         </Link>
                         <Link to="/about">
                             <li className='list-nav-content'>contact</li>

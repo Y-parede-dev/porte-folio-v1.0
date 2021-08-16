@@ -1,6 +1,6 @@
 import Developpeur from './Developpeur';
 import Present from './Present';
-import '../assets/css/Main.css';
+import '../assets/css/Main.scss';
 const Main = ({ConnectApiUrl}) => {
     const profilDev = `${ConnectApiUrl}profil`
     
