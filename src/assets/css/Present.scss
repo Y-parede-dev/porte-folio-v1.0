@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
 .component-present{
-    margin: 217px auto 800px; /*800px pour les test sur la barre de nav a suprimer*/
+    margin: 40px auto;
     padding: 20px;
-    border-bottom: solid white 2px;
+    border-top: solid var(--color-secondary) 2px;
+    border-bottom: solid var(--color-secondary) 2px;
+    width: 80%;
+    
+}
+.component-present-inside,.component-present-inside > h4{
+    padding: 0 0 30px 0;
+}
+.component-present-inside > h4{
+    color: var(--color-secondary);
+    font-size: 2rem;   
+}
+.question{
+    color: var(--color-secondary);
+    padding: 5px 0;
+    font-size: x-large;
+}
+.question,.to-bold{
+    font-weight: 900;
+}
+.open-link{
+    font-weight: 700;
+}
+.open-link{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    display: inline-block;
+    position: relative;
+    color: #7350ee;
+    transition:300ms ease-in ;
+    &:hover{
+        font-size: 1.25rem;
+    }&:hover > .cacher-o{
+       padding: 5px;
+    }
+}
+.cacher-o{
+    position: absolute;
+    top: 6.5px;
+    left: -3px;
+    font-size: 0;
+    padding: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+.not-bold {
+    font-weight: 500;
 }

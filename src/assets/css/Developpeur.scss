@@ -6,7 +6,6 @@
     grid-template-areas: '. img . '
                         '. name .'
                         '. text .';
-    margin-top: 60px;
     color: var(--color-default)
 }
 .component-developpeur img {
@@ -21,9 +20,15 @@
 .component-developpeur h4{
     grid-area: name;
     font-family: 'Otomanopee One', sans-serif;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
 }
 .component-developpeur p{
     grid-area: text;
     font-size: 1.5rem;
+}
+@media screen and (min-width:500px) {
+    .component-developpeur h4 {
+        font-size: 4.5rem;
+    }
+   
 }

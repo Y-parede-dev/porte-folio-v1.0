@@ -1,32 +1,111 @@
 .post-project-form-content {
     background: var(--color-secondary);
     color: var(--color-primary);
-    padding: 30px 80px 15px;
+    padding: 30px 8px 15px;
     border-radius: 30px;
-    min-height: 400px;
-    margin: 30px 10%;
+    margin: 0 25px 40px;
     display: grid;
-    grid-template-rows: .5fr 5fr .5fr;
-    grid-gap: 1rem
+    grid-template-rows: .5fr auto .5fr;
+    grid-gap: 1rem;
+    box-shadow: 0 0 15px -6px black;
+}
+.post-project-form-content-close{
+
 }
 .header-project {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    &  button {
+        position: absolute;
+        overflow: hidden;
+        color: var(--color-primary);
+        font-weight: 900;
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        top: -11px;
+        right: 0px;
+        background-color: transparent;
+        transition: ease-in 300ms;
+        &:hover{
+            color: var(--color-secondary);
+            background-color: var(--color-primary);
+        }
+        &:focus{
+            & span{
+                display: none;
+            }
+        }
+
+        & span{
+            position: absolute;   
+        }
+        & span:nth-child(1){
+            top:0;
+            left:0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg,transparent,#fff);
+            animation: 1s showBtnStyle1 linear infinite;
+            
+        }
+        & span:nth-child(2){
+            top:-100%;
+            right:0%;
+            width:2px;
+            height:100%;
+            background:linear-gradient(180deg, transparent,#fff);
+            animation: 1s showBtnStyle2 linear infinite;
+            animation-delay:.25s;
+          }
+          & span:nth-child(3){
+            bottom:0;
+            right:0;
+            width:100%;
+            height:2px;
+            background: linear-gradient(270deg, transparent, #fff);
+            animation: 1s showBtnStyle3 linear infinite;
+            animation-delay:.5s;
+          }
+          & span:nth-child(4){
+            bottom:-100%;
+            left:0%;
+            width:2px;
+            height:100%;
+            background:linear-gradient(360deg, transparent,#fff);
+            animation: 1s showBtnStyle4 linear infinite;
+            animation-delay:.75s;
+          }  
+    }
 }
+
 .post-project-form, .content-description-project{
     position: relative;
     display: grid;
     align-items: center;
     
 }
+.form-control-label-desc {
+    padding: 0 0 1rem 0;
+}
 .form-control {
+    border: none;
+    padding: .6rem;
     font-size: 1.2rem;
 }
 .post-project-form{
-    grid-template-rows: 1fr 1fr 1fr 1fr 4fr 1fr 1fr ;
+    //grid-template-rows: 1fr 1fr 1fr 1fr 4fr 1fr 1fr ;
     grid-gap: 1rem;
     min-height: 382px;
+}
+img.preview-img-project {
+  max-width: 200px;
+  margin: auto;
+  background-color: var(--color-primary);
 }
 .description-new-project {
     //overflow: scroll;
@@ -34,8 +113,8 @@
     resize: none;
 }
 .content-max-char {
-    z-index: 3;
-    position: absolute; right: 5px;bottom: 5px;
+    z-index: 2;
+    position: absolute; right: 30px;bottom: 5px;
     display: flex;
 }
 .count-chars {
@@ -47,12 +126,113 @@
 .const-max-chars {
     color: var(--color-third)
 }
+.btn-submit-border, .submit-project {
+    width: fit-content;
+    margin: auto;
+    border-radius: 20px;
+
+}
+.btn-submit-border{
+ // background-color: red;
+  // background: linear-gradient(90deg, transparent, #fff);
+}
+.submit-project {
+    //border-color: white black black white;    
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1px;
+    box-shadow: 0 0 10px -6px black;
+    // border: none;
+    border: none;
+    color: var(--color-primary);
+    background-color: transparent;
+    transition: ease-in 300ms;
+    &:hover {
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+        // border-color: black white white black;
+        & + .inside-btn{
+            background-color: #fff;
+        }
+    }
+    &:focus {
+        color: var(--color-secondary);
+        text-shadow: 9px 4px 5px rgba(255, 255, 255, 1);
+        // border: var(--color-secondary);    
+        animation: 320ms btnFocus ease-in infinite;
+    }
+}
+
+.inside-btn {
+    padding: 15px;
+    border-radius: 20px;
+}
 .footer-project {
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: flex-end
 }
-.avertisement{
-    
+
+// mediaQpx
+@media screen and (max-width:400px) {
+  #pannel-admin-post{
+    display: none;
+  }
+  
 }
+@media screen and (min-width:850px) {
+  
+  .post-project-form-content {
+   
+    padding: 30px 80px 15px;
+    margin: 0px 10% 30px;
+   
+  }
+}
+// keyframe : TODO : a deplacer dans un fichier specialement concu pour
+@keyframes showBtnStyle1{
+    0% {
+        left:-100%
+    }
+    50%, 100%{
+        left:100%
+    }
+}
+@keyframes showBtnStyle2{
+    0%{
+      top:-100%;
+      
+    }50%, 100%{
+      top:100%
+    }
+  }
+  @keyframes showBtnStyle3 {
+    0%{
+      right:-100%;
+    }
+    50%, 100%{
+      right:100%
+    }
+  }
+  @keyframes showBtnStyle4{
+    0%{
+      bottom:-100%;
+      
+    }50%, 100%{
+      bottom:100%
+    }
+  }
+  @keyframes btnFocus {
+      from{
+        background: linear-gradient(90deg, rgba(255,255,255,.3), rgba(255,255,255,1));    
+      }25%{
+        background: linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+
+      }75%{
+        background: linear-gradient(270deg, rgba(255,255,255,.3), rgba(255,255,255,1));   
+      }
+      to{
+        background: linear-gradient(360deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+      }
+  }

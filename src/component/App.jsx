@@ -8,19 +8,40 @@ import ChangeTheme from '../themes/original/Theme';
 import Main from './Main';
 import ProjectCustomer from './ProjectCustomer';
 import Erreur404 from './Erreur404';
-
+import Login from './Login';
+// window.onbeforeunload = (e) => {
+//   if(2==1){
+//     return undefined
+//   }
+//   return(' ')
+// }
 const App = () => {
  
   let  xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   let  yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
   
   const url = 'http://localhost:3001/api/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
   const [onMaintenance, setOnMaintenance] = useState(false);
-  const [urlExt, setUrlExt]= useState('');
-  const [userIsCo, setUserIsCo]= useState(false);
-  const [userIsAdm, setUserIsAdm]= useState(true);
-
-  
+  const [userIsCo, setUserIsCo]= useState(false); // true pour test
+  const [userIsAdm, setUserIsAdm]= useState(false);  //true pour test
+  const [status,setStatus]=useState('Not Connected 🔴');
+  useEffect(()=>{
+    let userIsConnected = sessionStorage.getItem('user_co');
+    if(userIsConnected){
+      let userIsCoParse = JSON.parse(userIsConnected);
+      console.log(userIsCoParse.isConected);
+      setUserIsCo(userIsCoParse.isConected);
+      setUserIsAdm(userIsCoParse.isAdmin);
+      setStatus("Connected 🟢");
+    }
+    return()=>{
+      setUserIsCo(false);
+      setUserIsAdm(false);
+      setStatus("Not Connected 🔴");
+    }
+    
+  },[setUserIsCo, setUserIsAdm,setStatus])
   useEffect(()=>{
 
      // Block d'activation maintenance
@@ -33,7 +54,6 @@ const App = () => {
     };
     MaintainingActivate();
   },[]);
-  console.log(urlExt)
 
  // fin block d'activation maintenance
  /*if(window.location.href=='http://localhost:3000/privacy-policy'){
@@ -41,8 +61,10 @@ const App = () => {
  }*/
   return (
     <div className="App">
-      <p className="testCo">{userIsAdm?"⭐ Admin ⭐ ,":""} {userIsCo? "Connected 🟢": 'Not Connected 🔴'}</p>
-      <ChangeTheme/>
+      
+      <p className="testCo" >{status}</p>
+      
+      <Login apiUrl={url} setStatus={setStatus}/>
       
       <Router
         forceRefresh={true}
@@ -54,7 +76,7 @@ const App = () => {
             <Route path="/" exact component={Maintaining}/> :
             <Route path="/" exact component={()=>< Main ConnectApiUrl={url} />}/>
           }
-          <Route path='/projects' exact component={()=> <ProjectCustomer isAdmin = {userIsAdm} urlExt ={urlExt} setUrlExt={setUrlExt} connectApiUrlProjects={url} />}/>
+          <Route path='/projects' exact component={()=> <ProjectCustomer isAdmin={userIsAdm} connectApiUrlProjects={url} />}/>
           <Route component={Erreur404}/> 
         </Switch>
       </Router>

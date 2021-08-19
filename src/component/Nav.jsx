@@ -3,77 +3,77 @@ import{Link} from 'react-router-dom'
 import './../assets/css/Nav.scss';
 
 const Nav = ({largeur, hauteur}) => {
-    let [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const detection = () => {
+        if(window.onresize <= "850px"){
+            setIsOpen(false);
+        }
+    }
+    console.log(isOpen)
+    window.onresize = detection;
     const btnNav = (e) => {
-        try{
-            setIsOpen(!isOpen)
-        }
-        catch(error){
-            console.log(error)
-        }
+        setIsOpen(!isOpen)
         e.preventDefault();
         e.stopPropagation();
     };
+    try{
+        if(document.getElementById('navDynamique')){
+            if(isOpen===true){
+                document.getElementById('navDynamique').className='nav-custom display-nav-block'
+                if(window.onClick){
+                    document.getElementById('navDynamique').className = "nav-custom display-nav-none";
+                
+                }
+
+            }else{
+                document.getElementById('navDynamique').className = "nav-custom display-nav-none";
+            }
+        }
+    }
+    catch(error){
+        console.log(error)
+    }
     useEffect(()=>{
        window.onscroll = function () {
         try{
-            if(document.documentElement.scrollTop > 125){
-                document.getElementById('navNotMobile').style.position = "fixed";
-                document.getElementById('navNotMobile').style.top = 0;
-                document.getElementById('navNotMobile').style.padding = "34px 0";
+            if(largeur>850){
 
-            }else{
-                document.getElementById('navNotMobile').style.position = "absolute";
-                document.getElementById('navNotMobile').style.top = '168px';
-                document.getElementById('navNotMobile').style.padding = "0 0 20px";
-
+                if(document.documentElement.scrollTop > 190){
+                    document.getElementById('navDynamique').style.position = "fixed";
+                    document.getElementById('navDynamique').style.top = 0;
+                    document.getElementById('navDynamique').style.padding = "34px 0";
+    
+                }else{
+                    document.getElementById('navDynamique').style.position = "relative";
+                    document.getElementById('navDynamique').style.top = 'initial';
+                    document.getElementById('navDynamique').style.padding = "0 0 20px";
+                }
             }
         }catch{
 
         }
        }
 
-    },[])
+    },[largeur])
     return(
         <div className = 'nav-content'>
-            { largeur < 850 ? <button onClick={btnNav} className='button-open-nav-mobile'><span>/</span><span>/</span><span>/</span></button> :
-                 <nav className='nav-custom'  id = "navNotMobile" > 
-                    <ul className = 'list-nav list-nav-not-mobile'>
-                        <Link to='/'>
-                            <li className='list-nav-content'>accueil</li>
-                        </Link>
-                        <Link to='/projects'>
-                            <li className='list-nav-content'>mes projets</li>
-                        </Link>
-                        <Link to="/lang">
-                            <li className='list-nav-content'>techno favorite</li>
-                        </Link>
-                        <Link to="/about">
-                            <li className='list-nav-content'>contact</li>
-                        </Link>
-                    </ul>
-                </nav>}
-
-            {isOpen ?
-                <nav id = "navMobileFirst">
-                    
-                    <ul className = 'list-nav'>
-                        <Link to='/'>
-                            <li className='list-nav-content'>accueil</li>
-                        </Link>
-                        <Link to='/projects'>
-                            <li className='list-nav-content'>mes projets</li>
-                        </Link>
-                        <Link to="/lang">
-                            <li className='list-nav-content'>mes languages préféré</li>
-                        </Link>
-                        <Link to="/about">
-                            <li className='list-nav-content'>contact</li>
-                        </Link>
-                    </ul>
-                </nav>
-            :''}
-            
+           <button onClick={(e)=>btnNav(e)} className='button-open-nav-mobile'> <span> / </span>  <span> / </span>  <span> / </span>  </button> 
+            <nav className='nav-custom'  id = "navDynamique" > 
+            <ul className = 'list-nav'>
+                <Link to='/'>
+                    <li className='list-nav-content'>accueil</li>
+                </Link>
+                <Link to='/projects'>
+                    <li className='list-nav-content'>mes projets</li>
+                </Link>
+                <Link to="/lang">
+                    <li className='list-nav-content'>techno favorite</li>
+                </Link>
+                <Link to="/about">
+                    <li className='list-nav-content'>contact</li>
+                </Link>
+            </ul>
+        </nav>
         </div>
     )
 }

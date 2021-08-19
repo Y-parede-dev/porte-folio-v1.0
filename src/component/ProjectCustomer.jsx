@@ -4,7 +4,7 @@ import "../assets/css/ProjectCustomer.scss";
 import InitReq from "../config/InitReq";
 import PostProject from "./PostProject";
 
-const ProjectCustomer = ({isAdmin ,urlExt,setUrlExt,connectApiUrlProjects}) => {
+const ProjectCustomer = ({isAdmin , connectApiUrlProjects}) => {
     const [AllProjects, setAllProjects] = useState([]);
     const urlProject = `${connectApiUrlProjects}projects`;
    /*   TO DO v1.1.0 :
@@ -15,23 +15,26 @@ const ProjectCustomer = ({isAdmin ,urlExt,setUrlExt,connectApiUrlProjects}) => {
     
     useEffect(()=>{
         fetch(urlProject, InitReq())
-            .then(res=>res.json())
+            .then(res=>res.json("GET","application/json"))
             .then(
                 (result)=>{
                     console.log(result);
                     setAllProjects(result.result)
                 }
             )
-    },[]);
+        return () => {
+            setAllProjects([])
+        }
+    },[setAllProjects]);
    
     console.log(AllProjects.length)
 
     return (
         <div className="page-projects">
-            <PostProject isAdmin={isAdmin}/>
+            <PostProject isAdmin={isAdmin} urlProject={urlProject}/>
             <h2 className='mes-projets'><span className='little-text'>MES </span>PROJETS</h2>
             <p className='test-count'>il y a actuelement {AllProjects.length} projets importer sur le site</p>
-            <div className={AllProjects.length<4 ? `content-all-projects content-all-projects-${AllProjects.length}`:`content-all-projects content-all-3`}>
+            <div className={AllProjects.length<4 ? `content-all-projects content-all-projects-${AllProjects.length}`:`content-all-projects content-all-projects-3`}>
                 {AllProjects.map(it=>(
                 <a className='lien-projet'  key={`${it.nom}-${it.id}`} href={`${it.lien}`} target='_blank'>
                     <div className="content-project">

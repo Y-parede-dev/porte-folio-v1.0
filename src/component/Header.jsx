@@ -7,12 +7,11 @@ const Header = ({largeur, hauteur}) => {
     useEffect(()=>{
        
         try{
-            if(largeur<850 ){
+            if(window.onresize<850 ){
                 document.getElementById('header').style.position = "fixed";
                 document.getElementById('header').style.top = 0;
                 document.getElementById('header').style.right = 0;
                 document.getElementById('header').style.left = 0;
-
             }
         }catch{
         }

@@ -14,12 +14,13 @@ const Developpeur = ({connectApiUrlDev}) => {
     try {
         useEffect(()=>{
             let urlProfil = `${connectApiUrlDev}/1`;
-            fetch(urlProfil, InitReq())
+            fetch(urlProfil, InitReq("GET","application/json"))
                .then(res => res.json())
                .then((result) => {
                    setDev(result.result);
-                },(err)=>{console.log(err)})
-        },[]);
+                },(err)=>{console.log(err)});
+                return ()=>{setDev([])}
+        },[setDev]);
        
         return (
             <>

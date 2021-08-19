@@ -4,8 +4,10 @@ nav {
     padding: 21px;
     border-bottom: solid 3px var(--color-third);
 }
-nav#navMobileFirst {
+.nav-custom {
+    display: none;
     z-index: 4;
+    min-width: 150px;
     text-align: left;
 	position: fixed;
     grid-template-columns: 1fr ;
@@ -28,17 +30,18 @@ nav#navMobileFirst {
 .list-nav-content:hover{
     box-shadow: 0 0 0 0 #fff;	
 
-    animation: 300ms ease-out pulse 400ms infinite;
+    animation: 400ms ease-out pulse 400ms infinite;
 }
-nav#navMobileFirst .list-nav-content {
+nav.nav-custom .list-nav-content {
     padding: 10px 0;
 }
 .button-open-nav-mobile {
     position:fixed;
     z-index: 6;
-    top: 130px;
+    top: 114px;
     font-size: 1.5rem;
     left: 20px;
+    border-radius: 10px;
 }   
 .display-nav-none {
     display: none;
@@ -48,20 +51,32 @@ nav#navMobileFirst .list-nav-content {
 }
 
 /* display laytop*/
-#navNotMobile {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 168px;
-	padding: 0 35px 20px;
-}
-.list-nav-not-mobile{
-    min-height: 50px;
-    padding: 0 30px;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
+
+@media screen and (min-width:850px){
+    .button-open-nav-mobile{
+        display: none;
+    }
+    nav.nav-custom {
+        display: block;
+        position: relative;
+        left: 0;
+        right: 0;
+        height: fit-content;
+        padding: 0 35px 20px;
+    }
+    
+    .list-nav {
+        min-height: 50px;
+        text-align: center;
+        padding: 0 30px;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+
 }
 @keyframes pulse {
     to{
