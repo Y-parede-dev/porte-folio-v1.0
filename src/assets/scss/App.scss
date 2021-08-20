@@ -1,3 +1,5 @@
+@import './partials/Keframes';
+
 $color-default: rgb(0,0,0);
 $color-primary: white;/**/
 $color-secondary: rgb(5, 116, 187);/**/
@@ -53,36 +55,10 @@ a {
   font-weight: 300;
 }
 .App {
+  height: 100%;
+  width: 100%;
   text-align: center;
   padding-bottom: 150px;
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-.en-cours-de-creation{
-  background-color: var(--color-primary);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 1s linear;
-  }
-  .en-cours-de-creation{
-    margin: 8.5px auto 40px;
-    animation: App-W-I-P infinite 1.5s ease-in-out
-  }
-}
-
-.maintenance {
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 
@@ -97,30 +73,4 @@ a {
   right: 0;
   padding: 20px 20px 60px;
   text-align: center;
-}
-@keyframes App-W-I-P {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0
-  }
-  100%{
-    opacity: 1;
-  }
-}
-@keyframes App-logo-spin {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(80px);
-  }
-}
-
-@keyframes focusStyle {
-  to{
-    box-shadow:  
-      0 0 0 8px rgba(0,0,0,.1);
-  }
 }

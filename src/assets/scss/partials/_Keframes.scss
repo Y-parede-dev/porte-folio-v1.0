@@ -1,0 +1,304 @@
+
+// App.scss
+@keyframes focusStyle {
+    to{
+      box-shadow:  
+        0 0 0 8px rgba(0,0,0,.1);
+    }
+  }
+  
+  // Maintening.scss
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0);
+    }
+    25%{
+      transform: rotate(-90deg);
+
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes App-W-I-P {
+    0% {
+        font-size: 2.2rem;
+        color: var(--color-secondary);
+        text-shadow: 0 0 7px var(--color-secondary);
+        transform: rotate(0deg);
+    }
+    90% {
+        color: transparent;
+        text-shadow: none;
+        box-shadow: none;
+        background-color: transparent;
+        transform: rotate(90deg);
+    
+    
+    }
+    100%{
+      
+        color: var(--color-secondary);
+        text-shadow: 0 0 7px var(--color-secondary);
+        transform: rotate(0deg);
+       
+    }
+  }
+  // Nav.scss
+  @keyframes pulse {
+    to{
+        font-weight: 900;
+        font-size: 1.6rem;
+        box-shadow: 0 0 0 12px rgba(255,255,255,.1);
+    }
+  }
+  // PostProjetc.scss
+  @keyframes showBtnStyle1{
+    0% {
+        left:-100%
+    }
+    50%, 100%{
+        left:100%
+    }
+  }
+  @keyframes showBtnStyle2{
+    0%{
+      top:-100%;
+      
+    }50%, 100%{
+      top:100%
+    }
+  }
+  @keyframes showBtnStyle3 {
+    0%{
+      right:-100%;
+    }
+    50%, 100%{
+      right:100%
+    }
+  }
+  @keyframes showBtnStyle4{
+    0%{
+      bottom:-100%;
+      
+    }50%, 100%{
+      bottom:100%
+    }
+  }
+  
+  @keyframes btnFocus {
+      from{
+        background: linear-gradient(90deg, rgba(255,255,255,.3), rgba(255,255,255,1));    
+      }25%{
+        background: linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+  
+      }75%{
+        background: linear-gradient(270deg, rgba(255,255,255,.3), rgba(255,255,255,1));   
+      }
+      to{
+        background: linear-gradient(360deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+      }
+  }
+  // Present.scss
+  @keyframes afficheTechno {
+    0%,25%{
+        display: block;
+        
+    }25%,35%{
+        top: 113px;
+        left: 25px;
+        filter: none;
+  
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+  }
+  
+  @keyframes afficheTechno2 {
+    10%,25%{
+        display: block;
+        
+    }25%,35%{
+        filter: none;
+  
+        top: 20px;
+        left: 25px;
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  @keyframes afficheTechno3 {
+    10%,25%{
+        
+        display: block;
+    }25%,35%{
+        filter: none;
+        top: 64px;
+        left: 70px;
+  
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  @keyframes afficheTechno4 {
+    10%,25%{
+        display: block;
+        
+    }25%,35%{
+        filter: none;
+  
+        top: 20px;
+        left: 115px;
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  @keyframes afficheTechno5 {
+    10%,25%{
+        display: block;
+        
+    }25%,35%{
+        filter: none;
+        top: 113px;
+        left: 115px;
+  
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  @keyframes afficheTechno6 {
+    10%,25%{
+        display: block;
+        
+    }25%,35%{
+        filter: none;
+  
+        top: 113px;
+        left: 200px;
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  @keyframes afficheTechno7 {
+    10%,25%{
+        display: block;
+        
+    }25%,35%{
+        filter: none;
+  
+        top: 172px;
+        left: 138px;
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  @keyframes afficheTechno8 {
+    10%,25%{
+        display: block;
+        
+    }25%,35%{
+        filter: none;
+  
+        top: 233px;
+        left: 200px;
+    }50%,100%{
+        
+    }to{
+        top: -60px;
+        left: -60px;
+        display: none;
+    }
+    
+  }
+  
+  @media screen and (min-width:800px){  
+    @keyframes afficheTechno6 {
+        10%,25%{
+            display: block;
+            
+        }25%,35%{
+            filter: none;
+  
+            top: 113px;
+            left: 515px;
+        }50%,100%{
+            
+        }to{
+            top: -60px;
+            left: -60px;
+            display: none;
+        }
+        
+    }
+    @keyframes afficheTechno7 {
+        10%,25%{
+            display: block;
+            
+        }25%,35%{
+            filter: none;
+  
+            top: 172px;
+            left: 453px;
+        }50%,100%{
+            
+        }to{
+            top: -60px;
+            left: -60px;
+            display: none;
+        }
+        
+    }
+    @keyframes afficheTechno8 {
+        10%,25%{
+            display: block;
+            
+        }25%,35%{
+            filter: none;
+  
+            top: 233px;
+            left: 515px;
+        }50%,100%{
+            
+        }to{
+            top: -60px;
+            left: -60px;
+            display: none;
+        }
+        
+    }
+  }

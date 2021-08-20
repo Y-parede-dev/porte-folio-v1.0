@@ -1,4 +1,4 @@
-import './../assets/css/App.scss';
+import './../assets/scss/App.scss';
 import React,  { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Maintaining from './Maintaining';
@@ -9,12 +9,7 @@ import Main from './Main';
 import ProjectCustomer from './ProjectCustomer';
 import Erreur404 from './Erreur404';
 import Login from './Login';
-// window.onbeforeunload = (e) => {
-//   if(2==1){
-//     return undefined
-//   }
-//   return(' ')
-// }
+
 const App = () => {
  
   let  xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -43,7 +38,8 @@ const App = () => {
     
   },[setUserIsCo, setUserIsAdm,setStatus])
   useEffect(()=>{
-
+    
+    
      // Block d'activation maintenance
     //  TO DO :
     //    Déplace la fonction de maintenance dans un dossier 
@@ -53,12 +49,16 @@ const App = () => {
       //setOnMaintenance(true)
     };
     MaintainingActivate();
+    return(()=>{
+      
+    })
   },[]);
 
  // fin block d'activation maintenance
  /*if(window.location.href=='http://localhost:3000/privacy-policy'){
     window.location=`${urlExt}`;
  }*/
+
   return (
     <div className="App">
       
@@ -67,14 +67,14 @@ const App = () => {
       <Login apiUrl={url} setStatus={setStatus}/>
       
       <Router
-        forceRefresh={true}
+        forceRefresh={false}
       >
         <Header largeur={xMax} hauteur={yMax} />
         <Nav largeur={xMax} hauteur={yMax}/>
         <Switch>{
           onMaintenance ?
             <Route path="/" exact component={Maintaining}/> :
-            <Route path="/" exact component={()=>< Main ConnectApiUrl={url} />}/>
+            <Route path="/" exact component={()=>< Main ConnectApiUrl={url}/>}/>
           }
           <Route path='/projects' exact component={()=> <ProjectCustomer isAdmin={userIsAdm} connectApiUrlProjects={url} />}/>
           <Route component={Erreur404}/> 

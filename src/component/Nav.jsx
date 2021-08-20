@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import{Link} from 'react-router-dom'
-import './../assets/css/Nav.scss';
+import './../assets/scss/Nav.scss';
 
 const Nav = ({largeur, hauteur}) => {
     const [isOpen, setIsOpen] = useState(false);

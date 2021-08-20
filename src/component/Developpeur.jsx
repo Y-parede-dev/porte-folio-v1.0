@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {Typewriter, useTypewriter} from 'react-simple-typewriter';
-import '../assets/css/Developpeur.scss';
+import '../assets/scss/Developpeur.scss';
 import InitReq from "../config/InitReq";
 //import avatarDev from '../assets/images/developpeur.gif'
 const Developpeur = ({connectApiUrlDev}) => {
@@ -14,19 +14,20 @@ const Developpeur = ({connectApiUrlDev}) => {
     try {
         useEffect(()=>{
             let urlProfil = `${connectApiUrlDev}/1`;
+            
             fetch(urlProfil, InitReq("GET","application/json"))
                .then(res => res.json())
                .then((result) => {
                    setDev(result.result);
-                },(err)=>{console.log(err)});
-                return ()=>{setDev([])}
+                },(err)=>{console.log(err)})
+                return ()=>{setDev([]);}
         },[setDev]);
        
         return (
             <>
                 {dev.map((it)=>(
                     <div className='component-developpeur' key={`${it.nom} - ${it.prenom}`}>
-                        <h4>{it.nom} {it.prenom} </h4>
+                        <h4><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h4>
                         <p>Je suis <span>{text}</span></p>
                         <div className='img-profil'>
                             <Link to='/profil'>

@@ -69,7 +69,7 @@
 .header-projet h4 {
     font-weight: 900
 }
-.projet img{
+.img-projets{
     max-height: 250px;
     margin-top: 115px;
     max-width: 100%;
@@ -85,14 +85,16 @@
 }
 .interact-project{
     position: absolute;
-    bottom: 245px;
+    top: 287.43px;
     color: transparent;
 }
 .interact-project-txt {
     font-size: 3rem;
 }
-.test{
+.test {
     color: red;
+    /* position: relative; */
+    padding: 150px 0 0;
 }
 /*@keyframes hoverProject{
     0%{

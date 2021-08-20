@@ -1,0 +1,99 @@
+.maintenance {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 165px 0 0;
+    color: transparent;
+    height: 50vh;
+}
+.in-progress{
+
+    position: absolute;
+    width: 100%;
+    &>.en-cours-de-creation{
+        position: absolute;
+        width: 100%;
+        top: -21px;
+        &>span{
+            z-index: 3;
+            font-size: 1.50rem;
+            animation: App-W-I-P 1200ms infinite linear ;
+            &:nth-child(1){
+            animation-delay: 100ms;
+            }
+            &:nth-child(2){
+            animation-delay: 200ms; 
+            }
+            &:nth-child(3){
+            animation-delay: 300ms; 
+            }
+            &:nth-child(4){
+            animation-delay: 400ms;
+            }
+            &:nth-child(5){
+            animation-delay: 500ms;
+            }
+            &:nth-child(6){
+            animation-delay: 600ms;
+            }
+            &:nth-child(7){
+            animation-delay: 700ms;
+            }
+            &:nth-child(8){
+            animation-delay: 800ms;
+            }
+            &:nth-child(9){
+            animation-delay: 900ms;
+            }
+            &:nth-child(10){
+            animation-delay: 1000ms;
+            }
+            
+        }
+        //animation: App-W-I-P infinite 1.500ms ease-in-out
+    }
+}
+.cont-img-load {
+    position: absolute;
+    width: 100%;
+}
+.load-logo {
+    width: 70vmin;
+    pointer-events: none;
+    
+  }
+@media screen and(min-width:499px) {
+    .in-progress{
+        & >.en-cours-de-creation {
+            &>span{
+                background-color: var(--color-primary);
+                padding: 5px;
+                margin: 5px;
+                box-shadow: 0 0 10px -6px var(--color-secondary);
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .load-logo {
+        
+      animation: App-logo-spin infinite 1s linear;
+      animation-delay: 1100ms;
+    }
+  }
+@media screen and(min-width:700px) and (max-width:849px){
+    .maintenance {
+        padding: 156px 0 0;
+    }
+}
+@media screen and(min-width:850px){
+    .maintenance {
+        padding: 0;
+    }
+    .load-logo {
+        width: 20vmin;
+      }
+}

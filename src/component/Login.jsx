@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import InitReq from "../config/InitReq";
-import "./../assets/css/Login.scss";
+import "./../assets/scss/Login.scss";
 const Login = ({apiUrl,setStatus}) => {
     
     const [isConected, setIsConected] = useState(true);

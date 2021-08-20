@@ -1,6 +1,6 @@
 import logoHeader from '../../assets/images/logo-magin-code.svg';
 import logoHeaderWhite from '../../assets/images/logo-magin-code-white.svg';
-import '../../assets/css/Theme.scss';
+import '../../assets/scss/Theme.scss';
 import { useEffect, useState } from 'react';
 
 

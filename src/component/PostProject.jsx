@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../assets/css/PostProject.scss";
+import "../assets/scss/PostProject.scss";
 import InitReq from "../config/InitReq";
 
 const PostProject = ({isAdmin, urlProject})=>{
@@ -54,14 +54,16 @@ const PostProject = ({isAdmin, urlProject})=>{
         setPannelAdmin(!pannelAdmin);   
     }
     const handleSubmit=(e)=>{
-
-        bodyPost.set('user_id',recupUserParse.id);
-        bodyPost.set('nom',titleData);
-        bodyPost.set('lien',lienData);
-        bodyPost.set('description',descData);
-        bodyPost.set('image',urlImgData);
-        console.log(JSON.stringify(bodyPost))
-        postOnBdd();
+        if(window.confirm('souhaitez-vous poster se projet ?')){
+            bodyPost.set('user_id',recupUserParse.id);
+            bodyPost.set('nom',titleData);
+            bodyPost.set('lien',lienData);
+            bodyPost.set('description',descData);
+            bodyPost.set('image',urlImgData);
+            console.log(JSON.stringify(bodyPost))
+            postOnBdd();
+            window.reload()
+        }
         e.preventDefault();
     }
     const previewpicture = (e)=>{
@@ -93,7 +95,7 @@ const PostProject = ({isAdmin, urlProject})=>{
         <>{ isAdmin?
             <div id="pannel-admin-post" className="post-project-form-content">
                 <header className="header-project">
-                    <h2>Paneaux post pour admin</h2>
+                    <h2>Panneau ADMIN pour la création d'un projet</h2>
                     <button onClick={()=>openClosePannelAdmin()}> 
                         <span></span>
                         <span></span>
@@ -112,7 +114,7 @@ const PostProject = ({isAdmin, urlProject})=>{
                     {imgPresent?<img className='preview-img-project' alt='image du projet' src={`${urlImg}`}/>:""}
                     <div className="form-control" className="content-description-project">
 
-                        <label className="form-control form-control-label form-control-label-desc" htmlFor='descriptionP'>Description</label>
+                        <label className="form-control form-control-label form-control-label-desc" htmlFor='descriptionP'>Déscription</label>
                         <textarea className="form-control description-new-project" onChange={(e)=>{recupInfo(e,setDescData);countChars(e)}}value={descData} name='descriptionP' placeholder='* Decription du site' maxLength={CHARS_MAX}></textarea>
                         <div className="content-max-char">
                             <p id='count_chars' className="count-chars" >{nbrChars}</p>
@@ -123,7 +125,7 @@ const PostProject = ({isAdmin, urlProject})=>{
                     <label className="form-control form-control-label" htmlFor='lienP'>Lien</label>
                     <input className="form-control" name='lienP' onChange={(e)=>recupInfo(e,setLienData)} value={lienData} placeholder='* Lien' required></input>
                     <div className="btn-submit-border">
-                        <button className="submit-project" type="submit"><p className="inside-btn">Postez sur la Base de  donnée</p></button>
+                        <button className="submit-project" type="submit"><p className="inside-btn">Postez sur la Base de données</p></button>
                     </div>
                 </form>
                 

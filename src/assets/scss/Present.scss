@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+.component-present{
+    margin: 40px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: solid var(--color-secondary) 2px;
+    border-bottom: solid var(--color-secondary) 2px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+   
+    
+}
+.component-present-inside{
+    margin: auto;
+    padding: 20px;
+}
+.component-present-inside,.component-present-inside > h4{
+    padding: 0 0px 30px ;
+}
+.component-present-inside > h4{
+    color: var(--color-secondary);
+    font-size: 2rem;   
+}
+.component-present-inside > p {
+    font-size: 1.2rem;
+}
+.image-art-1{
+    position: relative;
+    overflow: hidden;
+    padding: 148px 0px;
+    //min-width: 826px;
+    margin: auto -38px;
+    background: url('../images/static/espace_fond.png') no-repeat center;
+    &:hover>.img-art-1-content{
+       // margin: 0;
+       right: -2000px;
+       backdrop-filter: none;
+
+    }
+    & > .img-techno{
+       // display: none;
+        position: absolute;
+        filter: brightness(.1);
+        top: -40px;
+        left: -40px;
+        
+    }
+    & > .img-techno-node{
+        background-color: white;
+        padding: 2px;
+     }
+    &:hover>.img-techno{
+        
+        &:nth-child(1){
+            animation: 12s afficheTechno  0s 1 ease-out;
+            
+        }
+        &:nth-child(2){
+            animation: afficheTechno2 11.5s .250s 1 ease-out;
+            
+        }
+        &:nth-child(3){
+            animation: afficheTechno3 11s .500s 1 linear;
+           
+        }
+        &:nth-child(4){
+            animation: afficheTechno4 10.5s .750s 1 linear;
+            
+        }
+        &:nth-child(5){
+            animation: afficheTechno5 10s 1.000s 1 linear;
+            
+        }
+        &:nth-child(6){
+            animation: afficheTechno6 9.5s 1.250s 1 ease-in;
+           
+        }
+        &:nth-child(7){
+            animation: afficheTechno7 6s 1.500s 1 ease-in;
+           
+        }
+        &:nth-child(8){
+            animation: afficheTechno8 5.5s 1.750s 1 ease-in;
+            // animation: name duration timing-function delay iteration-count direction fill-mode;
+            
+        }
+    }
+   
+
+}
+
+
+
+.img-art-1-content {
+    transition: 300ms ease-in-out;
+
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 00px;
+    bottom: 0;
+    /* width: fit-content; */
+    /* background: aqua; */
+    padding: 48px 19px;
+    backdrop-filter: blur(3px);
+}
+img.univers-image {
+    width: 70%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px -6px WHITE;
+}
+.question{
+    color: var(--color-secondary);
+    padding: 5px 0;
+    font-size: x-large;
+}
+.question,.to-bold{
+    font-weight: 900;
+}
+.block-quote-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+    padding: 48px ;
+    margin: 24px ;
+    font-size: 1.2rem;
+    font-style: italic;
+    box-shadow: 0 0 23px -9px;
+    font-weight: 400;
+    border-radius: 8px;
+    quotes:"";
+    &>q{
+
+    }
+}
+.open-link{
+    font-weight: 700;
+}
+.open-link{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    display: inline-block;
+    position: relative;
+    color: #7350ee;
+    transition:300ms ease-in ;
+    &:hover{
+        font-size: 1.25rem;
+    }&:hover > .cacher-o{
+       padding: 5px;
+    }
+}
+.cacher-o{
+    position: absolute;
+    top: 6.5px;
+    left: -3px;
+    font-size: 0;
+    padding: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+.not-bold {
+    font-weight: 500;
+}
+@media screen and (min-width:350px) {
+    img.univers-image {
+        width: auto;}
+}
+@media screen and (min-width:500px){
+    .block-quote-main {
+        
+        padding: 48px 100px;
+        margin: 24px 50px;
+    }
+    
+}
+@media screen and (min-width:800px){
+    .component-present{
+        grid-gap: 2rem 1rem;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 'art-1 img-art-1'
+        'art-2 art-2';
+    }
+    .component-present-inside-welcome{
+        grid-area: art-1;
+    }
+    .image-art-1{
+        grid-area: img-art-1;
+        margin: auto 0;
+    }
+    
+    .component-present-inside-présentation{
+        grid-area: art-2;
+
+    }
+    
+}
+@media screen and (min-width:1400px) {
+   
+}

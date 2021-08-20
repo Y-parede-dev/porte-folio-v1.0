@@ -1,0 +1,74 @@
+.mentors-content {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    padding: 20px 5px;
+    
+}
+.mentor-profil {
+    position: relative;
+    border: solid 10px var(--color-secondary);
+    border-radius: 30px;
+    height: max-content;
+    padding: 0 8px 10px;
+    max-width: 254px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: .2fr .5fr .3fr .2fr;
+}
+.mentor-profil > h5 {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin: -1px -11px;
+    border-radius: 15px 15px 0 0 ;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.mentor-profil > svg {
+    width: 200px;
+    height: 220px;
+    margin: 0 auto;
+}
+p.aide-aporter,.mentor-lien {
+    display: grid;
+}
+p.aide-aporter{
+    align-items: center;
+
+}
+.mentor-lien {
+    align-items: end;
+  
+    color: var(--color-secondary);
+}
+@media screen and (min-width:380px) {
+    .mentor-profil {
+        padding: 0 8px 20px;
+        max-width: 350px;
+    }
+    .mentor-profil > h5 {
+        margin: -1px -9px;
+       
+    }
+}
+@media screen and (min-width:850px){
+    .mentors-content {
+        margin: 20px 10px;
+        padding: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mentor-profil {
+        max-width: 350px;
+        padding: 0 20px 20px;
+        min-height: 645px;
+        
+    }
+    .mentor-profil > h5 {
+        
+        margin: -1px -21px;
+       
+    }
+    
+}
