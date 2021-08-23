@@ -9,13 +9,12 @@
     display: grid;
     grid-template-columns: 1fr;
    
-    
 }
 .component-present-inside{
     margin: auto;
-    padding: 20px;
+    padding: 30px;
 }
-.component-present-inside,.component-present-inside > h4{
+.component-present-inside > h4{
     padding: 0 0px 30px ;
 }
 .component-present-inside > h4{
@@ -25,6 +24,7 @@
 .component-present-inside > p {
     font-size: 1.2rem;
 }
+
 .image-art-1{
     position: relative;
     overflow: hidden;

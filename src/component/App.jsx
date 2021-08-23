@@ -23,7 +23,7 @@ const App = () => {
   console.log(document.documentElement.clientHeight)
   let tete =document.getElementById('App')
   console.log(document.body.getBoundingClientRect())
-  const url = 'https://api--porte-folio.herokuapp.com/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
+  const url = 'https://api--porte-folio.herokuapp.com/api/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
   const [onMaintenance, setOnMaintenance] = useState(false);
   const [userIsCo, setUserIsCo]= useState(false); // true pour test
   const [userIsAdm, setUserIsAdm]= useState(false);  //true pour test

@@ -7,9 +7,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px 0;
+    padding: 32px 0;
     margin-top: 55px;
     text-align: center;
+    
     &>div>ul{
         padding-top: 30px;
         display: flex;
@@ -41,13 +42,11 @@
 .img-fleche {
     transform: rotate(180deg);
     position: absolute;
-    top: -25px;
+    top: 0px;
     width: 100%;
     &>img{
-        background-color: var(--color-secondary);
+        filter: drop-shadow(0px 0px 2px var(--color-third));
         padding: 0 10px 7px;
-        border-radius:  0 0 50% 50% ;
-        border-bottom: solid var(--color-third);
     }
 }
 
@@ -58,6 +57,7 @@ p.magin-code-footer.txt-footer {
 @media screen and (min-width:850px) {
     #footer-principal {
         &>div>ul{
+            padding-top: 0;
             flex-direction: row;
         }
     }
