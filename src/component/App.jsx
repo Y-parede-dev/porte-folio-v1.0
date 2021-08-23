@@ -70,16 +70,16 @@ const App = () => {
       <Login apiUrl={url} setStatus={setStatus} setUserIsAdm={setUserIsAdm} setUserIsCo={setUserIsCo}/>
       
       <Router
-        forceRefresh={true}
+        forceRefresh={false}
       >
         <Header largeur={xMax} hauteur={yMax} />
         <Nav largeur={xMax} hauteur={yMax}/>
         <Switch>
           <Route path="/" exact component={()=>< Main ConnectApiUrl={url}/>}/>
           <Route path='/projects' exact component={()=> 
-          <PortFolio userIsAdm={userIsAdm} url={url}/>}/>
-          <Route path='/project-perso' exact component={()=> 
-          <ProjetPerso />}/>
+            <PortFolio userIsAdm={userIsAdm} url={url}/>}/>
+          {/* <Route path='/project-perso' exact component={()=> 
+           <ProjetPerso />}/> */}
           <Route path='/mentions' exact component={()=><Mentions/>}/>
           <Route path='/rgpd' exact component={()=><Rgpd/>}/>
           <Route component={Erreur404}/> 
