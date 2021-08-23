@@ -74,11 +74,8 @@ const App = () => {
       >
         <Header largeur={xMax} hauteur={yMax} />
         <Nav largeur={xMax} hauteur={yMax}/>
-        <Switch>{
-          onMaintenance ?
-            <Route path="/" exact component={Maintaining}/> :
-            <Route path="/" exact component={()=>< Main ConnectApiUrl={url}/>}/>
-          }
+        <Switch>
+          <Route path="/" exact component={()=>< Main ConnectApiUrl={url}/>}/>
           <Route path='/projects' exact component={()=> 
           <PortFolio userIsAdm={userIsAdm} url={url}/>}/>
           <Route path='/project-perso' exact component={()=> 

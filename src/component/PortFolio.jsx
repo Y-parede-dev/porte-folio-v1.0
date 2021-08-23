@@ -6,7 +6,6 @@ const PortFolio=({userIsAdm, url})=>{
         <>
             <ProjectCustomer isAdmin={userIsAdm} connectApiUrlProjects={url} />
             <ProjectSchool/>
-            
         </>
     )
 }
