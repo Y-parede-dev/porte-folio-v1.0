@@ -4,22 +4,22 @@
     left: 0;
     right: 0;
     z-index: 3;
+    border-bottom: solid var(--color-third);
     background: var(--color-secondary);
 }
 .header-inside {
     z-index: 5;
     & a{
         height: fit-content;
-
     }
 }
-
 .logo-header {
     width: 20vh;
     border-radius: 300px;
 }
 @media screen and (min-width:850px) {
     .header-principal{
+        border: none;
         position: relative;
     }
 }

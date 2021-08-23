@@ -120,22 +120,30 @@ img.univers-image {
     font-weight: 900;
 }
 .block-quote-main {
+    background: url("../images/static/lua.png") center fixed;
+    background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkgrey;
+    //background-color: darkgrey;
     padding: 48px ;
-    margin: 24px ;
+    margin: 24px 0 ;
     font-size: 1.2rem;
     font-style: italic;
     box-shadow: 0 0 23px -9px;
     font-weight: 400;
     border-radius: 8px;
     quotes:"";
-    &>q{
-
+    &> q {
+        /* filter: invert(1); */
+        backdrop-filter: none;
+        padding: 38px 20px;
+        background: rgba(5, 116, 187, 0.8);
+        color: white;
+        box-shadow: 0 0 10px -6px #0574bb;
     }
 }
+
 .open-link{
     font-weight: 700;
 }
@@ -168,14 +176,22 @@ img.univers-image {
         width: auto;}
 }
 @media screen and (min-width:500px){
-    .block-quote-main {
-        
-        padding: 48px 100px;
-        margin: 24px 50px;
+    
+    .block-quote-main{
+        margin: 24px ;
+        &>q {
+            /* filter: invert(1); */
+            backdrop-filter: blur(2px);
+            padding: 38px 20px;
+            background: rgba(5,116,187,.1);
+            color: white;
+            box-shadow: 0 0 10px -6px rgb(5,116,187);
+        }
     }
     
 }
 @media screen and (min-width:800px){
+   
     .component-present{
         grid-gap: 2rem 1rem;
         grid-template-columns: 1fr 2fr;
@@ -196,6 +212,10 @@ img.univers-image {
     }
     
 }
-@media screen and (min-width:1400px) {
-   
+@media screen and (min-width:1600px) {
+    .block-quote-main {
+        
+        padding: 48px 80px;
+        margin: 24px 228px;
+    }
 }

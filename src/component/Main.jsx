@@ -2,7 +2,7 @@ import Developpeur from './Developpeur';
 import Present from './Present';
 import '../assets/scss/Main.scss';
 import Mentors from './Mentors';
-const Main = ({ConnectApiUrl,setIsLoaded,isLoaded,trackPromise}) => {
+const Main = ({ConnectApiUrl}) => {
     const profilDev = `${ConnectApiUrl}profil`
     
     return(

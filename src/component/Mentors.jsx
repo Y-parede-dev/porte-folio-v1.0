@@ -9,7 +9,7 @@ const Mentors =()=>{
     return(
         <>
             <div className="mentors">
-                <h4 className="mentors-h4">Ils mon suivis</h4>
+                <h4 className="mentors-h4"><span className="little-text"> Ils</span> mon suivis</h4>
                 <div className="mentors-content">
                     <div className="mentor-profil">
                         <h5 className="mentor_nom">Hedy  DARGÈRE</h5>
@@ -72,7 +72,7 @@ const Mentors =()=>{
                         />
                         <p className="aide-aporter">Richard a été mon mentor durant les 6 mois de formation il m’a apporté une grande
                          plus-value par son expérience et sa connaissance dans le language Javascript que se soit côté serveur 
-                         avec node js ou côté client il avait une maitrise du language tel qui m'a transmis c'est connaissance qui vale
+                         avec node js ou côté client il avait une maitrise du language tel qui m'a transmis ses connaissances qui vale
                           de l'or.
                         </p>
                         <a href='https://www.linkedin.com/in/dr-richard-ngu-leubou-a5384684/' className="mentor-lien" target='_blank'>Lien vers le linked in de Richard</a>

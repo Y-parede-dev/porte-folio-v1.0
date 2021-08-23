@@ -27,7 +27,7 @@ const Developpeur = ({connectApiUrlDev}) => {
             <>
                 {dev.map((it)=>(
                     <div className='component-developpeur' key={`${it.nom} - ${it.prenom}`}>
-                        <h4><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h4>
+                        <h1><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h1>
                         <p>Je suis <span>{text}</span></p>
                         <div className='img-profil'>
                             <Link to='/profil'>

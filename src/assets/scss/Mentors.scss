@@ -1,3 +1,4 @@
+
 .mentors-content {
     display: grid;
     grid-gap: 1rem;
@@ -14,7 +15,9 @@
     max-width: 254px;
     margin: auto;
     display: grid;
+    grid-gap: 1.5rem;
     grid-template-rows: .2fr .5fr .3fr .2fr;
+    
 }
 .mentor-profil > h5 {
     background-color: var(--color-secondary);
@@ -63,6 +66,7 @@ p.aide-aporter{
         max-width: 350px;
         padding: 0 20px 20px;
         min-height: 645px;
+        grid-gap: 0;
         
     }
     .mentor-profil > h5 {

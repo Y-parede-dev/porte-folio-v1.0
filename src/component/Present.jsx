@@ -3,13 +3,11 @@ import imgUnivers from '../assets/images/static/espace.png';
 import imgPresta from '../assets/images/static/preston_logo_6.png';
 import imgNode from '../assets/images/static/Node.js_logo-48.png';
 import imgSass from '../assets/images/static/sass.png';
-
-
+import TechnoFav from './TechnoFav';
 
 const Present = ({setIsLoaded,isLoaded}) => {
     return(
         <div className="component-present">
-            
             <div className="component-present-inside component-present-inside-welcome">
                 <h4>Bienvenue dans mon univers</h4>
                 <p>Je suis développeur web freelance, je travaille principalement avec react.js, node.js et certaines de ces dépendances comme express</p>
@@ -28,7 +26,6 @@ const Present = ({setIsLoaded,isLoaded}) => {
                 {/* //////////////////////////////////////////////////////////// */}
                     <img alt='image univers' className='univers-image' src={imgUnivers}/>
                 </div>
-                
             </div>
             <div className="component-present-inside component-present-inside-présentation">
                 <h4>Ma présentation en quelques mots</h4>
@@ -52,7 +49,7 @@ const Present = ({setIsLoaded,isLoaded}) => {
                         Je continue à apprendre, car le web est vaste et de nouvelles façons de faire, ressources sont disponibles chaque jour.
                     </p>            
             </div>
-
+            <TechnoFav />
         </div>
     )
 }

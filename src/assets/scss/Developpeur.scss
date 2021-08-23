@@ -6,7 +6,8 @@
     grid-template-areas: '. img . '
                         '. name .'
                         '. text .';
-    color: var(--color-default)
+    color: var(--color-default);
+    margin: 24px 0 150px;
 }
 .component-developpeur img {
 	border-radius: 50%;
@@ -17,7 +18,7 @@
 	margin: auto;
 	grid-area: img;
 }
-.component-developpeur h4{
+.component-developpeur h1{
     grid-area: name;
     font-family: 'Otomanopee One', sans-serif;
     font-size: 3.5rem;

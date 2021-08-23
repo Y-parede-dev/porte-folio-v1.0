@@ -8,6 +8,7 @@ const Nav = ({largeur, hauteur}) => {
         if(window.onresize <= "850px"){
             setIsOpen(false);
         }
+        return ()=>setIsOpen(false)
     }
     console.log(isOpen)
     window.onresize = detection;
@@ -20,10 +21,6 @@ const Nav = ({largeur, hauteur}) => {
         if(document.getElementById('navDynamique')){
             if(isOpen===true){
                 document.getElementById('navDynamique').className='nav-custom display-nav-block'
-                if(window.onClick){
-                    document.getElementById('navDynamique').className = "nav-custom display-nav-none";
-                
-                }
 
             }else{
                 document.getElementById('navDynamique').className = "nav-custom display-nav-none";
@@ -34,27 +31,47 @@ const Nav = ({largeur, hauteur}) => {
         console.log(error)
     }
     useEffect(()=>{
-       window.onscroll = function () {
-        try{
-            if(largeur>850){
-
-                if(document.documentElement.scrollTop > 190){
-                    document.getElementById('navDynamique').style.position = "fixed";
-                    document.getElementById('navDynamique').style.top = 0;
-                    document.getElementById('navDynamique').style.padding = "34px 0";
-    
-                }else{
-                    document.getElementById('navDynamique').style.position = "relative";
-                    document.getElementById('navDynamique').style.top = 'initial';
-                    document.getElementById('navDynamique').style.padding = "0 0 20px";
-                }
+         window.onclick = function (){
+            if(isOpen===true){
+                setIsOpen(false)
             }
-        }catch{
-
+            return (()=>{setIsOpen(false)})
         }
-       }
+    },[isOpen])
+    // useEffect(()=>{
+    //    window.onscroll = function () {
+    //     try{
+    //         if(largeur>850){
 
-    },[largeur])
+    //             if(document.documentElement.scrollTop > 200){
+    //                 document.getElementById('navDynamique').style.position = "fixed";
+    //                 document.getElementById('navDynamique').style.top = 0;
+    //                 document.getElementById('navDynamique').style.padding = "10px 0";
+    
+    //             }else{
+    //                 document.getElementById('navDynamique').style.position = "relative";
+    //                 document.getElementById('navDynamique').style.top = 'initial';
+    //                 document.getElementById('navDynamique').style.padding = "0 0 20px";
+    //             }
+    //             if(document.documentElement.clientHeight>50){
+ 
+    //                 if(document.documentElement.scrollTop > document.documentElement.clientHeight){
+    //                     document.getElementById('footer-principal').style.display = "block";
+        
+    //                 }else{
+    //                     document.getElementById('footer-principal').style.display = "none";
+    //                 }
+    //             }else{
+    //                document.getElementById('footer-principal').style.display = "block";
+   
+    //             }
+    //         }
+    //     }catch{
+
+    //     }
+    //    }
+
+    // },[largeur])
     return(
         <div className = 'nav-content'>
            <button onClick={(e)=>btnNav(e)} className='button-open-nav-mobile'> <span> / </span>  <span> / </span>  <span> / </span>  </button> 
@@ -64,10 +81,10 @@ const Nav = ({largeur, hauteur}) => {
                     <li className='list-nav-content'>accueil</li>
                 </Link>
                 <Link to='/projects'>
-                    <li className='list-nav-content'>mes projets</li>
+                    <li className='list-nav-content'>porte feuille</li>
                 </Link>
-                <Link to="/lang">
-                    <li className='list-nav-content'>techno favorite</li>
+                <Link to="/project-perso">
+                    <li className='list-nav-content'>projets perso</li>
                 </Link>
                 <Link to="/about">
                     <li className='list-nav-content'>contact</li>

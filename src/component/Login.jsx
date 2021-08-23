@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import InitReq from "../config/InitReq";
 import "./../assets/scss/Login.scss";
-const Login = ({apiUrl,setStatus}) => {
+const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
     
     const [isConected, setIsConected] = useState(true);
     const [emailData, setEmailData] = useState("");
@@ -31,14 +31,21 @@ const Login = ({apiUrl,setStatus}) => {
             .then((result)=>{
                 let recupResponse = JSON.stringify(result);
                 sessionStorage.setItem('user_co',recupResponse);
-                let testr = sessionStorage.getItem("user_co");
-                const teste = JSON.parse(testr);
-                console.log(teste)
-                console.log(teste.id)
+              
+                try{
+
+                    console.log(result.isConected)
+                    console.log(result.isAdmin)
+                    setUserIsCo(result.isConected);
+                    setUserIsAdm(result.isAdmin);
+                }
+                catch{
+
+                }
             },(err)=>{
                 console.log(err)
             })
-            setStatus("Connected 🟢");
+            //setStatus("Connected 🟢");
 
         e.preventDefault();
         e.stopPropagation();
