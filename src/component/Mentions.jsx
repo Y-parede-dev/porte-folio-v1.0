@@ -11,7 +11,7 @@ const Mentions = () => {
                         <p className='nom-prenom'><span className='nom'>parede</span><span className="prenom"> yoan</span></p>
                         <p className='adresse info-contact info'>31 boulevard de l'Europe, 31700 blagnac</p>
                         <p className="telephone info-contact info">06 59 69 50 29</p>
-                        <p className="couriel info-contact info">contact@magin-code.fr</p>
+                        <p className="couriel info-contact info">magin.code@gmail.com</p>
                         <p className='siret info-contact info'>533 140 844 00028</p>
                         <p className='numero-inpi info-contact info'>IN PROGRESS</p>
                         <p className="status info-contact info">Auto-Entrepreneur</p>
@@ -39,7 +39,7 @@ const Mentions = () => {
             </div>
             <div className="mentions-legales--conception">
                 <h2 className="conception">conception & réalisation</h2>
-                <p className="conception">Développement & itégration : <a className="magin-code" href="mailto:contact@magin-code.fr">Magin code</a></p>
+                <p className="conception">Développement & itégration : <a className="magin-code" href="mailto:magin.code@gmail.com">Magin code</a></p>
             </div>
             <div className="mentions-legales--droits-auteur">
                 <h2 className='droits-auteur'>droits d'auteur - copyright - marques</h2>

@@ -21,11 +21,11 @@ const Rgpd = ()=>{
                  internet <a href="https://www.magin-code.fr">https://www.magin-code.fr</a> l'identité des différents intervenants dans le cadre de sa réalisation
                   et de son suivi:</p>
             <p>Propriétaire :  Auto-Entrepreneur Magin code Capital social de 0€ Numéro de TVA: FR20533140844 – 31 boulevard de l'europe 31700 Blagnac
-                Responsable publication : Parede – contact@magin-code.fr
+                Responsable publication : Parede – magin.code@gmail.com
                 Le responsable publication est une personne physique ou une personne morale.
-                Webmaster : Parede Yoan – contact@magin-code.fr
+                Webmaster : Parede Yoan – magin.code@gmail.com
                 Hébergeur : netlify - <a href="netlify.com">netlify.com</a> 
-                Délégué à la protection des données : PAREDE Yoan – contact@magin-code.fr</p>
+                Délégué à la protection des données : PAREDE Yoan – magin.code@gmail.com</p>
                 <div ng-bind-html="linkHTML"><p>Ces mentions légales RGPD sont issues du <a href="https://fr.orson.io/1371/generateur-mentions-legales" title="générateur gratuit de mentions légales pour un site internet">générateur gratuit de mentions légales pour un site internet</a></p></div>
                     <h2>2. Conditions générales d’utilisation du site et des services proposés.</h2>
                     <p>Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété Intellectuelle et des Réglementations Internationales applicables. 

@@ -41,7 +41,7 @@ const Footer = () =>{
                     <li>Vie privée</li>
                 </Link>
                 </ul>
-                <p className="magin-code-footer txt-footer">site fait avec 💙 par <a href="mailto:contact@magin-code.fr">magin code</a> - 2021. Version 1.0 "Starter"</p>
+                <p className="magin-code-footer txt-footer">site fait avec 💙 par <a href="mailto:magin.code@gmail.com">magin code</a> - 2021. Version 1.0 "Starter"</p>
                 <p className="copyright txt-footer">Copyright ©  2021. Tous droits réservés</p>
             </div>
         </footer>
