@@ -78,8 +78,8 @@ const App = () => {
           <Route path="/" exact component={()=>< Main ConnectApiUrl={url}/>}/>
           <Route path='/projects' exact component={()=> 
             <PortFolio userIsAdm={userIsAdm} url={url}/>}/>
-          {/* <Route path='/project-perso' exact component={()=> 
-           <ProjetPerso />}/> */}
+          <Route path='/project-perso' component={()=> 
+           <ProjetPerso />}/> 
           <Route path='/mentions' exact component={()=><Mentions/>}/>
           <Route path='/rgpd' exact component={()=><Rgpd/>}/>
           <Route component={Erreur404}/> 
