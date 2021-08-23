@@ -32,7 +32,7 @@ const Footer = () =>{
         <footer id='footer-principal'>
             <div className="img-fleche"><img id="img-fleche" onClick={()=>{footDisplay()}} alt='fleche vers le haut' src={flech}/></div>
             <div id="display-mobile" className='display-mobile'>
-                {/* <ul>
+                <ul>
                 <Link to="/mentions">
                     <li>Mentions légales</li>
                 </Link>
@@ -40,7 +40,7 @@ const Footer = () =>{
                 <Link to="/rgpd">
                     <li>Vie privée</li>
                 </Link>
-                </ul> */}
+                </ul>
                 <p className="magin-code-footer txt-footer">site fait avec 💙 par <a href="mailto:contact@magin-code.fr">magin code</a> - 2021. Version 1.0 "Starter"</p>
                 <p className="copyright txt-footer">Copyright ©  2021. Tous droits réservés</p>
             </div>
