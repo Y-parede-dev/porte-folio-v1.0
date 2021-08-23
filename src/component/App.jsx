@@ -21,7 +21,6 @@ const App = () => {
   TestScroll(xMax)
   console.log(window.innerHeight)
   console.log(document.documentElement.clientHeight)
-  let tete =document.getElementById('App')
   console.log(document.body.getBoundingClientRect())
   const url = 'https://api--porte-folio.herokuapp.com/api/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
   const [onMaintenance, setOnMaintenance] = useState(false);
@@ -31,16 +30,11 @@ const App = () => {
   useEffect(()=>{
     let userIsConnected = sessionStorage.getItem('user_co');
     if(userIsConnected){
-      let userIsCoParse = JSON.parse(userIsConnected);
-      console.log(userIsCoParse.isConected);
-      
       setStatus("Connected 🟢");
     }
     return()=>{
-     
       setStatus("Not Connected 🔴");
     }
-    
   },[userIsCo])
   useEffect(()=>{
     
@@ -81,7 +75,7 @@ const App = () => {
           <Route path='/rgpd' exact component={()=><Rgpd/>}/>
           <Route component={Erreur404}/> 
         </Switch>
-        <Footer/>
+        <Footer largeur={xMax}/>
       </Router>
     </div>
   );

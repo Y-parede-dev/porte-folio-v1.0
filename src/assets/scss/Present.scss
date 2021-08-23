@@ -12,7 +12,7 @@
 }
 .component-present-inside{
     margin: auto;
-    padding: 30px;
+    padding: 30px 0;
 }
 .component-present-inside > h4{
     padding: 0 0px 30px ;
@@ -30,7 +30,7 @@
     overflow: hidden;
     padding: 148px 0px;
     //min-width: 826px;
-    margin: auto -38px;
+    margin: auto 0px;
     background: url('../images/static/espace_fond.png') no-repeat center;
     &:hover>.img-art-1-content{
        // margin: 0;
