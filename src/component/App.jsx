@@ -66,9 +66,6 @@ const App = () => {
 
   return (
     <div className="App">
-      
-      <Login apiUrl={url} setStatus={setStatus} setUserIsAdm={setUserIsAdm} setUserIsCo={setUserIsCo}/>
-      
       <Router
         forceRefresh={false}
       >
