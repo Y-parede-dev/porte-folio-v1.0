@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import {Typewriter, useTypewriter} from 'react-simple-typewriter';
 import '../assets/scss/Developpeur.scss';
 import InitReq from "../config/InitReq";
+import Maintaining from "./Maintaining";
 //import avatarDev from '../assets/images/developpeur.gif'
-const Developpeur = ({connectApiUrlDev}) => {
+const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
     const [dev, setDev] = useState([]);
     const text = useTypewriter({
         words: ['développeur web','développeur javaScript', 'développeur react.js', 'développeur node.js', 'passionné'],
@@ -19,29 +20,38 @@ const Developpeur = ({connectApiUrlDev}) => {
                .then(res => res.json())
                .then((result) => {
                    setDev(result.result);
+                   setIsLoaded(true)
                 },(err)=>{console.log(err)})
                 return ()=>{setDev([]);}
         },[setDev]);
-       
-        return (
+       if(!isLoaded){
+        return(
             <>
-                {dev.map((it)=>(
-                    <div className='component-developpeur' key={`${it.nom} - ${it.prenom}`}>
-                        <h1><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h1>
-                        <p>Je suis <span>{text}</span></p>
-                        <div className='img-profil'>
-                            <Link to='/profil'>
-                                <img title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgUrl}assets/images/profils/admin/${it.img_url}`}/>
-                            </Link>
-                        </div>
-                    </div>
-                ))}
+                <Maintaining/>
             </>
         )
+    }
+       else{
+            return (
+                <>
+                    {dev.map((it)=>(
+                        <div className='component-developpeur' key={`${it.nom} - ${it.prenom}`}>
+                            <h1><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h1>
+                            <p>Je suis <span>{text}</span></p>
+                            <div className='img-profil'>
+                                <Link to='/profil'>
+                                    <img title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgUrl}assets/images/profils/admin/${it.img_url}`}/>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </>
+            )
+        }
     } catch (error) {
         return (
         <>
-            <p className='error-message'>ERREUR LA BASE DE DONNÉE N'EST PAS CONNECTER</p>
+            <Maintaining/>
         </>
         )
     }

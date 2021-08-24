@@ -2,7 +2,7 @@ const ProjectSchool = () => {
 
     return (
         <div className="page-projects-etude">
-            <h2 className='mes-projets'><span className='little-text'>MES </span>PROJETS D'ÉTUDE</h2>
+            <h4 className='mes-projets'><span className='little-text'>MES </span>PROJETS D'ÉTUDE</h4>
             <div className='projet-etude content-all-projects content-all-projects-3'>
                 <div className="projet-etude">
                     <a className='lien-projet'  href="https://github.com/Y-parede-dev/OC-Projet-2" target='_blank'>

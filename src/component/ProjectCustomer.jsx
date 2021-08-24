@@ -27,10 +27,12 @@ const ProjectCustomer = ({isAdmin , connectApiUrlProjects}) => {
     },[]);
    
     return (
-        <>{AllProjects ?
+        <>
+        <div className="mes-projets-content">
+            <h4 className='mes-projets'><span className='little-text'>MES </span>PROJETS</h4>
+            {AllProjects ?
             <div className="page-projects">
                 {isAdmin && <PostProject isAdmin={isAdmin} urlProject={urlProject}/>}
-                <h2 className='mes-projets'><span className='little-text'>MES </span>PROJETS</h2>
                 <p className='test-count'>il y a actuelement {AllProjects.length} projet{AllProjects.length > 1 && 's'} importer sur le site</p>
                 <div className={AllProjects.length<4 ? `content-all-projects content-all-projects-${AllProjects.length}`:`content-all-projects content-all-projects-3`}>
                     {AllProjects.map(it=>(
@@ -57,7 +59,9 @@ const ProjectCustomer = ({isAdmin , connectApiUrlProjects}) => {
                     ))}
                 </div>
             </div>:<Maintaining props='non connecter a la base de donnéés'/>
-        }</>
+        }
+        </div>
+    </>
     )
 }
 

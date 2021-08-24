@@ -16,9 +16,10 @@ import Rgpd from './Rgpd';
 import { TestScroll } from '../config/UseEffect';
 const App = () => {
  
-  let  xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  let  yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  TestScroll(xMax)
+  let xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  let yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  let heightMax = document.body.offsetHeight;
+
   console.log(window.innerHeight)
   console.log(document.documentElement.clientHeight)
   console.log(document.body.getBoundingClientRect())
@@ -27,6 +28,11 @@ const App = () => {
   const [userIsCo, setUserIsCo]= useState(false); // true pour test
   const [userIsAdm, setUserIsAdm]= useState(false);  //true pour test
   const [status,setStatus]=useState('Not Connected 🔴');
+  const [footOpen, setFootOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  TestScroll(xMax);
+
   useEffect(()=>{
     let userIsConnected = sessionStorage.getItem('user_co');
     if(userIsConnected){
@@ -59,26 +65,28 @@ const App = () => {
  }*/
 
   return (
-    <div className="App">
+    <div id="App" className="App">
       <Router
         forceRefresh={false}
       >
+        <Login apiUrl={url} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} />
         <Header largeur={xMax} hauteur={yMax} />
         <Nav largeur={xMax} hauteur={yMax}/>
         <Switch>
-          <Route path="/" exact component={()=>< Main ConnectApiUrl={url}/>}/>
+          <Route path="/" exact component={()=><Main ConnectApiUrl={url} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
           <Route path='/projects' exact component={()=> 
-            <PortFolio userIsAdm={userIsAdm} url={url}/>}/>
+            <PortFolio userIsAdm={userIsAdm} url={url} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
           <Route path='/project-perso' exact component={()=> 
           <ProjetPerso />}/>
           <Route path='/mentions' exact component={()=><Mentions/>}/>
           <Route path='/rgpd' exact component={()=><Rgpd/>}/>
           <Route component={Erreur404}/> 
         </Switch>
-        <Footer largeur={xMax}/>
+        <Footer largeurEcran={xMax} height={heightMax} footOpen={footOpen} setFootOpen={setFootOpen}/>
       </Router>
     </div>
   );
+
 }
 
 export default App;

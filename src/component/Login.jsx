@@ -54,7 +54,6 @@ const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
     
     return(
     <>
-
         <a style={{color:"red"}} onClick={()=>test()} href="#">conection</a>
         {!isConected?
         <div className="form-log-content">

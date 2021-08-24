@@ -1,11 +1,15 @@
-import ProjectCustomer from "./ProjectCustomer"
-import ProjectSchool from "./ProjectSchool"
+import ProjectCustomer from "./ProjectCustomer";
+import ProjectSchool from "./ProjectSchool";
+import '../assets/scss/PorteFolio.scss';
 
 const PortFolio=({userIsAdm, url})=>{
     return (
         <>
-            <ProjectCustomer isAdmin={userIsAdm} connectApiUrlProjects={url} />
-            <ProjectSchool/>
+            <div className="page-projects">
+
+                <ProjectCustomer isAdmin={userIsAdm} connectApiUrlProjects={url} />
+                <ProjectSchool/>
+            </div>
         </>
     )
 }

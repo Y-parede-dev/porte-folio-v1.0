@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
 .component-present{
     margin: 40px auto;
+    justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
     border-top: solid var(--color-secondary) 2px;
@@ -126,7 +127,7 @@ img.univers-image {
     justify-content: center;
     align-items: center;
     //background-color: darkgrey;
-    padding: 48px ;
+    padding: 48px 10px;
     margin: 24px 0 ;
     font-size: 1.2rem;
     font-style: italic;
