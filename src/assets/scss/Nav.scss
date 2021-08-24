@@ -3,6 +3,7 @@ nav {
 	background-color: var(--color-secondary);
     padding: 21px;
     border-bottom: solid 3px var(--color-third);
+    transition: ease-in 300ms;
 }
 .nav-custom {
     display: none;
@@ -13,7 +14,7 @@ nav {
     grid-template-columns: 1fr ;
 	top: 0%;
 	height: 75vh;
-	top: 19.4%;
+	top:20%;
     box-shadow: black 0px 5px 10px -6px;	
 }
 .list-nav {
@@ -22,6 +23,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .list-nav-content {
     font-size: 1.35rem;
     text-decoration: none;
@@ -36,13 +38,32 @@ nav.nav-custom .list-nav-content {
     padding: 10px 0;
 }
 .button-open-nav-mobile {
+    transition: ease-in 200ms;
     position:fixed;
     z-index: 6;
-    top: 114px;
+    top: 65px;
     font-size: 1.5rem;
     left: 20px;
-    border-radius: 10px;
-}   
+    padding: 5px;
+    min-width: 49px;
+    border-radius:2px;
+    border: none;
+    &>span {
+        transition: ease-in 200ms;
+
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: var(--color-third);
+        justify-content: center;
+        display: flex;
+    }&>.just-one{
+        margin: 10px 0;
+        top: 0;
+        position: absolute;
+    }
+}
+
 .display-nav-none {
     display: none;
 }

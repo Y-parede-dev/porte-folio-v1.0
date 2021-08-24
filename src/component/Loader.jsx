@@ -1,7 +1,7 @@
 import logoMaginCode from './../assets/images/calque_1.svg';
 import '../assets/scss/Maintening.scss'
 
-const Maintaining = (props) => {
+const Loader = (props) => {
 
     return (
         <div className='maintenance'>
@@ -27,4 +27,4 @@ const Maintaining = (props) => {
         </div>
     );
 }
-export default Maintaining;
+export default Loader;

@@ -28,66 +28,17 @@
 
 .image-art-1{
     position: relative;
+    transition: 300ms ease-in-out;
     overflow: hidden;
-    padding: 148px 0px;
+    // padding: 148px 0px;
     //min-width: 826px;
     margin: auto 0px;
     background: url('../images/static/espace_fond.png') no-repeat center;
-    &:hover>.img-art-1-content{
-       // margin: 0;
-       right: -2000px;
-       backdrop-filter: none;
-
+    
+    &:hover {
+        box-shadow: 0px 0px 12px -2px var(--color-secondary);
     }
-    & > .img-techno{
-       // display: none;
-        position: absolute;
-        filter: brightness(.1);
-        top: -40px;
-        left: -40px;
-        
-    }
-    & > .img-techno-node{
-        background-color: white;
-        padding: 2px;
-     }
-    &:hover>.img-techno{
-        
-        &:nth-child(1){
-            animation: 12s afficheTechno  0s 1 ease-out;
-            
-        }
-        &:nth-child(2){
-            animation: afficheTechno2 11.5s .250s 1 ease-out;
-            
-        }
-        &:nth-child(3){
-            animation: afficheTechno3 11s .500s 1 linear;
-           
-        }
-        &:nth-child(4){
-            animation: afficheTechno4 10.5s .750s 1 linear;
-            
-        }
-        &:nth-child(5){
-            animation: afficheTechno5 10s 1.000s 1 linear;
-            
-        }
-        &:nth-child(6){
-            animation: afficheTechno6 9.5s 1.250s 1 ease-in;
-           
-        }
-        &:nth-child(7){
-            animation: afficheTechno7 6s 1.500s 1 ease-in;
-           
-        }
-        &:nth-child(8){
-            animation: afficheTechno8 5.5s 1.750s 1 ease-in;
-            // animation: name duration timing-function delay iteration-count direction fill-mode;
-            
-        }
-    }
-   
+  
 
 }
 
@@ -96,7 +47,6 @@
 .img-art-1-content {
     transition: 300ms ease-in-out;
 
-    position: absolute;
     margin: auto;
     top: 0;
     left: 0;
@@ -104,12 +54,16 @@
     bottom: 0;
     /* width: fit-content; */
     /* background: aqua; */
-    padding: 48px 19px;
-    backdrop-filter: blur(3px);
+    padding: 19px;
+    backdrop-filter: blur(2px);
+    &:hover{
+        box-shadow: 0 0 50px 2px var(--color-secondary);
+    }
+
 }
 img.univers-image {
-    width: 70%;
-    border-radius: 30px;
+    width: 90%;
+    border-radius: 20px;
     box-shadow: 0 0 10px -6px WHITE;
 }
 .question{
@@ -172,10 +126,7 @@ img.univers-image {
 .not-bold {
     font-weight: 500;
 }
-@media screen and (min-width:350px) {
-    img.univers-image {
-        width: auto;}
-}
+
 @media screen and (min-width:500px){
     
     .block-quote-main{
@@ -197,7 +148,8 @@ img.univers-image {
         grid-gap: 2rem 1rem;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: 'art-1 img-art-1'
-        'art-2 art-2';
+        'art-2 art-2'
+        'techno-fav techno-fav';
         padding-top: 130px;
         padding-bottom: 130px;
     }

@@ -42,8 +42,8 @@ const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
                     <li>Vie privée</li>
                 </Link>
                 </ul>
-                <p className="magin-code-footer txt-footer">site fait avec 💙 par <a href="mailto:magin.code@gmail.com">magin code.</a> Version 1.0 "Starter"</p>
-                <p className="copyright txt-footer">Copyright ©  2021. Tous droits réservés</p>
+                <p className="copyright txt-footer">Copyright© <a href="mailto:magin.code@gmail.com">magin code 2021.</a> Tous droits réservés</p>
+                <p className="magin-code-footer txt-footer">site fait avec 💙 par PAREDE Yoan Version 1.0 "Starter"</p>
             </div>
         </footer>
     )

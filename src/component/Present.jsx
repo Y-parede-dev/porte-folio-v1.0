@@ -12,8 +12,9 @@ const Present = ({setIsLoaded,isLoaded}) => {
                 <h4>Bienvenue dans mon univers</h4>
                 <p>Je suis développeur web freelance, je travaille principalement avec react.js, node.js et certaines de ces dépendances comme express</p>
             </div>
-            <div className="image-art-1">
-                {/* metre un dossier en place qui stocke lesl logo suivant */}
+            {/* metre un dossier en place qui stocke lesl logo suivant */}
+             <div className="image-art-1">
+                 {/*
                 <img className='img-techno' src="https://img.icons8.com/color/48/000000/javascript--v2.png"/>
                 <img className='img-techno' src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
                 <img className='img-techno' src="https://img.icons8.com/color/48/000000/css3.png"/>
@@ -22,11 +23,13 @@ const Present = ({setIsLoaded,isLoaded}) => {
                 <img className='img-techno img-techno-node' src="https://img.icons8.com/color/48/000000/mysql-logo.png"/>
                 <img className='img-techno' src={imgPresta}/>
                 <img className='img-techno' src={imgSass}/>
+            */}
                 <div className="img-art-1-content">
-                {/* //////////////////////////////////////////////////////////// */}
                     <img alt='image univers' className='univers-image' src={imgUnivers}/>
                 </div>
-            </div>
+            </div> 
+                
+                {/* //////////////////////////////////////////////////////////// */}
             <div className="component-present-inside component-present-inside-présentation">
                 <h4>Ma présentation en quelques mots</h4>
                 <p>Bonjour, moi c'est Yoan, je suis tombé amoureux du web après m'être blessé j'ai décidé de me reconvertir,
@@ -49,7 +52,6 @@ const Present = ({setIsLoaded,isLoaded}) => {
                         Je continue à apprendre, car le web est vaste et de nouvelles façons de faire, ressources sont disponibles chaque jour.
                     </p>            
             </div>
-            <TechnoFav />
         </div>
     )
 }

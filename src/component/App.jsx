@@ -1,7 +1,7 @@
 import './../assets/scss/App.scss';
 import React,  { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Maintaining from './Maintaining';
+import Loader from './Loader';
 import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
@@ -50,10 +50,10 @@ const App = () => {
     //    Déplace la fonction de maintenance dans un dossier 
     //    spécialement conçus a cet effet
     //    crée un bouton sur le profil de l'admin pour activer ou desactiver la maintenance
-    const MaintainingActivate = () => {
+    const LoaderActivate = () => {
       //setOnMaintenance(true)
     };
-    MaintainingActivate();
+    LoaderActivate();
     return(()=>{
       
     })
@@ -67,7 +67,7 @@ const App = () => {
   return (
     <div id="App" className="App">
       <Router
-        forceRefresh={false}
+        forceRefresh={true}
       >
         <Login apiUrl={url} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} />
         <Header largeur={xMax} hauteur={yMax} />

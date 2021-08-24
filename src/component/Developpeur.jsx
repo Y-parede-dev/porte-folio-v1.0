@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {Typewriter, useTypewriter} from 'react-simple-typewriter';
 import '../assets/scss/Developpeur.scss';
 import InitReq from "../config/InitReq";
-import Maintaining from "./Maintaining";
+import Loader from "./Loader";
 //import avatarDev from '../assets/images/developpeur.gif'
 const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
     const [dev, setDev] = useState([]);
@@ -22,12 +22,12 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
                    setDev(result.result);
                    setIsLoaded(true)
                 },(err)=>{console.log(err)})
-                return ()=>{setDev([]);}
+                return ()=>{setDev([])}
         },[setDev]);
        if(!isLoaded){
         return(
             <>
-                <Maintaining/>
+                <Loader/>
             </>
         )
     }
@@ -51,7 +51,7 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
     } catch (error) {
         return (
         <>
-            <Maintaining/>
+            <Loader/>
         </>
         )
     }

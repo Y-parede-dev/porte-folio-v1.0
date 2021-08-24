@@ -59,10 +59,16 @@ a {
   height: 100%;
   width: 100%;
   text-align: center;
-  padding-bottom: 150px;
+  padding:150px 0;
 }
 
 
 .App-link {
   color: #61dafb;
+}
+
+@media screen and(min-width:850px) {
+  .App {
+    padding:0 0 150px;
+  }
 }

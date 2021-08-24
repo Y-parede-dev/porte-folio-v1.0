@@ -19,11 +19,26 @@ const Nav = ({largeur, hauteur}) => {
     };
     try{
         if(document.getElementById('navDynamique')){
+            let recupBTNSpan=document.getElementById('btn-nav-mobile') ;
+           
+            // console.log(recupBTNSpan)
             if(isOpen===true){
-                document.getElementById('navDynamique').className='nav-custom display-nav-block'
+                document.getElementById('navDynamique').className='nav-custom display-nav-block';
+                recupBTNSpan.style.top = "109px";
+                recupBTNSpan.style.padding = "10px";
 
+                for(let i=0;i< recupBTNSpan.children.length; i++){
+                    recupBTNSpan.children[i].className='just-one';
+
+                }
             }else{
                 document.getElementById('navDynamique').className = "nav-custom display-nav-none";
+                for(let i=0;i< recupBTNSpan.children.length; i++){
+                    recupBTNSpan.style.top = "64px";
+                    recupBTNSpan.style.padding = "5px";
+                    recupBTNSpan.children[i].className=' ';
+                }
+
             }
         }
     }
@@ -74,7 +89,7 @@ const Nav = ({largeur, hauteur}) => {
     // },[largeur])
     return(
         <div className = 'nav-content'>
-           <button onClick={(e)=>btnNav(e)} className='button-open-nav-mobile'> <span> / </span>  <span> / </span>  <span> / </span>  </button> 
+           <button id="btn-nav-mobile" onClick={(e)=>btnNav(e)} className='button-open-nav-mobile'> <span>  </span>  <span>  </span>  <span>  </span>  </button> 
             <nav className='nav-custom'  id = "navDynamique" > 
             <ul className = 'list-nav'>
                 <Link to='/'>
