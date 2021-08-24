@@ -1,6 +1,6 @@
 import ProjectCustomer from "./ProjectCustomer";
 import ProjectSchool from "./ProjectSchool";
-import '../assets/scss/PorteFolio.scss';
+import '../assets/scss/PortFolio.scss';
 
 const PortFolio=({userIsAdm, url})=>{
     return (
