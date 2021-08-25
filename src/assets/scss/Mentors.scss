@@ -29,11 +29,13 @@
     justify-content: center;
     display: flex;
 }
-.mentor-profil > svg {
-    width: 200px;
-    height: 220px;
-    margin: 0 auto;
+.mentor-profil>img {
+    max-width: 200px;
+    max-height: 220px;
+
+    margin: 0 auto 10px;
 }
+
 p.aide-aporter,.mentor-lien {
     display: grid;
 }

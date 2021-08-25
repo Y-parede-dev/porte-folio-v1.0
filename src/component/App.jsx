@@ -14,7 +14,7 @@ import Footer from './Footer';
 import Mentions from './Mentions';
 import Rgpd from './Rgpd';
 import { TestScroll } from '../config/UseEffect';
-import ProfilsDev from './ProfilDev';
+import ProfilsDev from './FormAbout';
 import RouterReact from './Router';
 import buildSitemap from 'react-build-sitemap'
 
@@ -48,22 +48,46 @@ const App = () => {
     }
   },[userIsCo])
   useEffect(()=>{
-    
-    
-     // Block d'activation maintenance
-    //  TO DO :
-    //    Déplace la fonction de maintenance dans un dossier 
-    //    spécialement conçus a cet effet
-    //    crée un bouton sur le profil de l'admin pour activer ou desactiver la maintenance
-    const LoaderActivate = () => {
-      //setOnMaintenance(true)
-    };
-    LoaderActivate();
-    return(()=>{
-      
-    })
-  },[]);
+    let height = document.body.offsetHeight/2;
+    let largeur = xMax;
+    window.onload=()=>{
+        if(height<850){
+            document.getElementById('footer-principal').style.display='block';
+        }else{
+            document.getElementById('footer-principal').style.display='none';
+            window.onscroll = ()=>{
+              try{
+                  console.log(height)
+                  console.log(document.documentElement.scrollTop)
+                  if(largeur>850){
+                      if(document.documentElement.scrollTop > 200){
+                          document.getElementById('navDynamique').style.position = "fixed";
+                          document.getElementById('navDynamique').style.top = 0;
+                          document.getElementById('navDynamique').style.padding = "10px 0";
+          
+                      }else{
+                          document.getElementById('navDynamique').style.position = "relative";
+                          document.getElementById('navDynamique').style.top = 'initial';
+                          document.getElementById('navDynamique').style.padding = "0 0 20px";
+                      }
+                      if(document.documentElement.scrollTop > height){
+                          document.getElementById('footer-principal').style.display='block';
+                          
+                      }else{
+                          document.getElementById('footer-principal').style.display='none';
+              
+                      }
+                  }else{
+                      document.getElementById('footer-principal').style.display='block';
 
+                  }
+                  
+              }catch{
+              }
+      }
+    }
+    }
+},[])
  // fin block d'activation maintenance
  /*if(window.location.href=='http://localhost:3000/privacy-policy'){
     window.location=`${urlExt}`;
