@@ -1,9 +1,5 @@
 import '../assets/scss/Present.scss';
-import imgUnivers from '../assets/images/static/espace.png';
-import imgPresta from '../assets/images/static/preston_logo_6.png';
-import imgNode from '../assets/images/static/Node.js_logo-48.png';
-import imgSass from '../assets/images/static/sass.png';
-import TechnoFav from './TechnoFav';
+import imgUnivers from '../assets/images/static/espace.PNG';
 
 const Present = ({setIsLoaded,isLoaded}) => {
     return(

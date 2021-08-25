@@ -2,10 +2,10 @@ import {useEffect} from 'react';
 export const TestScroll =(largeur)=>{
     useEffect(()=>{
         
-        var height = document.body.offsetHeight/1.5;
+        var height = document.body.offsetHeight/2;
        
         window.onload=()=>{
-            if(height<800){
+            if(height<850){
                 document.getElementById('footer-principal').style.display='block';
                 
             }else{

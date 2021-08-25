@@ -1,0 +1,47 @@
+h1.mentions-legales--title {
+    padding: 30px 0;
+    text-transform: uppercase;
+    color: var(--color-default);
+}
+.mentions-legales-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 10%;
+    grid-gap: 1rem;
+}
+.mentions-legales--item{
+    padding: 30px 20px;
+    box-shadow: 0 0 10px -6px black;
+}
+.title-ml {
+    text-transform: uppercase;
+    color: var(--color-secondary);
+}
+.editeur-contact {
+    text-align: left;
+}
+.item-inside {
+    padding: 40px 0 0;
+
+}
+.item-inside-loi {
+    padding: 80px 0 0;
+}
+.link-ml{
+    color:var(--color-secondary)
+}
+p.tva.info-contact.info {
+    padding: 20px;
+    text-align: center;
+}
+@media screen and (min-width:850px) {
+    .mentions-legales-content {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem 2rem;
+
+    }
+    .mentions-legales--conception{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

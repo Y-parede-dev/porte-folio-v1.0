@@ -17,16 +17,20 @@ $color-third: rgb(67, 70, 67);
 
 }
 *:focus{
-  outline: none;
-  box-shadow:  
-    0 0 0 0px rgba(255,255,255,1);
-  animation: focusStyle 500ms infinite ;
-  // border: red solid;
-  // transform: scale(1.1);
+  // outline: none;
+  // box-shadow:  
+  //   0 0 0 0px rgba(255,255,255,1);
+  // animation: focusStyle 500ms infinite ;
+  // // border: red solid;
+  // // transform: scale(1.1);
 
-  border-radius: 8px;
+  // border-radius: 8px;
   
   /* width: max-content; */
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
 }
 .body{height:100vh}
 
@@ -51,6 +55,9 @@ main {
 a {
 	text-decoration: none;
   color: var(--color-primary);
+}
+textarea {
+  resize: none;
 }
 .little-text {
   font-weight: 300;

@@ -20,7 +20,8 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
                .then(res => res.json())
                .then((result) => {
                    setDev(result.result);
-                   setIsLoaded(true)
+                   localStorage.setItem('dev', result.result)
+                   setIsLoaded(true);
                 },(err)=>{console.log(err)})
                 return ()=>{setDev([])}
         },[setDev]);

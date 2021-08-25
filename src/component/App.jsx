@@ -14,6 +14,11 @@ import Footer from './Footer';
 import Mentions from './Mentions';
 import Rgpd from './Rgpd';
 import { TestScroll } from '../config/UseEffect';
+import ProfilsDev from './ProfilDev';
+import RouterReact from './Router';
+import buildSitemap from 'react-build-sitemap'
+
+
 const App = () => {
  
   let xMax = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -32,7 +37,7 @@ const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   TestScroll(xMax);
-
+  //buildSitemap('./Router.jsx', '../../sitemap.xml', 'https://magin-code.fr');
   useEffect(()=>{
     let userIsConnected = sessionStorage.getItem('user_co');
     if(userIsConnected){
@@ -66,24 +71,34 @@ const App = () => {
 
   return (
     <div id="App" className="App">
-      <Router
-        forceRefresh={true}
+      <RouterReact 
+        apiUrl={url} 
+        setUserIsCo={setUserIsCo}
+        userIsAdm={userIsAdm} setUserIsAdm={setUserIsAdm} 
+        largeur={xMax} hauteur={yMax} 
+        isLoaded={isLoaded} setIsLoaded={setIsLoaded} 
+        footOpen={footOpen} setFootOpen={setFootOpen}
+        height={heightMax}
+       />
+      {/* <Router
+        forceRefresh={false}
       >
-        <Login apiUrl={url} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} />
+        <Login apiUrl={url} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} /> 
         <Header largeur={xMax} hauteur={yMax} />
         <Nav largeur={xMax} hauteur={yMax}/>
         <Switch>
-          <Route path="/" exact component={()=><Main ConnectApiUrl={url} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
+          <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
           <Route path='/projects' exact component={()=> 
-            <PortFolio userIsAdm={userIsAdm} url={url} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
+            <PortFolio userIsAdm={userIsAdm} url={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
           <Route path='/project-perso' exact component={()=> 
           <ProjetPerso />}/>
           <Route path='/mentions' exact component={()=><Mentions/>}/>
           <Route path='/rgpd' exact component={()=><Rgpd/>}/>
+          <Route path='/about' exact component={()=><ProfilsDev/>}/>
           <Route component={Erreur404}/> 
         </Switch>
         <Footer largeurEcran={xMax} height={heightMax} footOpen={footOpen} setFootOpen={setFootOpen}/>
-      </Router>
+      </Router> */}
     </div>
   );
 

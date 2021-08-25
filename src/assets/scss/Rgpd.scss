@@ -1,0 +1,18 @@
+.rgpd {
+    padding: 35px 10% 50px;
+    margin: 35px 10%;
+    box-shadow: 0 0 10px -6px black;
+}
+.ul-rgpd{
+    list-style: none;
+    padding: 20px 0;
+    &>li{
+        padding: 20px ;
+    }
+}
+.h2-title-rgpd, .h3-title-rgpd{
+    padding: 20px 0;
+}
+.link-rgpd{
+    color: var(--color-secondary);
+}

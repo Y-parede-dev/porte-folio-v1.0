@@ -1,5 +1,5 @@
 import logoMaginCode from './../assets/images/calque_1.svg';
-import '../assets/scss/Maintening.scss'
+import '../assets/scss/Loader.scss'
 
 const Loader = (props) => {
 

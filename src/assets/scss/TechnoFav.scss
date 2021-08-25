@@ -8,7 +8,19 @@
     grid-column-start: 1;
 }
 
+.techno{
+    box-shadow: 0 0 4px -2px black;
+    padding: 20px 55px;
+    margin: 40px 0;
 
+}
+.lien-techno{
+    color:var(--color-secondary)
+}
+img.tecnho-logo {
+    width: 50px;
+    padding: 16px 0;
+}
 h5.techno-name {
     font-size: larger;
 }
@@ -23,9 +35,11 @@ h5.techno-name {
     }
     .techno {
         //border:solid black;
-        box-shadow: 0 0 4px -2px black;
         margin: 40px 0 -40px;
-        padding: 20px 5px;
+        &:last-child{
+            margin: 40px 0 40px;
+
+        }
         &:first-child,&:nth-child(3),&:nth-child(5){
          margin: 0px 0;
 

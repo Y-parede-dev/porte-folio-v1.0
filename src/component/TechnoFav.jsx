@@ -1,6 +1,6 @@
 import '../assets/scss/TechnoFav.scss';
-import logoNode from "../assets/images/static/Node.js_logo-48.png";
-import logoSass from "../assets/images/static/sass.png";
+import logoNode from "../assets/images/static/Node.js_logo-48.PNG";
+import logoSass from "../assets/images/static/sass.PNG";
 import logoMongo from "../assets/images/static/mongodb.svg";
 
 const TechnoFav = ()=>{
@@ -26,7 +26,7 @@ const TechnoFav = ()=>{
                     <p className="techno-desc">
                     J'utilise les balises HTML 5 pour construire l'architecture des sites / applications web que je crée,
                         je l'utilise principalement à l'intérieur de react dans le
-                        <a className="lien-techno" href="https://fr.reactjs.org/docs/introducing-jsx.html" target="_blank" rel="noopener noreferrer">jsx</a>
+                        <a className="lien-techno" href="https://fr.reactjs.org/docs/introducing-jsx.html" target="_blank" rel="noopener noreferrer"> jsx</a>
                     </p>
                     </div>
                     <div className="techno">
