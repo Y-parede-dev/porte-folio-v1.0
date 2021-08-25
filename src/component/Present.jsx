@@ -1,5 +1,5 @@
 import '../assets/scss/Present.scss';
-import imgUnivers from '../assets/images/static/espace.PNG';
+import imgUnivers from '../assets/images/static/espace.png';
 
 const Present = ({setIsLoaded,isLoaded}) => {
     return(

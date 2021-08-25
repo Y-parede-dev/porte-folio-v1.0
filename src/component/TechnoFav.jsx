@@ -1,6 +1,6 @@
 import '../assets/scss/TechnoFav.scss';
-import logoNode from "../assets/images/static/Node.js_logo-48.PNG";
-import logoSass from "../assets/images/static/sass.PNG";
+import logoNode from "../assets/images/static/Node.js_logo-48.png";
+import logoSass from "../assets/images/static/sass.png";
 import logoMongo from "../assets/images/static/mongodb.svg";
 
 const TechnoFav = ()=>{
