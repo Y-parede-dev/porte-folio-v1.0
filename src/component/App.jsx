@@ -17,6 +17,7 @@ import { TestScroll } from '../config/UseEffect';
 import ProfilsDev from './FormAbout';
 import RouterReact from './Router';
 import buildSitemap from 'react-build-sitemap'
+import Cursor from '../svgToJsx/Cursor';
 
 
 const App = () => {
@@ -90,6 +91,7 @@ const App = () => {
 
   return (
     <div id="App" className="App">
+      {/* <Cursor/> */}
       <RouterReact 
         apiUrl={url} 
         setUserIsCo={setUserIsCo}
@@ -99,25 +101,7 @@ const App = () => {
         footOpen={footOpen} setFootOpen={setFootOpen}
         height={heightMax}
        />
-      {/* <Router
-        forceRefresh={false}
-      >
-        <Login apiUrl={url} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} /> 
-        <Header largeur={xMax} hauteur={yMax} />
-        <Nav largeur={xMax} hauteur={yMax}/>
-        <Switch>
-          <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
-          <Route path='/projects' exact component={()=> 
-            <PortFolio userIsAdm={userIsAdm} url={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
-          <Route path='/project-perso' exact component={()=> 
-          <ProjetPerso />}/>
-          <Route path='/mentions' exact component={()=><Mentions/>}/>
-          <Route path='/rgpd' exact component={()=><Rgpd/>}/>
-          <Route path='/about' exact component={()=><ProfilsDev/>}/>
-          <Route component={Erreur404}/> 
-        </Switch>
-        <Footer largeurEcran={xMax} height={heightMax} footOpen={footOpen} setFootOpen={setFootOpen}/>
-      </Router> */}
+     
     </div>
   );
 

@@ -14,9 +14,12 @@
 	background-color: var(--color-secondary);
 	box-shadow: 0 0 10px -6px var(--color-secondary);
 }
+
 .component-developpeur .img-profil {
-	margin: auto;
-	grid-area: img;
+    background: var(--color-secondary);
+    margin: auto;
+    grid-area: img;
+    border-radius: 50%;
 }
 .component-developpeur h1{
     grid-area: name;

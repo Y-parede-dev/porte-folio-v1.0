@@ -6,6 +6,7 @@ const ProjetPerso = () => {
         <div className="A-VENIR">
             <h4><span className="little-text">Mes</span> projets perso</h4>
             <div>
+                <p className='presentation-projets-perso'></p>
                 <Maintaining/>
             </div>
         </div>

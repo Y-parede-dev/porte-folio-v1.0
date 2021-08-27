@@ -4,6 +4,7 @@ import {Typewriter, useTypewriter} from 'react-simple-typewriter';
 import '../assets/scss/Developpeur.scss';
 import InitReq from "../config/InitReq";
 import Loader from "./Loader";
+import DevSvg from '../svgToJsx/DevSvg';
 //import avatarDev from '../assets/images/developpeur.gif'
 const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
     const [dev, setDev] = useState([]);
@@ -41,7 +42,8 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
                             <p>Je suis <span>{text}</span></p>
                             <div className='img-profil'>
                                 <Link to='/profil'>
-                                    <img title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgUrl}assets/images/profils/admin/${it.img_url}`}/>
+                                    <DevSvg/>
+                                    {/* <img className="img-dev" title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgDev}`}/> */}
                                 </Link>
                             </div>
                         </div>
