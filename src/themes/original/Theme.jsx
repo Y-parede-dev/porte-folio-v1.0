@@ -23,9 +23,8 @@ const ChangeTheme = () => {
     const ChangeThemeOnClick = (e) =>{
         let colorPrimary = 'rgb(5, 116, 187)';
         let colorSecondary = 'white';
-        console.log('first : ', themeChoise)
+        
         setThemeChoise(!themeChoise);
-        console.log('second : ',themeChoise)
         /*
         try {
             console.log('third : ', themeChoise)

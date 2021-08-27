@@ -1,7 +1,8 @@
 .techno-fav {
-    padding: 10px 30px 90px;
-    margin-bottom: 36px;
-    border-bottom: solid var(--color-secondary);
+	padding: 10px 30px 90px;
+	border-bottom: solid var(--color-secondary);
+	width: 80%;
+	margin: 0 auto 36px;
 }
 .techno:last-child {
     grid-column-end: 3;
@@ -34,9 +35,9 @@ h5.techno-name {
     }
     .techno {
         //border:solid black;
-        margin: 40px 0 -40px;
+        margin: 115px 0 -115px;
         &:last-child{
-            margin: 40px 0 40px;
+            margin: 115px 0 115px;
 
         }
         &:first-child,&:nth-child(3),&:nth-child(5){

@@ -10,7 +10,7 @@ const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
 
     const test=()=>{
         setIsConected(!isConected)
-        console.log(isConected)
+        
     }
     const setDataMail = (e) => {
         setEmailData(e.target.value)
@@ -23,8 +23,6 @@ const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
         pass:passData
     }
    
-    console.log(`mail data : ${emailData}`)
-    console.log(`pass data : ${passData}`)
     const HandleSubmitlog = (e) => {
         fetch(`${apiUrl}profil/login`, InitReq("POST","application/json",JSON.stringify(bodyConnect)))
             .then(res=>res.json())
@@ -34,8 +32,7 @@ const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
               
                 try{
 
-                    console.log(result.isConected)
-                    console.log(result.isAdmin)
+                  
                     setUserIsCo(result.isConected);
                     setUserIsAdm(result.isAdmin);
                 }

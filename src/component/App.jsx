@@ -25,9 +25,7 @@ const App = () => {
   let yMax = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   let heightMax = document.body.offsetHeight;
 
-  console.log(window.innerHeight)
-  console.log(document.documentElement.clientHeight)
-  console.log(document.body.getBoundingClientRect())
+  
   const url = 'https://api--porte-folio.herokuapp.com/api/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
   const [onMaintenance, setOnMaintenance] = useState(false);
   const [userIsCo, setUserIsCo]= useState(false); // true pour test
@@ -35,7 +33,7 @@ const App = () => {
   const [status,setStatus]=useState('Not Connected 🔴');
   const [footOpen, setFootOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  
+  // const [height, setHeight]= useState(0);
   //buildSitemap('./Router.jsx', '../../sitemap.xml', 'https://magin-code.fr');
   useEffect(()=>{
     let userIsConnected = sessionStorage.getItem('user_co');
@@ -46,7 +44,9 @@ const App = () => {
       setStatus("Not Connected 🔴");
     }
   },[userIsCo])
+  
   useEffect(()=>{
+    
     let height = document.body.offsetHeight/2;
     let largeur = xMax;
     window.onload=()=>{
@@ -56,8 +56,7 @@ const App = () => {
             document.getElementById('footer-principal').style.display='none';
             window.onscroll = ()=>{
               try{
-                console.log(height)
-                console.log(document.documentElement.scrollTop)
+                
                 if(largeur>850){
                     if(document.documentElement.scrollTop > 200){
                         document.getElementById('navDynamique').style.position = "fixed";

@@ -10,7 +10,7 @@ const Nav = ({largeur, hauteur}) => {
         }
         return ()=>setIsOpen(false)
     }
-    console.log(isOpen)
+    
     window.onresize = detection;
     const btnNav = (e) => {
         setIsOpen(!isOpen)
@@ -21,7 +21,6 @@ const Nav = ({largeur, hauteur}) => {
         if(document.getElementById('navDynamique')){
             let recupBTNSpan=document.getElementById('btn-nav-mobile') ;
            
-            // console.log(recupBTNSpan)
             if(isOpen===true){
                 document.getElementById('navDynamique').className='nav-custom display-nav-block';
                 recupBTNSpan.style.top = "109px";

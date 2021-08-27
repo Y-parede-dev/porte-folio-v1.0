@@ -18,7 +18,7 @@ const PostProject = ({isAdmin, urlProject})=>{
     const recupUserParse=JSON.parse(recupUser);
 
     const CHARS_MAX = 400;
-    console.log(urlProject)
+    
     const bodyPost = new FormData()
     bodyPost.append('user_id','');
     bodyPost.append('nom','');
@@ -42,7 +42,7 @@ const PostProject = ({isAdmin, urlProject})=>{
         fetch(urlProject, InitReq("POST", null,bodyPost,recupUserParse.token))
         .then(res=>res.json())
         .then((result)=>{
-            console.log(result)
+            
         },(err)=>{
             console.log(err)
         })
@@ -60,7 +60,7 @@ const PostProject = ({isAdmin, urlProject})=>{
             bodyPost.set('lien',lienData);
             bodyPost.set('description',descData);
             bodyPost.set('image',urlImgData);
-            console.log(JSON.stringify(bodyPost))
+            
             postOnBdd();
             window.reload()
         }

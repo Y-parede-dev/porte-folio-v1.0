@@ -6,7 +6,7 @@ import flech from '../assets/images/static/fleche-vers-le-bas.svg';
 const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
     const footDisplay=()=>{
         setFootOpen(!footOpen);
-        console.log(footOpen)
+        
     }
 
     

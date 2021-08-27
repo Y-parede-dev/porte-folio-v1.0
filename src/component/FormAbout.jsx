@@ -8,13 +8,13 @@ const FormAbout = () => {
         <>
             <div className="contact">
                 <form className='form-contact' onSubmit={()=>{}}>
-                    <label for='nom-contact'>Votre nom</label>
+                    <label htmlFor='nom-contact'>Votre nom</label>
                     <input name="nom-contact" type="text" className="nom" />
-                    <label for='prenom-contact'>Votre prenom</label>
+                    <label htmlFor='prenom-contact'>Votre prenom</label>
                     <input name="prenom-contact" type="text" className="prenom" />
-                    <label for='email-contact'>Votre email</label>
+                    <label htmlFor='email-contact'>Votre email</label>
                     <input name="email-contact" type="email" className="email" />
-                    <label for='message-contact'>Votre question/message</label>
+                    <label htmlFor='message-contact'>Votre question/message</label>
                     <textarea name="message-contact" type="text" className="message" />
                     <button onClick={()=>{}}type='submit'>Envoyer</button>
                 </form>

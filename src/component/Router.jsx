@@ -33,7 +33,7 @@ const RouterReact=({
     return (
         <>
             <Router
-                forceRefresh={false} >
+                forceRefresh={true} >
                 <Login apiUrl={apiUrl} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} />
                 <Header largeur={largeur} hauteur={hauteur} />
                 <Nav largeur={largeur} hauteur={hauteur}/>

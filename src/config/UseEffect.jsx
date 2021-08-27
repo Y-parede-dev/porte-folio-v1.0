@@ -12,8 +12,6 @@ export const TestScroll =(largeur)=>{
                 document.getElementById('footer-principal').style.display='none';
                 window.onscroll = ()=>{
                     try{
-                        console.log(height)
-                        console.log(document.documentElement.scrollTop)
                         
                         if(largeur>850){
                             if(document.documentElement.scrollTop > 200){

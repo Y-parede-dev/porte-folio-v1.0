@@ -11,7 +11,7 @@ const ProjectCustomer = ({isAdmin , connectApiUrlProjects, isLoaded, setIsLoaded
             - METRE EN PLACE UN FICHIER POUR REGROUPER TOUS LES USEEFFECTS 
              
     */
-    console.log(urlProject)
+    
     
     useEffect(()=>{
         fetch(urlProject, InitReq("GET","application/json"))
