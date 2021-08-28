@@ -15,7 +15,9 @@
     margin: auto;
     grid-area: img;
     border-radius: 50%;
-    max-width: 211px;max-height: 211px;
+    &>a>svg{
+        max-width: 211px;max-height: 211px;
+    }
 }
 .component-developpeur h1{
     grid-area: name;

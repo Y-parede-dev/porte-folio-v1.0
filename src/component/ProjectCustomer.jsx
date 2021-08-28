@@ -44,6 +44,7 @@ const ProjectCustomer = ({isAdmin , connectApiUrlProjects, isLoaded, setIsLoaded
                <div className="page-projects">
                    
                    <p className='test-count'>il y a actuelement {AllProjects.length} projet{AllProjects.length > 1 && 's'} importer sur le site</p>
+                   <p>Vous trouverez sur cette pages tous les projets profesionneles que j'ai réaliser en descendant dans la page vous pourez voir le code des site/applications web de mes projets d'étude.</p>
                    <div className={AllProjects.length<4 ? `content-all-projects content-all-projects-${AllProjects.length}`:`content-all-projects content-all-projects-3`}>
                        {AllProjects.map(it=>(
                        <a className='lien-projet'  key={`${it.nom}-${it.id}`} href={`${it.lien}`} target='_blank'>
