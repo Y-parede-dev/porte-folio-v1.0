@@ -39,6 +39,7 @@ nav.nav-custom .list-nav-content {
     font-size: 1.3rem;
 }
 .button-open-nav-mobile {
+    cursor: pointer;
     transition: ease-in 200ms;
     position:fixed;
     z-index: 6;

@@ -120,7 +120,7 @@ const ProjectSchool = () => {
                                     <h3 >Reseau social d'entreprise</h3>
                                 </header>
                             
-                                    <img  className='img-projets' alt="Image du projet reseau social d'entreprise" src={p7}/>
+                                    <img  className='img-projets need-box-shadow' alt="Image du projet reseau social d'entreprise" src={p7}/>
                                 <p className="desc-project" >Ce projet ma fait d'écouvrir la joie de crée un site avec la vision d'un fullstack création integrale d'un reseau social
                                     autant côté backend que frontend.
                                     utilisation de NodeJs / reactJs et certaines de leur dépendences (exemple : express, json web token, react-dom-router, etc.).
