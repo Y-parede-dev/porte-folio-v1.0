@@ -9,17 +9,13 @@
     color: var(--color-default);
     margin: 137px 0;
 }
-.component-developpeur img {
-	border-radius: 50%;
-	background-color: var(--color-secondary);
-	box-shadow: 0 0 10px -6px var(--color-secondary);
-}
-
 .component-developpeur .img-profil {
+    box-shadow: 0 0 10px -6px var(--color-secondary);
     background: var(--color-secondary);
     margin: auto;
     grid-area: img;
     border-radius: 50%;
+    max-width: 211px;max-height: 211px;
 }
 .component-developpeur h1{
     grid-area: name;
