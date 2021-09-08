@@ -2,8 +2,7 @@ import Developpeur from './Developpeur';
 import Present from './Present';
 import '../assets/scss/Main.scss';
 import Mentors from './Mentors';
-import Maintaining from './Loader';
-import { useEffect } from 'react';
+
 import TechnoFav from './TechnoFav';
 const Main = ({ConnectApiUrl, isLoaded, setIsLoaded}) => {
     const profilDev = `${ConnectApiUrl}profil`;

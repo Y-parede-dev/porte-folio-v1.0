@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/scss/Footer.scss";
 import flech from '../assets/images/static/fleche-vers-le-bas.svg';
@@ -6,16 +6,10 @@ import flech from '../assets/images/static/fleche-vers-le-bas.svg';
 const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
     const footDisplay=()=>{
         setFootOpen(!footOpen);
-        
     }
-
-    
-   
-   
     useEffect(()=>{
         if(largeurEcran<850){
             if(footOpen){
-           
                 document.getElementById('display-mobile').style.display = 'block';
                 document.getElementById('img-fleche').style.transform = 'rotate(180deg)';
                 document.getElementById('img-fleche').style.padding = '7px 10px 0px';
@@ -28,7 +22,7 @@ const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
             }
         }
 
-    },[footOpen])
+    },[footOpen, largeurEcran])
     return(
         <footer id='footer-principal'>
             <div className="img-fleche" id="img-fleche-content" ><img id="img-fleche" onClick={()=>{footDisplay()}} alt='fleche vers le haut/bas' src={flech}/></div>
@@ -43,7 +37,7 @@ const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
                 </Link>
                 </ul>
                 <p className="copyright txt-footer">Copyright© <a href="mailto:magin.code@gmail.com">magin code 2021.</a> Tous droits réservés</p>
-                <p className="magin-code-footer txt-footer">site fait avec 💙 par - 🙋‍♂️ PAREDE Yoan - Version 1.0 "Starter"</p>
+                <p className="magin-code-footer txt-footer">site fait avec 💙 par - 🙋‍♂️ <a href="mailto:magin.code@gmail.com">PAREDE Yoan</a> - Version 1.0 "Starter"</p>
             </div>
         </footer>
     )

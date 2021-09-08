@@ -84,11 +84,11 @@ img.univers-image {
     padding: 48px 10px;
     margin: 24px 0 ;
     font-size: 1.2rem;
-    font-style: italic;
     box-shadow: 0 0 23px -9px;
     font-weight: 400;
     border-radius: 8px;
-    quotes:"";
+    font-style: italic;
+    quotes: none;
     &> q {
         /* filter: invert(1); */
         backdrop-filter: none;

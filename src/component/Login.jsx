@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import InitReq from "../config/InitReq";
 import "./../assets/scss/Login.scss";
-const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
+const Login = ({apiUrl, setUserIsCo, setUserIsAdm}) => {
     
     const [isConected, setIsConected] = useState(true);
     const [emailData, setEmailData] = useState("");
     const [passData, setPassData] = useState("");
-    const [isGo, setIsGo] = useState(false);
 
     const test=()=>{
         setIsConected(!isConected)
-        
     }
     const setDataMail = (e) => {
         setEmailData(e.target.value)
@@ -31,8 +29,6 @@ const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
                 sessionStorage.setItem('user_co',recupResponse);
               
                 try{
-
-                  
                     setUserIsCo(result.isConected);
                     setUserIsAdm(result.isAdmin);
                 }
@@ -46,12 +42,10 @@ const Login = ({apiUrl,setStatus,setUserIsCo,setUserIsAdm}) => {
 
         e.preventDefault();
         e.stopPropagation();
-        
     }
-    
     return(
     <>
-        <a style={{color:"red"}} onClick={()=>test()} href="#">conection</a>
+        <p style={{color:"red"}} onClick={()=>test()}>connect</p>
         {!isConected?
         <div className="form-log-content">
             <form className="from_log" onSubmit={(e)=>HandleSubmitlog(e)}>

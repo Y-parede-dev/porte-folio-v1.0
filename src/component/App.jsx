@@ -1,23 +1,6 @@
 import './../assets/scss/App.scss';
 import React,  { useState, useEffect } from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Loader from './Loader';
-import Header from './Header';
-import Nav from './Nav';
-import Main from './Main';
-import PortFolio from './PortFolio';
-import ProjectCustomer from './ProjectCustomer';
-import Erreur404 from './Erreur404';
-import Login from './Login';
-import ProjetPerso from './ProjetPerso';
-import Footer from './Footer';
-import Mentions from './Mentions';
-import Rgpd from './Rgpd';
-import { TestScroll } from '../config/UseEffect';
-import ProfilsDev from './FormAbout';
 import RouterReact from './Router';
-import buildSitemap from 'react-build-sitemap'
-import Cursor from '../svgToJsx/Cursor';
 
 
 const App = () => {
@@ -28,23 +11,11 @@ const App = () => {
 
   
   const url = 'https://api--porte-folio.herokuapp.com/api/'; // a modifier pour passer en prod -- 1. passer l'api en HTTPS !!!! --- 2. changer le localhost en V1.0 pour adapter a l'hebergeur
-  const [onMaintenance, setOnMaintenance] = useState(false);
   const [userIsCo, setUserIsCo]= useState(false); // true pour test
   const [userIsAdm, setUserIsAdm]= useState(false);  //true pour test
-  const [status,setStatus]=useState('Not Connected 🔴');
+  // const [status,setStatus]=useState('Not Connected 🔴');
   const [footOpen, setFootOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [height, setHeight]= useState(0);
-  //buildSitemap('./Router.jsx', '../../sitemap.xml', 'https://magin-code.fr');
-  useEffect(()=>{
-    let userIsConnected = sessionStorage.getItem('user_co');
-    if(userIsConnected){
-      setStatus("Connected 🟢");
-    }
-    return()=>{
-      setStatus("Not Connected 🔴");
-    }
-  },[userIsCo])
   
   useEffect(()=>{
     
@@ -83,7 +54,7 @@ const App = () => {
       }
     }
     }
-},[])
+},[xMax])
  // fin block d'activation maintenance
  /*if(window.location.href=='http://localhost:3000/privacy-policy'){
     window.location=`${urlExt}`;
@@ -94,6 +65,7 @@ const App = () => {
       {/* <Cursor/> */}
       <RouterReact 
         apiUrl={url} 
+        userIsCo={userIsCo}
         setUserIsCo={setUserIsCo}
         userIsAdm={userIsAdm} setUserIsAdm={setUserIsAdm} 
         largeur={xMax} hauteur={yMax} 

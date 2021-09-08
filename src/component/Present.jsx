@@ -21,7 +21,7 @@ const Present = ({setIsLoaded,isLoaded}) => {
                 <img className='img-techno' src={imgSass}/>
             */}
                 <div className="img-art-1-content">
-                    <img alt='image univers' className='univers-image' src={imgUnivers}/>
+                    <img alt='mon univers' className='univers-image' src={imgUnivers}/>
                 </div>
             </div> 
                 

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import '../assets/scss/DevSvg.scss';
 const DevSvg = () => {
   

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {Typewriter, useTypewriter} from 'react-simple-typewriter';
+import {useTypewriter} from 'react-simple-typewriter';
 import '../assets/scss/Developpeur.scss';
 import InitReq from "../config/InitReq";
 import Loader from "./Loader";
@@ -12,7 +12,6 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
         words: ['développeur web','développeur javaScript', 'développeur react.js', 'développeur node.js', 'passionné'],
         loop: 0,
     });
-    const imgUrl= connectApiUrlDev.split('profil')[0];
     try {
         useEffect(()=>{
             let urlProfil = `${connectApiUrlDev}/1`;
@@ -25,7 +24,7 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
                    setIsLoaded(true);
                 },(err)=>{console.log(err)})
                 return ()=>{setDev([])}
-        },[setDev]);
+        },[setDev, setIsLoaded, connectApiUrlDev]);
        if(!isLoaded){
         return(
             <>

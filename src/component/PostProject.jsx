@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../assets/scss/PostProject.scss";
 import InitReq from "../config/InitReq";
 
@@ -6,7 +6,6 @@ const PostProject = ({isAdmin, urlProject})=>{
     const [nbrChars, setNbrChars] = useState(0)
     const [imgPresent, setImgPresent] = useState(false)
     const [urlImg, setUrlImg] = useState("");
-    const [fileImg, setFileImg] = useState([]);
     const [pannelAdmin, setPannelAdmin] = useState(true) //true pour test
 
     const [titleData, setTitleData]= useState('');
@@ -111,8 +110,8 @@ const PostProject = ({isAdmin, urlProject})=>{
 
                     <label className="form-control form-control-label" htmlFor='imageP'>Image</label>
                     <input className="form-control form-control-file" type='file' onChange={(e)=>{setUrlImgData(e.target.files[0]);previewpicture(e)}} accept='image/*' name='imageP' placeholder='* Image'></input>
-                    {imgPresent?<img className='preview-img-project' alt='image du projet' src={`${urlImg}`}/>:""}
-                    <div className="form-control" className="content-description-project">
+                    {imgPresent?<img className='preview-img-project' alt='projet' src={`${urlImg}`}/>:""}
+                    <div className="form-control content-description-project">
 
                         <label className="form-control form-control-label form-control-label-desc" htmlFor='descriptionP'>Déscription</label>
                         <textarea className="form-control description-new-project" onChange={(e)=>{recupInfo(e,setDescData);countChars(e)}}value={descData} name='descriptionP' placeholder='* Decription du site' maxLength={CHARS_MAX}></textarea>

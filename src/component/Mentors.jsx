@@ -2,11 +2,8 @@ import '../assets/scss/Mentors.scss';
 import gregAvatar from '../assets/images/static/mentors/greg-avatar.svg';
 import hedyAvatar from '../assets/images/static/mentors/hedy-avatar.svg';
 import richAvatar from '../assets/images/static/mentors/rich-avatar.svg';
-import { useEffect } from 'react';
 
 const Mentors =()=>{
-    
-        
     return(
         <>
             <div className="mentors">
@@ -19,7 +16,7 @@ const Mentors =()=>{
                             CSS3 ainsi que ces préprocesseurs comme SASS, LESS et bien d'autres
                             Hedy ma également apporter une aide plus globale par rapport à son expérience
                          </p>
-                        <a href='#' className="mentor-lien" target='_blank'>Lien vers le linked in d' Hedy</a>
+                        <a href='https://www.linkedin.com/in/hedy-darg%C3%A8re-0a34b81a7/' className="mentor-lien" target='_blank' rel="noreferrer">Lien vers le linked in d' Hedy</a>
                         </div>
                     <div className="mentor-profil">
                         <h5 className="mentor_nom">Grégoire BOISSEAUX</h5>
@@ -29,7 +26,7 @@ const Mentors =()=>{
                             il m'a apporté une bonne vision du monde du développement ainsi que des conseils de qualité.
                             Il n'y a pas si longtemps son experience ma bien aider. <br/>
                             Grégoire ma apporter une aide autant technique qu'humaine </p>
-                        <a href='https://www.linkedin.com/in/boisseaugregoire/' className="mentor-lien" target='_blank'>Lien vers le linked in de Grégoire</a>
+                        <a href='https://www.linkedin.com/in/boisseaugregoire/' className="mentor-lien" target='_blank' rel="noreferrer">Lien vers le linked in de Grégoire</a>
                     </div>
                    
                     <div className="mentor-profil">
@@ -40,10 +37,9 @@ const Mentors =()=>{
                          avec node js ou côté client il avait une maitrise du language tel qui m'a transmis ses connaissances qui vale
                           de l'or.
                         </p>
-                        <a href='https://www.linkedin.com/in/dr-richard-ngu-leubou-a5384684/' className="mentor-lien" target='_blank'>Lien vers le linked in de Richard</a>
+                        <a href='https://www.linkedin.com/in/dr-richard-ngu-leubou-a5384684/' className="mentor-lien" target='_blank' rel="noreferrer">Lien vers le linked in de Richard</a>
                     </div>
                 </div>
-              
             </div>
         </>
     )

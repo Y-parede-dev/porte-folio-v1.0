@@ -1,13 +1,11 @@
 import './../assets/scss/App.scss';
-import React,  {  useState, useEffect, Suspense } from 'react';
+import React,  { Suspense } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Loader from './Loader';
 import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
 import PortFolio from './PortFolio';
 import Erreur404 from './Erreur404';
-import Login from './Login';
 import ProjetPerso from './ProjetPerso';
 import Footer from './Footer';
 import Mentions from './Mentions';
@@ -27,7 +25,7 @@ import FormAbout from './FormAbout';
 // const FormAbout = React.lazy(() => import('./FormAbout'));
 
 const RouterReact=({
-        apiUrl,setUserIsCo, userIsAdm, setUserIsAdm,
+        apiUrl, userIsAdm,
         largeur, hauteur, isLoaded, setIsLoaded, footOpen,
         setFootOpen, height}) => {
     return (
@@ -46,7 +44,7 @@ const RouterReact=({
                             <ProjetPerso />}/>
                         <Route path='/mentions' exact component={()=><Mentions/>}/>
                         <Route path='/rgpd' exact component={()=><Rgpd/>}/>
-                        <Route path='/about' exact component={()=><FormAbout/>}/>
+                        <Route path='/about' exact component={()=><FormAbout apiUrl={apiUrl} />}/>
                         <Route component={Erreur404}/> 
                     </Switch>
                 </Suspense>
