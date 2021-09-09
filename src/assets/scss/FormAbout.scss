@@ -3,16 +3,22 @@
 
 }
 .form-contact {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    border: solid;//4 test
+    border-radius:0 0 10px -5px var(--color-third);
     min-width: 65%;
     width: max-content;
     padding: 30px;
-    margin: auto;
+    margin: 30px auto;
+    &>div>div>input{
+        border: transparent;
+        border-radius: 30px;
+    }
 }
 .meta-contact{
     display: grid;
@@ -22,9 +28,13 @@
 .meta-elt {
     display: grid;
     grid-template-columns: .8fr 1.2fr;
+    align-items: center;
+    
+}
+.input-contact, .message {
+    font-size: 1.12rem;
 }
 .input-contact {
-    font-size: 1.12rem;
     height: 34px;
     padding: 5px;
 }
@@ -36,7 +46,7 @@
     & > textarea{
         height: 350px;
         padding: 10px 5px;
-
+        border-radius: 12px;
     }
 }
 button.btn-form-about {
@@ -70,4 +80,33 @@ button.btn-form-about {
     &::placeholder{
         color: white;
     }
+}
+// NETWORK
+
+.link-network{
+    display: grid;
+    grid-template-areas: ". logo1 logo2 logo3 ."
+                         ". title title title .";
+    background-color:var(--color-secondary);
+    min-height: 800px;
+    background: url('../images/static/logo-network/background-logo-network.png') no-repeat center var(--color-secondary) ;
+    & > h2{
+    grid-area: title;
+        
+    }
+    &> a:nth-child(2){
+        width: fit-content;
+        grid-area: logo1;
+    }&> a:nth-child(3){
+        width: fit-content;
+        grid-area: logo2;
+    }&> a:nth-child(4){
+        width: fit-content;
+        grid-area: logo3;
+    }
+}
+.logo-network {
+    background-color: var(--color-primary);
+    width: 80px;
+    padding: 20px;
 }

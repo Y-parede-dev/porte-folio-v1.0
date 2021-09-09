@@ -2,6 +2,11 @@ import { useState } from 'react';
 import '../assets/scss/FormAbout.scss';
 import InitReq from '../config/InitReq';
 import {isValidEmailFront} from '../config/ValidMail';
+//logo network
+
+import logoFB from '../assets/images/static/logo-network/Facebook.svg';
+import logoLI from '../assets/images/static/logo-network/Linkedin.svg';
+import logoMT from '../assets/images/static/logo-network/malt.svg';
 
 const FormAbout = ({apiUrl}) => {
     const [nomData, setNomData] = useState("");
@@ -90,7 +95,7 @@ const FormAbout = ({apiUrl}) => {
             <div className="contact">
                 <h1 className="title-contact">Contactez moi</h1>
                 <p className="contact-with-form">Plusieurs posibilité soit en complétant le formulaire ci dessous 👇, ou alors vous trouverez plus bas mes liens sociaux</p>
-                <form className='form-contact' onSubmit={()=>{handleSubmit()}}>
+                <form className='form-contact' onSubmit={(e)=>{handleSubmit(e)}}>
                     <div className="meta-contact">
                         <div id="meta-nom" className="meta-nom meta-elt">
                             <label className='label-contact label-nom' htmlFor='nom-contact'>Votre nom & prénom</label>
@@ -111,6 +116,12 @@ const FormAbout = ({apiUrl}) => {
                     </div>
                     <button className='btn-form-about' type='submit'>Envoyer</button>
                 </form>
+                <div className="link-network">
+                    <h2>MES LIENS SOCIAUX</h2>
+                    <a href="https://www.facebook.com/Yoanparede1" target="_blank" rel="noopener noreferrer"><img className="logo-network logo-fb" src={logoFB} alt='faceboook'/></a>
+                    <a href="https://www.linkedin.com/in/yoan-parede-b95893198/" target="_blank" rel="noopener noreferrer"><img className="logo-network logo-li" src={logoLI} alt="linkedin"/></a>
+                    <a href="https://www.malt.fr/profile/yoanparede1" target="_blank" rel="noopener noreferrer"><img className="logo-network logo-mt" src={logoMT} alt="malt" /></a>
+                </div>
             </div>
         </>
     )

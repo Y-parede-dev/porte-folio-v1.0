@@ -9,6 +9,10 @@ const ProjectSchool = () => {
     return (
         <div className="page-projects-etude">
             <h4 className='mes-projets'><span className='little-text'>MES </span>PROJETS D'ÉTUDE</h4>
+            <blockquote className="bq-projetct-school">
+                <q>Ici je vous présente les projets que j'ai menez a bien durant la formation développeur web suivi avec <a className="open-link" href="https://openclassrooms.com/" target="_blank" rel="noopener noreferrer">O
+                    <span className='cacher-o'></span>penClassRooms </a></q>
+            </blockquote>
             <div className='projet-etude content-all-projects content-all-projects-3'>
                 <div className="projet-etude">
                     <a className='lien-projet'  href="https://github.com/Y-parede-dev/OC-Projet-2" target='_blank' rel="noreferrer">
