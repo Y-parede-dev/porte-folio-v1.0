@@ -7,7 +7,8 @@
     background-color: var(--color-secondary);
     display: grid;
     grid-gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: center;
     border-radius:0 0 10px -5px var(--color-third);
@@ -24,12 +25,14 @@
     display: grid;
     height: 80%;
     align-items: center;
+    grid-gap: 1.2rem;
+
 }
 .meta-elt {
     display: grid;
-    grid-template-columns: .8fr 1.2fr;
+    grid-template-columns: 1fr;
     align-items: center;
-    
+    grid-gap: 1.2rem;
 }
 .input-contact, .message {
     font-size: 1.12rem;
@@ -41,8 +44,7 @@
 .message-contact {
     display: grid;
     grid-gap: 1.2rem;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    
     & > textarea{
         height: 350px;
         padding: 10px 5px;
@@ -50,8 +52,7 @@
     }
 }
 button.btn-form-about {
-    grid-column-end: 3;
-    grid-column-start: 1;
+    
     width: 250px;
     margin: auto;
     border-radius: 40px;
@@ -85,28 +86,58 @@ button.btn-form-about {
 
 .link-network{
     display: grid;
-    grid-template-areas: ". logo1 logo2 logo3 ."
-                         ". title title title .";
-    background-color:var(--color-secondary);
-    min-height: 800px;
-    background: url('../images/static/logo-network/background-logo-network.png') no-repeat center var(--color-secondary) ;
+    grid-template-areas: " . . . . . "
+                        ".  logo1 logo2 logo3 ."
+                        
+                        ".  template template template .";                        ;
+    background-color: var(--color-secondary);
+   // background: url('../images/static/logo-network/SVG/mes_reseaux.svg') no-repeat center var(--color-secondary);
+    grid-template-columns: 1fr .2fr .2fr .2fr 1fr;
+    grid-template-rows: .5fr 1fr 2.5fr ;
+    grid-gap: 2rem;
     & > h2{
     grid-area: title;
-        
+    }
+    & > img {
+        grid-area: template;
+    }
+    & > a {
+        margin: auto;
+        width: fit-content;
     }
     &> a:nth-child(2){
-        width: fit-content;
         grid-area: logo1;
     }&> a:nth-child(3){
-        width: fit-content;
         grid-area: logo2;
+        &>img{
+
+            background-color: var(--color-primary);
+        }
     }&> a:nth-child(4){
-        width: fit-content;
         grid-area: logo3;
     }
 }
+
 .logo-network {
-    background-color: var(--color-primary);
     width: 80px;
     padding: 20px;
+    
+}
+
+@media screen and (min-width:850px) {
+    .form-contact {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .message-contact {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    button.btn-form-about {
+        grid-column-end: 3;
+        grid-column-start: 1;
+    }
+    .meta-elt {
+        grid-template-columns: .8fr 1.2fr;
+    }
 }

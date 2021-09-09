@@ -7,6 +7,8 @@ import {isValidEmailFront} from '../config/ValidMail';
 import logoFB from '../assets/images/static/logo-network/Facebook.svg';
 import logoLI from '../assets/images/static/logo-network/Linkedin.svg';
 import logoMT from '../assets/images/static/logo-network/malt.svg';
+import templateSVG from '../assets/images/static/logo-network/SVG/mes_reseaux.svg';
+
 
 const FormAbout = ({apiUrl}) => {
     const [nomData, setNomData] = useState("");
@@ -117,7 +119,8 @@ const FormAbout = ({apiUrl}) => {
                     <button className='btn-form-about' type='submit'>Envoyer</button>
                 </form>
                 <div className="link-network">
-                    <h2>MES LIENS SOCIAUX</h2>
+                    {/* <h2>MES LIENS SOCIAUX</h2> */}
+                    <img className='template' src={templateSVG} alt="design create by magin.code 2021"/>
                     <a href="https://www.facebook.com/Yoanparede1" target="_blank" rel="noopener noreferrer"><img className="logo-network logo-fb" src={logoFB} alt='faceboook'/></a>
                     <a href="https://www.linkedin.com/in/yoan-parede-b95893198/" target="_blank" rel="noopener noreferrer"><img className="logo-network logo-li" src={logoLI} alt="linkedin"/></a>
                     <a href="https://www.malt.fr/profile/yoanparede1" target="_blank" rel="noopener noreferrer"><img className="logo-network logo-mt" src={logoMT} alt="malt" /></a>
