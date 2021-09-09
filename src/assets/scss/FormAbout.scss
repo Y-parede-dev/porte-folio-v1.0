@@ -88,6 +88,7 @@ button.btn-form-about {
     display: grid;
     grid-template-areas: " . logo1 . "
                          ". logo2 ."
+                         ". logo3 ."
                         ". template ."; 
     background-color: var(--color-secondary);
     grid-template-columns: 1fr;
