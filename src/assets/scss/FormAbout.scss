@@ -5,23 +5,14 @@
 .form-contact {
     color: var(--color-primary);
     background-color: var(--color-secondary);
-    display: -ms-grid;
     display: grid;
     grid-gap: 1.5rem;
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1.5rem 1fr;
     grid-template-rows: 1fr 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     border-radius:0 0 10px -5px var(--color-third);
     min-width: 65%;
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
     padding: 30px;
     margin: 30px auto;
@@ -30,32 +21,17 @@
         border-radius: 30px;
     }
 }
-.form-contact > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1
-}
-.form-contact > *:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1
-}
 .meta-contact{
-    display: -ms-grid;
     display: grid;
     height: 80%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     grid-gap: 1.2rem;
 
 }
 .meta-elt {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     grid-gap: 1.2rem;
 }
 .input-contact, .message {
@@ -66,7 +42,6 @@
     padding: 5px;
 }
 .message-contact {
-    display: -ms-grid;
     display: grid;
     grid-gap: 1.2rem;
     
@@ -82,23 +57,17 @@ button.btn-form-about {
     margin: auto;
     border-radius: 40px;
     font-size: 1.35rem;
-    background: -o-linear-gradient(left, var(--color-secondary), transparent),-o-linear-gradient(330deg, var(--color-secondary), transparent);
     background: linear-gradient(90deg, var(--color-secondary), transparent),linear-gradient(120deg, var(--color-secondary), transparent);
     color: white;
     cursor: pointer;
     padding: 10px 5px;
     border: transparent;
-    -webkit-transition:300ms ease-in;
-    -o-transition:300ms ease-in;
     transition:300ms ease-in;
-    -webkit-box-shadow: 1px 0px 4px 0 black;
-            box-shadow: 1px 0px 4px 0 black;
+    box-shadow: 1px 0px 4px 0 black;
     &:hover{
-        background: -o-linear-gradient(left,  transparent, #0574bb),-o-linear-gradient(330deg,  transparent, #0574bb);
         background: linear-gradient(90deg,  transparent, #0574bb),linear-gradient(120deg,  transparent, #0574bb);
         border: red;
-        -webkit-box-shadow: -1px 0px 4px 0 black;
-                box-shadow: -1px 0px 4px 0 black;
+        box-shadow: -1px 0px 4px 0 black;
     }
 }
 .valid, .not-valid{
@@ -109,18 +78,6 @@ button.btn-form-about {
 }
 .not-valid{
     background-color: #fb1d1dc2;
-    &::-webkit-input-placeholder{
-        color: white;
-    }
-    &::-moz-placeholder{
-        color: white;
-    }
-    &:-ms-input-placeholder{
-        color: white;
-    }
-    &::-ms-input-placeholder{
-        color: white;
-    }
     &::placeholder{
         color: white;
     }
@@ -128,42 +85,28 @@ button.btn-form-about {
 // NETWORK
 
 .link-network{
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto 2rem auto 2rem auto 2rem auto;
-        grid-template-areas: "  logo1  "
-                         " logo2 "
-                         " logo3 "
-                         " template "; 
+    grid-template-areas: " . logo1 . "
+                         ". logo2 ."
+                        ". template ."; 
     background-color: var(--color-secondary);
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
     & > a {
         margin: auto;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
         width: fit-content;
     }
     & > img {
-        -ms-grid-row: 7;
-        -ms-grid-column: 1;
         grid-area: template;
     }
     &> a:nth-child(2){
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
         grid-area: logo1;
     }&> a:nth-child(3){
-        -ms-grid-row: 3;
-        -ms-grid-column: 1;
         grid-area: logo2;
         &>img{
             background-color: var(--color-primary);
         }
     }&> a:nth-child(4){
-        -ms-grid-row: 5;
-        -ms-grid-column: 1;
         grid-area: logo3;
     }
 }
@@ -173,188 +116,43 @@ button.btn-form-about {
     padding: 20px;
     
 }
+
 @media screen and (min-width:850px) {
-        /*
-    * Prefixed by https://autoprefixer.github.io
-    * PostCSS: v8.3.6,
-    * Autoprefixer: v10.3.1
-    * Browsers: last 4 version
-    */
-
-    .title-contact {
-        margin: 55px auto;
-
-    }
     .form-contact {
-        color: var(--color-primary);
-        background-color: var(--color-secondary);
-        display: -ms-grid;
-        display: grid;
-        grid-gap: 1.5rem;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        -ms-grid-rows: 1fr 1.5rem 1fr;
-        grid-template-rows: 1fr 1fr;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        border-radius:0 0 10px -5px var(--color-third);
-        min-width: 65%;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        padding: 30px;
-        margin: 30px auto;
-        &>div>div>input{
-            border: transparent;
-            border-radius: 30px;
-        }
-    }
-    .form-contact > *:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1
-    }
-    .form-contact > *:nth-child(2) {
-        -ms-grid-row: 3;
-        -ms-grid-column: 1
-    }
-    .meta-contact{
-        display: -ms-grid;
-        display: grid;
-        height: 80%;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        grid-gap: 1.2rem;
-
-    }
-    .meta-elt {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        grid-gap: 1.2rem;
-    }
-    .input-contact, .message {
-        font-size: 1.12rem;
-    }
-    .input-contact {
-        height: 34px;
-        padding: 5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
     .message-contact {
-        display: -ms-grid;
-        display: grid;
-        grid-gap: 1.2rem;
-        
-        & > textarea{
-            height: 350px;
-            padding: 10px 5px;
-            border-radius: 12px;
-        }
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
     button.btn-form-about {
-        
-        width: 250px;
-        margin: auto;
-        border-radius: 40px;
-        font-size: 1.35rem;
-        background: -o-linear-gradient(left, var(--color-secondary), transparent),-o-linear-gradient(330deg, var(--color-secondary), transparent);
-        background: linear-gradient(90deg, var(--color-secondary), transparent),linear-gradient(120deg, var(--color-secondary), transparent);
-        color: white;
-        cursor: pointer;
-        padding: 10px 5px;
-        border: transparent;
-        -webkit-transition:300ms ease-in;
-        -o-transition:300ms ease-in;
-        transition:300ms ease-in;
-        -webkit-box-shadow: 1px 0px 4px 0 black;
-                box-shadow: 1px 0px 4px 0 black;
-        &:hover{
-            background: -o-linear-gradient(left,  transparent, #0574bb),-o-linear-gradient(330deg,  transparent, #0574bb);
-            background: linear-gradient(90deg,  transparent, #0574bb),linear-gradient(120deg,  transparent, #0574bb);
-            border: red;
-            -webkit-box-shadow: -1px 0px 4px 0 black;
-                    box-shadow: -1px 0px 4px 0 black;
-        }
+        grid-column-end: 3;
+        grid-column-start: 1;
     }
-    .valid, .not-valid{
-        color: white;
+    .meta-elt {
+        grid-template-columns: .8fr 1.2fr;
     }
-    .valid{
-        background-color: #10b110c9;
-    }
-    .not-valid{
-        background-color: #fb1d1dc2;
-        &::-webkit-input-placeholder{
-            color: white;
-        }
-        &::-moz-placeholder{
-            color: white;
-        }
-        &:-ms-input-placeholder{
-            color: white;
-        }
-        &::-ms-input-placeholder{
-            color: white;
-        }
-        &::placeholder{
-            color: white;
-        }
-    }
-    // NETWORK
-
     .link-network{
-        display: -ms-grid;
         display: grid;
-        -ms-grid-rows: auto 2rem auto 2rem auto 2rem auto;
-            grid-template-areas: "  logo1  "
-                            " logo2 "
-                            " logo3 "
-                            " template "; 
+        grid-template-areas: " . . . . . "
+                            ".  logo1 logo2 logo3 ."
+                            
+                            ".  template template template .";                        ;
         background-color: var(--color-secondary);
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        & > a {
-            margin: auto;
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
-            width: fit-content;
-        }
+       // background: url('../images/static/logo-network/SVG/mes_reseaux.svg') no-repeat center var(--color-secondary);
+        grid-template-columns: 1fr .2fr .2fr .2fr 1fr;
+        grid-template-rows: .5fr 1fr 2.5fr ;
         & > img {
-            -ms-grid-row: 7;
-            -ms-grid-column: 1;
             grid-area: template;
         }
         &> a:nth-child(2){
-            -ms-grid-row: 1;
-            -ms-grid-column: 1;
             grid-area: logo1;
         }&> a:nth-child(3){
-            -ms-grid-row: 3;
-            -ms-grid-column: 1;
             grid-area: logo2;
-            &>img{
-                background-color: var(--color-primary);
-            }
+            
         }&> a:nth-child(4){
-            -ms-grid-row: 5;
-            -ms-grid-column: 1;
             grid-area: logo3;
         }
     }
-
-    .logo-network {
-        width: 80px;
-        padding: 20px;
-        
-    }
-
 }

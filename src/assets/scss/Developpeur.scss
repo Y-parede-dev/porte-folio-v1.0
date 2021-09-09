@@ -1,27 +1,16 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 .component-developpeur {
     position: relative;
-    display: -ms-grid;
     display: grid;
     grid-gap: 1rem;
-        grid-template-areas: '. img . '
+    grid-template-areas: '. img . '
                         '. name .'
                         '. text .';
     color: var(--color-default);
     margin: 137px 0;
 }
 .component-developpeur .img-profil {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -webkit-box-shadow: 0 0 10px -6px var(--color-secondary);
-            box-shadow: 0 0 10px -6px var(--color-secondary);
+    box-shadow: 0 0 10px -6px var(--color-secondary);
     background: var(--color-secondary);
     margin: auto;
     grid-area: img;
@@ -31,8 +20,6 @@
     }
 }
 .component-developpeur h1{
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
     grid-area: name;
     font-family: 'Otomanopee One', sans-serif;
     font-size: 3.5rem;
@@ -46,8 +33,6 @@
     }
 }
 .component-developpeur p{
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
     grid-area: text;
     font-size: 1.5rem;
 }

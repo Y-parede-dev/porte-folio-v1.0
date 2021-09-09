@@ -1,197 +1,104 @@
 
 // App.scss
 @keyframes focusStyle {
-  to{
-    -webkit-box-shadow:  
-      0 0 0 8px rgba(0,0,0,.1);
-            box-shadow:  
-      0 0 0 8px rgba(0,0,0,.1);
-  }
-}
-
-// Maintening.scss
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-            transform: rotate(0);
-  }
-  25%{
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes App-W-I-P {
-  0% {
-      font-size: 2.2rem;
-      color: var(--color-secondary);
-      text-shadow: 0 0 7px var(--color-secondary);
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-  }
-  90% {
-      color: transparent;
-      text-shadow: none;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      background-color: transparent;
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-  
-  
-  }
-  100%{
-    
-      color: var(--color-secondary);
-      text-shadow: 0 0 7px var(--color-secondary);
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-     
-  }
-}
-
-@keyframes App-W-I-P {
-  0% {
-      font-size: 2.2rem;
-      color: var(--color-secondary);
-      text-shadow: 0 0 7px var(--color-secondary);
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-  }
-  90% {
-      color: transparent;
-      text-shadow: none;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      background-color: transparent;
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-  
-  
-  }
-  100%{
-    
-      color: var(--color-secondary);
-      text-shadow: 0 0 7px var(--color-secondary);
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-     
-  }
-}
-// Nav.scss
-@keyframes pulse {
-  to{
-      font-weight: 900;
-      font-size: 1.6rem;
-      -webkit-box-shadow: 0 0 0 12px rgba(255,255,255,.1);
-              box-shadow: 0 0 0 12px rgba(255,255,255,.1);
-  }
-}
-// PostProjetc.scss
-@keyframes showBtnStyle1{
-  0% {
-      left:-100%
-  }
-  50%, 100%{
-      left:100%
-  }
-}
-@-webkit-keyframes showBtnStyle2{
-  0%{
-    top:-100%;
-    
-  }50%, 100%{
-    top:100%
-  }
-}
-@keyframes showBtnStyle2{
-  0%{
-    top:-100%;
-    
-  }50%, 100%{
-    top:100%
-  }
-}
-@-webkit-keyframes showBtnStyle3 {
-  0%{
-    right:-100%;
-  }
-  50%, 100%{
-    right:100%
-  }
-}
-@keyframes showBtnStyle3 {
-  0%{
-    right:-100%;
-  }
-  50%, 100%{
-    right:100%
-  }
-}
-@-webkit-keyframes showBtnStyle4{
-  0%{
-    bottom:-100%;
-    
-  }50%, 100%{
-    bottom:100%
-  }
-}
-@keyframes showBtnStyle4{
-  0%{
-    bottom:-100%;
-    
-  }50%, 100%{
-    bottom:100%
-  }
-}
-
-@-webkit-keyframes btnFocus {
-    from{
-      background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: linear-gradient(90deg, rgba(255,255,255,.3), rgba(255,255,255,1));    
-    }25%{
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,1));
-
-    }75%{
-      background: -webkit-gradient(linear, right top, left top, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: linear-gradient(270deg, rgba(255,255,255,.3), rgba(255,255,255,1));   
-    }
     to{
-      background: -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: linear-gradient(360deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+      box-shadow:  
+        0 0 0 8px rgba(0,0,0,.1);
     }
-}
-
-@keyframes btnFocus {
-    from{
-      background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: -o-linear-gradient(left, rgba(255,255,255,.3), rgba(255,255,255,1));
-      background: linear-gradient(90deg, rgba(255,255,255,.3), rgba(255,255,255,1));    
-    }25%{
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,1));
-      background: linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,1));
-
-    }75%{
-      background: -webkit-gradient(linear, right top, left top, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: -o-linear-gradient(right, rgba(255,255,255,.3), rgba(255,255,255,1));
-      background: linear-gradient(270deg, rgba(255,255,255,.3), rgba(255,255,255,1));   
+  }
+  
+  // Maintening.scss
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0);
     }
+    25%{
+      transform: rotate(-90deg);
+
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes App-W-I-P {
+    0% {
+        font-size: 2.2rem;
+        color: var(--color-secondary);
+        text-shadow: 0 0 7px var(--color-secondary);
+        transform: rotate(0deg);
+    }
+    90% {
+        color: transparent;
+        text-shadow: none;
+        box-shadow: none;
+        background-color: transparent;
+        transform: rotate(90deg);
+    
+    
+    }
+    100%{
+      
+        color: var(--color-secondary);
+        text-shadow: 0 0 7px var(--color-secondary);
+        transform: rotate(0deg);
+       
+    }
+  }
+  // Nav.scss
+  @keyframes pulse {
     to{
-      background: -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,.3)), to(rgba(255,255,255,1)));
-      background: -o-linear-gradient(bottom, rgba(255,255,255,.3), rgba(255,255,255,1));
-      background: linear-gradient(360deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+        font-weight: 900;
+        font-size: 1.6rem;
+        box-shadow: 0 0 0 12px rgba(255,255,255,.1);
     }
-}
-// Present.scss
-
-
+  }
+  // PostProjetc.scss
+  @keyframes showBtnStyle1{
+    0% {
+        left:-100%
+    }
+    50%, 100%{
+        left:100%
+    }
+  }
+  @keyframes showBtnStyle2{
+    0%{
+      top:-100%;
+      
+    }50%, 100%{
+      top:100%
+    }
+  }
+  @keyframes showBtnStyle3 {
+    0%{
+      right:-100%;
+    }
+    50%, 100%{
+      right:100%
+    }
+  }
+  @keyframes showBtnStyle4{
+    0%{
+      bottom:-100%;
+      
+    }50%, 100%{
+      bottom:100%
+    }
+  }
+  
+  @keyframes btnFocus {
+      from{
+        background: linear-gradient(90deg, rgba(255,255,255,.3), rgba(255,255,255,1));    
+      }25%{
+        background: linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+  
+      }75%{
+        background: linear-gradient(270deg, rgba(255,255,255,.3), rgba(255,255,255,1));   
+      }
+      to{
+        background: linear-gradient(360deg, rgba(255,255,255,.3), rgba(255,255,255,1));
+      }
+  }
+  // Present.scss
+ 

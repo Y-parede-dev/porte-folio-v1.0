@@ -1,25 +1,9 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 .maintenance {
     background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     color: transparent;
     height: 50vh;
@@ -35,47 +19,36 @@
         &>span{
             z-index: 3;
             font-size: 1.50rem;
-            -webkit-animation: App-W-I-P 1200ms infinite linear ;
-                    animation: App-W-I-P 1200ms infinite linear ;
+            animation: App-W-I-P 1200ms infinite linear ;
             &:nth-child(1){
-            -webkit-animation-delay: 100ms;
-                    animation-delay: 100ms;
+            animation-delay: 100ms;
             }
             &:nth-child(2){
-            -webkit-animation-delay: 200ms;
-                    animation-delay: 200ms; 
+            animation-delay: 200ms; 
             }
             &:nth-child(3){
-            -webkit-animation-delay: 300ms;
-                    animation-delay: 300ms; 
+            animation-delay: 300ms; 
             }
             &:nth-child(4){
-            -webkit-animation-delay: 400ms;
-                    animation-delay: 400ms;
+            animation-delay: 400ms;
             }
             &:nth-child(5){
-            -webkit-animation-delay: 500ms;
-                    animation-delay: 500ms;
+            animation-delay: 500ms;
             }
             &:nth-child(6){
-            -webkit-animation-delay: 600ms;
-                    animation-delay: 600ms;
+            animation-delay: 600ms;
             }
             &:nth-child(7){
-            -webkit-animation-delay: 700ms;
-                    animation-delay: 700ms;
+            animation-delay: 700ms;
             }
             &:nth-child(8){
-            -webkit-animation-delay: 800ms;
-                    animation-delay: 800ms;
+            animation-delay: 800ms;
             }
             &:nth-child(9){
-            -webkit-animation-delay: 900ms;
-                    animation-delay: 900ms;
+            animation-delay: 900ms;
             }
             &:nth-child(10){
-            -webkit-animation-delay: 1000ms;
-                    animation-delay: 1000ms;
+            animation-delay: 1000ms;
             }
             
         }
@@ -98,8 +71,7 @@
                 background-color: var(--color-primary);
                 padding: 5px;
                 margin: 5px;
-                -webkit-box-shadow: 0 0 10px -6px var(--color-secondary);
-                        box-shadow: 0 0 10px -6px var(--color-secondary);
+                box-shadow: 0 0 10px -6px var(--color-secondary);
             }
         }
     }
@@ -108,11 +80,8 @@
 @media (prefers-reduced-motion: no-preference) {
     .load-logo {
         
-      -webkit-animation: App-logo-spin infinite 1s linear;
-        
-              animation: App-logo-spin infinite 1s linear;
-      -webkit-animation-delay: 1100ms;
-              animation-delay: 1100ms;
+      animation: App-logo-spin infinite 1s linear;
+      animation-delay: 1100ms;
     }
   }
 @media screen and(min-width:700px) and (max-width:849px){
