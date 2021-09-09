@@ -20,15 +20,17 @@ const FormAbout = ({apiUrl}) => {
     //         contenu,
     //         objet
     //         }
-    const handleSubmit = ()=>{
-
-        fetch(`${apiUrl}/mail/`, InitReq("POST","application/json",JSON.stringify(data)))
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        
+        fetch(`${apiUrl}mail`, InitReq("POST","application/json",JSON.stringify(data)))
             .then(res=>res.json())
             .then(result=>{
-                console.log(result)
-                alert(result)
+                console.log(result);
+                alert(result);
 
-            },error=>{return error})
+            },error=>{return error});
+            
     }
     const setColor = (e) => {
         if(e.target.type === "email"){
@@ -42,11 +44,11 @@ const FormAbout = ({apiUrl}) => {
             if(isValidEmailFront(e.target.value)){
                 e.target.className =  "input-contact valid";
                 if(document.getElementById('message-error')){
-                    document.getElementById('message-error').remove()
+                    document.getElementById('message-error').remove();
                 }
             }else{
                 if(document.getElementById('meta-mail').childElementCount<=2){
-                    document.getElementById('meta-mail').appendChild(messageMailNotValid)
+                    document.getElementById('meta-mail').appendChild(messageMailNotValid);
                 }
                 e.target.className = "input-contact not-valid";
 
