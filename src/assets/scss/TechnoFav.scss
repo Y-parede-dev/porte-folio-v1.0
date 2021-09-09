@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .techno-fav {
 	padding: 10px 30px 90px;
 	border-bottom: solid var(--color-secondary);
@@ -8,12 +15,15 @@
     margin-bottom: 40px;
 }
 .techno:last-child {
+    -ms-grid-column-span: 2;
     grid-column-end: 3;
-    grid-column-start: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
 }
 
 .techno{
-    box-shadow: 0 0 4px -2px black;
+    -webkit-box-shadow: 0 0 4px -2px black;
+            box-shadow: 0 0 4px -2px black;
     padding: 20px 55px;
     margin: 40px 0;
 
@@ -29,15 +39,16 @@ h5.techno-name {
 }
 @media screen and (min-width:850px) {
     .techno-content {
+        display: -ms-grid;
         display: grid;
         grid-gap: 4rem 2rem;
+        -ms-grid-columns: 1fr 2rem 1fr;
         grid-template-columns: 1fr 1fr;
         margin:20px;
         
 
     }
     .techno {
-        //border:solid black;
         margin: 115px 0 -115px;
         &:last-child{
             margin: 115px 0 115px;

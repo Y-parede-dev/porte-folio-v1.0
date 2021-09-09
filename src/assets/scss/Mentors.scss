@@ -1,7 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 
 .mentors-content {
+    display: -ms-grid;
     display: grid;
     grid-gap: 1rem;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     padding: 20px 5px;
     
@@ -10,12 +19,16 @@
     position: relative;
     border: solid 10px var(--color-secondary);
     border-radius: 30px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding: 0 8px 10px;
     max-width: 254px;
     margin: auto;
+    display: -ms-grid;
     display: grid;
     grid-gap: 1.5rem;
+    -ms-grid-rows: .2fr 1.5rem .5fr 1.5rem .3fr 1.5rem .2fr;
     grid-template-rows: .2fr .5fr .3fr .2fr;
     
 }
@@ -25,8 +38,14 @@
     font-size: 1.4rem;
     margin: -1px -11px;
     border-radius: 15px 15px 0 0 ;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .mentor-profil>img {
@@ -37,14 +56,19 @@
 }
 
 p.aide-aporter,.mentor-lien {
+    display: -ms-grid;
     display: grid;
 }
 p.aide-aporter{
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
 }
 .mentor-lien {
-    align-items: end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
   
     color: var(--color-secondary);
 }
@@ -62,6 +86,7 @@ p.aide-aporter{
     .mentors-content {
         margin: 20px 10px;
         padding: 10px;
+        -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
     .mentor-profil {
