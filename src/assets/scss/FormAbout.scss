@@ -86,31 +86,25 @@ button.btn-form-about {
 
 .link-network{
     display: grid;
-    grid-template-areas: " . . . . . "
-                        ".  logo1 logo2 logo3 ."
-                        
-                        ".  template template template .";                        ;
+    grid-template-areas: "  logo1  "
+                         " logo2 "
+                         " logo3 "
+                         " template "; 
     background-color: var(--color-secondary);
-   // background: url('../images/static/logo-network/SVG/mes_reseaux.svg') no-repeat center var(--color-secondary);
-    grid-template-columns: 1fr .2fr .2fr .2fr 1fr;
-    grid-template-rows: .5fr 1fr 2.5fr ;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
-    & > h2{
-    grid-area: title;
-    }
-    & > img {
-        grid-area: template;
-    }
     & > a {
         margin: auto;
         width: fit-content;
+    }
+    & > img {
+        grid-area: template;
     }
     &> a:nth-child(2){
         grid-area: logo1;
     }&> a:nth-child(3){
         grid-area: logo2;
         &>img{
-
             background-color: var(--color-primary);
         }
     }&> a:nth-child(4){
@@ -139,5 +133,27 @@ button.btn-form-about {
     }
     .meta-elt {
         grid-template-columns: .8fr 1.2fr;
+    }
+    .link-network{
+        display: grid;
+        grid-template-areas: " . . . . . "
+                            ".  logo1 logo2 logo3 ."
+                            
+                            ".  template template template .";                        ;
+        background-color: var(--color-secondary);
+       // background: url('../images/static/logo-network/SVG/mes_reseaux.svg') no-repeat center var(--color-secondary);
+        grid-template-columns: 1fr .2fr .2fr .2fr 1fr;
+        grid-template-rows: .5fr 1fr 2.5fr ;
+        & > img {
+            grid-area: template;
+        }
+        &> a:nth-child(2){
+            grid-area: logo1;
+        }&> a:nth-child(3){
+            grid-area: logo2;
+            
+        }&> a:nth-child(4){
+            grid-area: logo3;
+        }
     }
 }

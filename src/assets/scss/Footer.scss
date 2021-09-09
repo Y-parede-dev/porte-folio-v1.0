@@ -53,9 +53,11 @@
 
 p.magin-code-footer.txt-footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    grid-gap: 2px;
+    gap: 2px;
     padding: 0% 20px;
 }
 @media screen and (min-width:850px) {

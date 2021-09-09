@@ -21,7 +21,7 @@ const ProjectSchool = () => {
                                 <header  className='header-projet'>
                                     <h3 >CV en HTML5 et CSS/3</h3>
                                 </header>
-                                <img  className='img-projets need-box-shadow' alt="Projet html5 css3" src={html5}/>
+                                <img  className='img-projets img-projets-school need-box-shadow' alt="Projet html5 css3" src={html5}/>
                                 <p className="desc-project" >Projet réaliser en HTML5 / CSS 3, début d'une grande aventure de merveilleux souvenir et naissance d'une passion</p>
                                 <footer  className="footer-projet">
                                     <p className="lien-projet-p" >Crée votre cv en HTML5 / CSS3</p> 
@@ -40,7 +40,7 @@ const ProjectSchool = () => {
                                 <header  className='header-projet'>
                                     <h3 >Site web animé</h3>
                                 </header>
-                                <img  className='img-projets need-box-shadow' alt="Projet animation avec css 3" src={p3}/>
+                                <img  className='img-projets img-projets-school need-box-shadow' alt="Projet animation avec css 3" src={p3}/>
                                 <p className="desc-project" >Projet réaliser en HTML5 / CSS 3 & SASS en préprocesseur, 
                                     avec ce projeyt j'ai gagné en puissance, et en experience sur les animations.
                                 </p>
@@ -61,7 +61,7 @@ const ProjectSchool = () => {
                                 <header  className='header-projet'>
                                     <h3 >Référencement & SEO</h3>
                                 </header>
-                                <img  className='img-projets need-box-shadow' alt="Projet SEO & Referencement" src={p4}/>
+                                <img  className='img-projets img-projets-school need-box-shadow' alt="Projet SEO & Referencement" src={p4}/>
                                 <p className="desc-project" >Dans ce projet j'ai mis en pratique le SEO & le référencement, en optimisant un site web déjà existant 
                                     changement taille sources(images etc.), optimisation du code(la syntaxe, la sémantique) et adaptation en responsive design.
                                 </p>
@@ -83,7 +83,7 @@ const ProjectSchool = () => {
                                     <h3 >Site e-comerce</h3>
                                 </header>
                             
-                                    <img  className='img-projets need-box-shadow' alt="Projet création site e-comerce" src={p5}/>
+                                    <img  className='img-projets img-projets-school need-box-shadow' alt="Projet création site e-comerce" src={p5}/>
                                 <p className="desc-project" >Projet réaliser en HTML5 / CSS 3 & JavaScript, projet super important premier script en JavaScript, se projet
                                  se concentre sur toute la partie frontend de la création d'un site e-comerce</p>
                                 <footer  className="footer-projet">
@@ -104,7 +104,7 @@ const ProjectSchool = () => {
                                     <h3 >Api avis gastronomique</h3>
                                 </header>
                             
-                                    <img  className='img-projets need-box-shadow' alt="Projet construire une api sécuriser" src={p6}/>
+                                    <img  className='img-projets img-projets-school need-box-shadow' alt="Projet construire une api sécuriser" src={p6}/>
                                 <p className="desc-project" >Projet réaliser avec NodeJs, le but étant de créé une API pour pour un site répertoriant des sauces l'API est CRUD</p>
                                 <footer  className="footer-projet">
                                     <p className="lien-projet-p" >Crée une api d'avis gastronoique</p> 
@@ -124,7 +124,7 @@ const ProjectSchool = () => {
                                     <h3 >Reseau social d'entreprise</h3>
                                 </header>
                             
-                                    <img  className='img-projets need-box-shadow' alt="Projet reseau social d'entreprise" src={p7}/>
+                                    <img  className='img-projets img-projets-school need-box-shadow' alt="Projet reseau social d'entreprise" src={p7}/>
                                 <p className="desc-project" >Ce projet ma fait d'écouvrir la joie de crée un site avec la vision d'un fullstack création integrale d'un reseau social
                                     autant côté backend que frontend.
                                     utilisation de NodeJs / reactJs et certaines de leur dépendences (exemple : express, json web token, react-dom-router, etc.).
