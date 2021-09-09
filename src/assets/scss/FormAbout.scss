@@ -89,9 +89,9 @@ button.btn-form-about {
     grid-template-areas: " . logo1 . "
                          ". logo2 ."
                          ". logo3 ."
-                        ". template ."; 
+                        "template template template"; 
     background-color: var(--color-secondary);
-    grid-template-columns: 1fr;
+    grid-template-columns: .5fr 1fr .5fr;
     grid-gap: 2rem;
     & > a {
         margin: auto;
