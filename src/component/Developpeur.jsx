@@ -40,10 +40,10 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
                             <h1><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h1>
                             <p>Je suis <span>{text}</span></p>
                             <div className='img-profil'>
-                                <Link to='/profil'>
+                                {/* <Link to='/profil'> */}
                                     <DevSvg/>
                                     {/* <img className="img-dev" title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgDev}`}/> */}
-                                </Link>
+                                {/* </Link> */}
                             </div>
                         </div>
                     ))}
