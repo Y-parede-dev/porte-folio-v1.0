@@ -12,10 +12,25 @@ nav {
     min-width: 150px;
     text-align: left;
     grid-template-columns: 1fr ;
-    box-shadow: black 0px 5px 10px -6px;	
+    box-shadow: black 0px 5px 10px -6px;
+    display: none;
+    position: fixed;
+    grid-template-columns: 1fr ;
+    top:20%;
+
+    height: 80%;
+    box-shadow: black 0px 5px 10px -6px;
 }
 .list-nav {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.list-nav-content {
+    font-size: 1.35rem;
+    text-decoration: none;
+   
 }
 .list-nav-content:hover{
     box-shadow: 0 0 0 0 #fff;	
@@ -61,6 +76,8 @@ nav.nav-custom .list-nav-content {
     display: block;
 }
 
+
+
 @media screen and (min-width:850px){
     .button-open-nav-mobile{
         display: none;
@@ -85,31 +102,5 @@ nav.nav-custom .list-nav-content {
         justify-content: flex-start;
 
     }
-
-}
-@media screen and (max-width:850px){
-
-    .nav-custom {
-        display: none;
-        position: fixed;
-        grid-template-columns: 1fr ;
-        top:20%;
-
-        height: 75vh;
-        box-shadow: black 0px 5px 10px -6px;	
-    }
-    .list-nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    .list-nav-content {
-        font-size: 1.35rem;
-        text-decoration: none;
-       
-    }
-   
-    
 
 }
