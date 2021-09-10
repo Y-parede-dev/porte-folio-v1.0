@@ -33,8 +33,8 @@ const RouterReact=({
             <Router
                 forceRefresh={true} >
                 {/* <Login apiUrl={apiUrl} setUserIsCo={setUserIsCo} setUserIsAdm={setUserIsAdm} /> */}
-                <Header largeur={largeur} hauteur={hauteur} />
-                <Nav largeur={largeur} hauteur={hauteur}/>
+                {/* <Header largeur={largeur} hauteur={hauteur} /> */}
+                {/* <Nav largeur={largeur} hauteur={hauteur}/> */}
                 <Suspense fallback={<>CHARGEMENT</>}>
                     <Switch>
                         <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
