@@ -29,7 +29,7 @@ const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
             <div id="display-mobile" className='display-mobile'>
                 <ul>
                 <Link to="/mentions">
-                    <li>Mentions légales</li>
+                    <li>Mentions </li>
                 </Link>
                 <span> - </span>
                 <Link to="/rgpd">
