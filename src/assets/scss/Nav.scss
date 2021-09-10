@@ -17,7 +17,49 @@ nav {
 .list-nav {
     list-style: none;
 }
+.list-nav-content:hover{
+    box-shadow: 0 0 0 0 #fff;	
 
+    animation: 400ms ease-out pulse 400ms infinite;
+}
+nav.nav-custom .list-nav-content {
+    padding: 10px 0;
+    font-size: 1.3rem;
+}
+.button-open-nav-mobile {
+    cursor: pointer;
+    transition: ease-in 200ms;
+    position:fixed;
+    z-index: 6;
+    top: 47px;
+    font-size: 1.5rem;
+    left: 20px;
+    padding: 5px;
+    min-width: 49px;
+    border-radius:2px;
+    border: none;
+    &>span {
+        transition: ease-in 200ms;
+
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: var(--color-third);
+        justify-content: center;
+        display: flex;
+    }&>.just-one{
+        margin: 10px 0;
+        top: 0;
+        position: absolute;
+    }
+}
+
+.display-nav-none {
+    display: none;
+}
+.display-nav-block {
+    display: block;
+}
 
 @media screen and (min-width:850px){
     .button-open-nav-mobile{
@@ -67,49 +109,7 @@ nav {
         text-decoration: none;
        
     }
-    .list-nav-content:hover{
-        box-shadow: 0 0 0 0 #fff;	
-    
-        animation: 400ms ease-out pulse 400ms infinite;
-    }
-    nav.nav-custom .list-nav-content {
-        padding: 10px 0;
-        font-size: 1.3rem;
-    }
-    .button-open-nav-mobile {
-        cursor: pointer;
-        transition: ease-in 200ms;
-        position:fixed;
-        z-index: 6;
-        top: 47px;
-        font-size: 1.5rem;
-        left: 20px;
-        padding: 5px;
-        min-width: 49px;
-        border-radius:2px;
-        border: none;
-        &>span {
-            transition: ease-in 200ms;
-    
-            width: 30px;
-            height: 3px;
-            margin: 5px;
-            background: var(--color-third);
-            justify-content: center;
-            display: flex;
-        }&>.just-one{
-            margin: 10px 0;
-            top: 0;
-            position: absolute;
-        }
-    }
-    
-    .display-nav-none {
-        display: none;
-    }
-    .display-nav-block {
-        display: block;
-    }
+   
     
 
 }
