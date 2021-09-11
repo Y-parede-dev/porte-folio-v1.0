@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import logoHeader from '../assets/images/logo-magin-code-white.svg';
+import logoHeader from '../assets/images/static/180pxMC-w.png';
 import '../assets/scss/Header.scss';
 
 const Header = ({largeur, hauteur}) => {
