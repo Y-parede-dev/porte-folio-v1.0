@@ -11,14 +11,13 @@ nav {
     z-index: 4;
     min-width: 150px;
     text-align: left;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     box-shadow: black 0px 5px 10px -6px;
     display: none;
     position: fixed;
-    grid-template-columns: 1fr ;
-    top:157px;
-
-    height: 74%;
+    grid-template-columns: 1fr;
+    top: 151px;
+    height: 67.9%;
     box-shadow: black 0px 5px 10px -6px;
 }
 .list-nav {
@@ -87,6 +86,7 @@ nav.nav-custom .list-nav-content {
         position: relative;
         left: 0;
         right: 0;
+        top: 0;
         height: fit-content;
         padding: 0 35px 20px;
     }
