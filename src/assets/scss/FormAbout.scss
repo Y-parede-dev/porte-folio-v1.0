@@ -97,6 +97,9 @@ button.btn-form-about {
     grid-gap: 2rem;
     & > .link-network-h2 {
         grid-area: title;
+        color: white;
+        font-size: 2rem;
+        margin-top: 26px;
     }
     & > a {
         margin: auto;
@@ -139,15 +142,12 @@ button.btn-form-about {
     .meta-elt {
         grid-template-columns: .8fr 1.2fr;
     }
-    .link-network{
-        grid-template-areas: 
-        ". title title title ."
-        ".  logo1 logo2 logo3 ."
-                            ;
+    .link-network {
+        grid-template-areas: ". title title title ."
+                            ".  logo1 logo2 logo3 .";
         background-color: var(--color-secondary);
-       // background: url('../images/static/logo-network/SVG/mes_reseaux.svg') no-repeat center var(--color-secondary);
         grid-template-columns: 1fr .2fr .2fr .2fr 1fr;
         grid-template-rows: .5fr 1fr;
-        
+        padding-bottom: 39px;
     }
 }
