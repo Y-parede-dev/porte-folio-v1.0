@@ -12,9 +12,9 @@ const Mentors =()=>{
                     <div className="mentor-profil">
                         <h5 className="mentor_nom">Hedy  DARGÈRE</h5>
                         <img src={hedyAvatar} alt='avatar-mentor'/>
-                        <p className="aide-aporter">Hedy ma beaucoup aider dans le début de ma reconversion avec une connaissance et une maitrise incroyable sur les lagunages HTML5,
+                        <p className="aide-aporter">Hedy m'a beaucoup aider dans le début de ma reconversion avec une connaissance et une maîtrise incroyable sur les lagunages HTML5,
                             CSS3 ainsi que ces préprocesseurs comme SASS, LESS et bien d'autres
-                            Hedy ma également apporter une aide plus globale par rapport à son expérience
+                            Hedy m'a également apporter une aide plus globale par rapport à son expérience
                          </p>
                         <a href='https://www.linkedin.com/in/hedy-darg%C3%A8re-0a34b81a7/' className="mentor-lien" target='_blank' rel="noreferrer">Lien vers le linked in d' Hedy</a>
                         </div>
@@ -24,7 +24,7 @@ const Mentors =()=>{
                         <p className="aide-aporter">
                             Grégoire a été un des mentors évaluateur qui a évalué mon projet sur le SEO & Référencement,
                             il m'a apporté une bonne vision du monde du développement ainsi que des conseils de qualité.
-                            Il n'y a pas si longtemps son experience ma bien aider. <br/>
+                            Il n'y a pas si longtemps son experience m'a bien aider. <br/>
                             Grégoire ma apporter une aide autant technique qu'humaine </p>
                         <a href='https://www.linkedin.com/in/boisseaugregoire/' className="mentor-lien" target='_blank' rel="noreferrer">Lien vers le linked in de Grégoire</a>
                     </div>
