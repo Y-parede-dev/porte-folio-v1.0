@@ -34,7 +34,8 @@ const FormAbout = ({apiUrl}) => {
             .then(res=>res.json())
             .then(result=>{
                 console.log(result);
-                alert(result);
+                alert("Email envoyer");
+                window.location.reload()
 
             },error=>{return error});
             
