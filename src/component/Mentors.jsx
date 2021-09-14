@@ -7,7 +7,7 @@ const Mentors =()=>{
     return(
         <>
             <div className="mentors">
-                <h4 className="mentors-h4"><span className="little-text"> Ils</span> m'ont suivi</h4>
+                <h4 className="mentors-h4"><span className="little-text"> Ils </span>m'ont suivi</h4>
                 <div className="mentors-content">
                     <div className="mentor-profil">
                         <h5 className="mentor_nom">Hedy  DARGÈRE</h5>
