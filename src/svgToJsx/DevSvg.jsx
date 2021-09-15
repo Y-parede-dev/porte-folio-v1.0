@@ -22,6 +22,7 @@ const DevSvg = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      xml:lang="en-us"
       width="219"
       height="219"
       viewBox="0 0 264 280"
