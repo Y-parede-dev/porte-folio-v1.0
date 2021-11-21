@@ -47,6 +47,8 @@ const Mentions = () => {
                         <p className='marques'>Toutes les marques citées et logos représentés sur ce site sont propriété de leurs titulaires respectifs.</p>
                         <p>icones </p>
                         <div>Icônes conçues par <a className="link-ml" href="https://www.flaticon.com/fr/auteurs/catalin-fertu" title="Catalin Fertu">Catalin Fertu</a> from <a className="link-ml" href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
+                        <p>Logo costume </p>
+                        <div>Logo costume conçues par<a className="link-ml" href='https://fr.freepik.com/vecteurs/infographie'>Infographie vecteur créé par felicities - fr.freepik.com</a></div>
                     </div>
                 </div>
                 <div className="mentions-legales--item mentions-legales--conception">

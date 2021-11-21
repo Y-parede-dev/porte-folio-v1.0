@@ -11,6 +11,7 @@ import Footer from './Footer';
 import Mentions from './Mentions';
 import Rgpd from './Rgpd';
 import FormAbout from './FormAbout';
+import Offre from './Offre';
 
 // const Header = React.lazy(() =>  import('./Header'));
 // // const Nav = React.lazy(() =>  import('./Nav'));
@@ -42,6 +43,8 @@ const RouterReact=({
                             <PortFolio userIsAdm={userIsAdm} url={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
                         <Route path='/project-perso' exact component={()=> 
                             <ProjetPerso />}/>
+                        <Route path='/offre' exact component={()=><Offre/>}/>
+
                         <Route path='/mentions' exact component={()=><Mentions/>}/>
                         <Route path='/rgpd' exact component={()=><Rgpd/>}/>
                         <Route path='/about' exact component={()=><FormAbout apiUrl={apiUrl} />}/>

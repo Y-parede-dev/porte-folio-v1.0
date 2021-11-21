@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import{Link} from 'react-router-dom'
+import{Link} from 'react-router-dom';
 import './../assets/scss/Nav.scss';
 
 const Nav = ({largeur, hauteur}) => {
@@ -96,6 +96,9 @@ const Nav = ({largeur, hauteur}) => {
                 </Link>
                 <Link to='/projects'>
                     <li className='list-nav-content'>porte feuille</li>
+                </Link>
+                <Link to='/offre'>
+                    <li className='list-nav-content'>offre</li>
                 </Link>
                 <Link to="/project-perso">
                     <li className='list-nav-content'>projets perso</li>
