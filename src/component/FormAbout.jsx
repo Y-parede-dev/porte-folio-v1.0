@@ -97,7 +97,8 @@ const FormAbout = ({apiUrl}) => {
         <>
             <div className="contact">
                 <h1 className="title-contact">Contactez moi</h1>
-                <p className="contact-with-form">Plusieurs posibilité soit en complétant le formulaire ci dessous 👇, ou alors vous trouverez plus bas mes liens sociaux</p>
+                <p className="contact-with-form">Si vous souhaitez un contact rapide je vous invite à passer par Messenger vous avez un accès rapide en bas à droite sur chaque page,<br />
+                 si vous souhaitez un devis pour un projet vous pouvez remplir directement le formulaire je réponds sous 24 h maximum</p>
                 <form className='form-contact' onSubmit={(e)=>{handleSubmit(e)}}>
                     <div className="meta-contact">
                         <div id="meta-nom" className="meta-nom meta-elt">
