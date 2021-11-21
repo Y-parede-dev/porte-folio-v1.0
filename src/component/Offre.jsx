@@ -17,7 +17,11 @@ const Offre=()=>{
     const offres=[]
     offres.push(starter, pro, mesure);
     return(
+        <div>
+                <h3>Les offres</h3>
+            
         <section className="offres">
+            
             {
                 offres.map(offre=>(
                     <div key={`${offre.name}-${1}`} id={offre.name} className="card-offre">
@@ -40,10 +44,11 @@ const Offre=()=>{
                         </div>
                     </div>
                     
-                ))
-            }
+                    ))
+                }
             
         </section>
+    </div>
     )
 }
 export default Offre;
