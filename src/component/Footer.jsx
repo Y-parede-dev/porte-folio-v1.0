@@ -37,7 +37,7 @@ const Footer = ({largeurEcran, footOpen, setFootOpen}) =>{
                 </Link>
                 </ul>
                 <p className="copyright txt-footer">Copyright© <a href="mailto:magin.code@gmail.com">magin code 2021.</a> Tous droits réservés</p>
-                <p className="magin-code-footer txt-footer">site fait avec 💙 par - 🙋‍♂️ <a href="mailto:magin.code@gmail.com">PAREDE Yoan</a> - Version 1.0.1 "Starter"</p>
+                <p className="magin-code-footer txt-footer">site fait avec 💖 par - 🙋‍♂️ <a href="mailto:magin.code@gmail.com">PAREDE Yoan</a> - Version 1.0.1 "Starter"</p>
             </div>
         </footer>
     )
