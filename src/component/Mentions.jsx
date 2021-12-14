@@ -54,7 +54,7 @@ const Mentions = () => {
                 <div className="mentions-legales--item mentions-legales--conception">
                     <h2 className="conception-title title-ml">conception & réalisation</h2>
                     <div className="item-inside">
-                        <p className="conception">Développement & itégration : <a className="link-ml magin-code" href="mailto:magin.code@gmail.com">Magin code</a></p>
+                        <p className="conception">Développement & intégration : <a className="link-ml magin-code" href="mailto:magin.code@gmail.com">Magin code</a></p>
                     </div>
                 </div>
             </div>

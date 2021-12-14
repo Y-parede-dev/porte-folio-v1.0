@@ -8,7 +8,7 @@ const Offre=()=>{
     };
     const pro={
         name:"Pro",
-        type:["e-comerce", "réseau social", "Application web"]
+        type:["e-commerce", "réseau social", "Application web"]
     };
     const mesure={
         name:"Sur_mesure",

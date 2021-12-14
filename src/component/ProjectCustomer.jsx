@@ -39,7 +39,7 @@ const ProjectCustomer = ({ connectApiUrlProjects, isLoaded, setIsLoaded}) => {
                {AllProjects ?
                <div className="page-projects">
                    
-                   <p>Vous trouverez sur cette page tous les projets professionnels que j'ai réalisés en descendant dans la page vous pourrez voir le code des sites/applications web de mes projets d'études.</p>
+                   <p>Vous trouverez sur cette page tous les projets professionnels que j'ai réalisé en descendant dans la page vous pourrez voir le code des sites/applications web de mes projets d'études.</p>
                    <div className={AllProjects.length<4 ? `content-all-projects content-all-projects-${AllProjects.length}`:`content-all-projects content-all-projects-3`}>
                    {/* <p className='test-count'>il y a actuelement {AllProjects.length} projet{AllProjects.length > 1 && 's'} importer sur le site</p> */}
                        {AllProjects.map(it=>(

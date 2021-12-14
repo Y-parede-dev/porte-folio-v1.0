@@ -10,7 +10,7 @@ const ProjectSchool = () => {
         <div className="page-projects-etude">
             <h4 className='mes-projets mes-projets-school'><span className='little-text'>MES </span>PROJETS D'ÉTUDE</h4>
             <blockquote className="bq-projetct-school">
-                <q>Ici je vous présente les projets que j'ai menés à bien durant la formation développeur web suivi avec <a className="open-link" href="https://openclassrooms.com/" target="_blank" rel="noopener noreferrer">O
+                <q>Ici je vous présente les projets que j'ai mené à bien durant la formation développeur web suivi avec <a className="open-link" href="https://openclassrooms.com/" target="_blank" rel="noopener noreferrer">O
                     <span className='cacher-o'></span>penClassRooms </a></q>
             </blockquote>
             <div className='projet-etude content-all-projects content-all-projects-3'>
@@ -22,9 +22,9 @@ const ProjectSchool = () => {
                                     <h3 >CV en HTML5 et CSS/3</h3>
                                 </header>
                                 <img  className='img-projets img-projets-school need-box-shadow' alt="Projet html5 css3" src={html5}/>
-                                <p className="desc-project" >Projet réalisé en HTML5 / CSS 3, début d'une grande aventure de merveilleux souvenir et naissance d'une passion</p>
+                                <p className="desc-project" >Projet réalisé en HTML5 / CSS 3, début d'une grande aventure de merveilleux souvenirs et naissance d'une passion</p>
                                 <footer  className="footer-projet">
-                                    <p className="lien-projet-p" >Crée votre cv en HTML5 / CSS3</p> 
+                                    <p className="lien-projet-p" >Créer votre cv en HTML5 / CSS3</p> 
                                 </footer>
                             </div>
                             <div className="disabled interact-project">
@@ -41,10 +41,10 @@ const ProjectSchool = () => {
                                     <h3 >Site web animé</h3>
                                 </header>
                                 <img  className='img-projets img-projets-school need-box-shadow' alt="Projet animation avec css 3" src={p3}/>
-                                <p className="desc-project" >Projet réalisé en HTML5 / CSS 3 & SASS en préprocesseur, avec ce projet j'ai gagné en puissance, et en expérience sur les animations css.
+                                <p className="desc-project" >Projet réalisé en HTML5 / CSS 3 & SASS en préprocesseur, avec ce projet j'ai gagné en puissance, et en expérience sur les animations CSS.
                                 </p>
                                 <footer  className="footer-projet">
-                                    <p className="lien-projet-p" >Créé des annimation avec CSS 3 et SASS</p> 
+                                    <p className="lien-projet-p" >Créé des animations avec CSS 3 et SASS</p> 
                                 </footer>
                             </div>
                             <div className="disabled interact-project">
@@ -78,13 +78,13 @@ const ProjectSchool = () => {
                         <div className="content-project">
                             <div className="projet">
                                 <header  className='header-projet'>
-                                    <h3 >Site e-comerce</h3>
+                                    <h3 >Site e-commerce</h3>
                                 </header>
                             
                                     <img  className='img-projets img-projets-school need-box-shadow' alt="Projet création site e-comerce" src={p5}/>
                                 <p className="desc-project" >Projet réalisé en HTML5 / CSS 3 & Javascript, projet superimportant premier script en Javascript, ce projet se concentre sur toute la partie frontend de la création d'un site e-commerce</p>
                                 <footer  className="footer-projet">
-                                    <p className="lien-projet-p" >Crée un site e-comerce</p> 
+                                    <p className="lien-projet-p" >Créer un site e-commerce</p> 
                                 </footer>
                             </div>
                             <div className="disabled interact-project">
@@ -104,7 +104,7 @@ const ProjectSchool = () => {
                                     <img  className='img-projets img-projets-school need-box-shadow' alt="Projet construire une api sécuriser" src={p6}/>
                                 <p className="desc-project" >Projet réalisé avec Node Js, le but étant de créer une API pour un site répertoriant des sauces l'API est CRUD</p>
                                 <footer  className="footer-projet">
-                                    <p className="lien-projet-p" >Crée une api d'avis gastronoique</p> 
+                                    <p className="lien-projet-p" >Créer une api d'avis gastronomique</p> 
                                 </footer>
                             </div>
                             <div className="disabled interact-project">
@@ -126,7 +126,7 @@ const ProjectSchool = () => {
                                     utilisation de NodeJs / reactjs et certaines de leur dépendance (exemple : express, json web token, react dom router, etc.).
                                 </p>
                                 <footer  className="footer-projet">
-                                    <p className="lien-projet-p" >Crée un réseau social d'entreprise</p> 
+                                    <p className="lien-projet-p" >Créer un réseau social d'entreprise</p> 
                                 </footer>
                             </div>
                             <div className="disabled interact-project">
