@@ -30,6 +30,38 @@ $color-third: rgb(67, 70, 67);
   
   /* width: max-content; */
 }
+.reboot {
+  height: 74vh;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: left;
+  width: fit-content;
+  margin: auto;
+  padding: 0 30px;
+  justify-content: center;
+    h2{
+      font-size: xx-large;
+      padding-bottom: 70px;
+      text-align: center;
+    }
+    p{
+      font-size: x-large;
+      
+    }
+    ul{
+      font-size: x-large;
+
+      padding-top: 20px;
+      li{
+        margin-left: 35px;
+        
+      }
+      li:first-child{
+        padding-top: 10px;
+      }
+    }
+  }
 img{
   width: fit-content;
   height: fit-content;
@@ -68,10 +100,10 @@ blockquote {
   font-weight: 300;
 }
 .App {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   text-align: center;
-  padding:150px 0 68px;
+  padding:0;
 }
 
 
@@ -81,6 +113,6 @@ blockquote {
 
 @media screen and(min-width:850px) {
   .App {
-    padding:0 0 66px;
+    padding:0;
   }
 }

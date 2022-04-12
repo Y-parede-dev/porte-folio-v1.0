@@ -55,7 +55,7 @@ const Nav = ({largeur, hauteur}) => {
    
     return(
         <div className = 'nav-content'>
-           <button id="btn-nav-mobile" onClick={(e)=>btnNav(e)} className='button-open-nav-mobile'> <span>  </span>  <span>  </span>  <span>  </span>  </button> 
+           {/* <button id="btn-nav-mobile" onClick={(e)=>btnNav(e)} className='button-open-nav-mobile'> <span>  </span>  <span>  </span>  <span>  </span>  </button> 
             <nav className='nav-custom'  id = "navDynamique" > 
             <ul className = 'list-nav'>
                 <Link to='/'>
@@ -74,7 +74,7 @@ const Nav = ({largeur, hauteur}) => {
                     <li className='list-nav-content'>contact</li>
                 </Link>
             </ul>
-        </nav>
+        </nav> */}
         </div>
     )
 }

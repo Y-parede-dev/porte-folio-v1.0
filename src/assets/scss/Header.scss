@@ -1,13 +1,12 @@
 .header-principal {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     z-index: 3;
     border-bottom: solid var(--color-third);
     background: var(--color-secondary);
-    max-height: 180px;
-    min-height: 150px;
+    height: 20vh;
 }
 .header-inside {
     & a{

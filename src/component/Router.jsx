@@ -12,18 +12,8 @@ import Mentions from './Mentions';
 import Rgpd from './Rgpd';
 import FormAbout from './FormAbout';
 import Offre from './Offre';
+import {Reboot}from './Reboot'
 
-// const Header = React.lazy(() =>  import('./Header'));
-// // const Nav = React.lazy(() =>  import('./Nav'));
-// const Main = React.lazy(() =>  import('./Main'));
-// const PortFolio = React.lazy(() => import('./PortFolio'));
-// const Erreur404 = React.lazy(() => import('./Erreur404'));
-// // const Login = React.lazy(() => import('./Login'));
-// const ProjetPerso = React.lazy(() => import('./ProjetPerso'));
-// // const Footer = React.lazy(() => import('./Footer'));
-// const Mentions = React.lazy(() => import('./Mentions'));
-// const Rgpd = React.lazy(() => import('./Rgpd'));
-// const FormAbout = React.lazy(() => import('./FormAbout'));
 
 const RouterReact=({
         apiUrl, userIsAdm,
@@ -38,7 +28,8 @@ const RouterReact=({
                 <Nav largeur={largeur} hauteur={hauteur}/>
                 <Suspense fallback={<>CHARGEMENT</>}>
                     <Switch>
-                        <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
+                        <Route path="/" exact component={()=><Reboot/>}/>
+                        {/* <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
                         <Route path='/projects' exact component={()=> 
                             <PortFolio userIsAdm={userIsAdm} url={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
                         <Route path='/project-perso' exact component={()=> 
@@ -47,7 +38,7 @@ const RouterReact=({
 
                         <Route path='/mentions' exact component={()=><Mentions/>}/>
                         <Route path='/rgpd' exact component={()=><Rgpd/>}/>
-                        <Route path='/about' exact component={()=><FormAbout apiUrl={apiUrl} />}/>
+                        <Route path='/about' exact component={()=><FormAbout apiUrl={apiUrl} />}/> */}
                         <Route component={Erreur404}/> 
                     </Switch>
                 </Suspense>
