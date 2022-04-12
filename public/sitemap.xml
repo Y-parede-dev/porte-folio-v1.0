@@ -1,10 +1,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://magin-code.fr</loc>
-<lastmod>2021-11-08</lastmod>
+<lastmod>2022-04-12</lastmod>
 <priority>1</priority>
 </url>
-<url>
+<!-- <url>
 <loc>https://magin-code.fr/offre</loc>
 <lastmod>2021-11-08</lastmod>
 <priority>0.9</priority>
@@ -35,7 +35,7 @@
 <lastmod>2021-09-10</lastmod>
 <priority>0.4</priority>
 </url>
-<url>
+<url> -->
 <loc>https://magin-code.fr/netlify.com</loc>
 <lastmod>2021-09-10</lastmod>
 <priority>0.0</priority>
