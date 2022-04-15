@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAChB,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,gBAAgB,CAAA;EACZ,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,IAAI,CAAE,IAAG,CAAC,sBAAsB;EAChD,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,mBAAmB,CAAA;EACf,UAAU,EAAE,KAAK;CACpB",
-    "sources": [
-        "ProjectSchool.scss"
-    ],
-    "names": [],
-    "file": "ProjectSchool.css"
-}
