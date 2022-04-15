@@ -1,0 +1,14 @@
+.mes-projets-school {
+  margin-bottom: 50px;
+}
+
+.need-box-shadow {
+  -webkit-box-shadow: 0 0 10px -6px var(--color-secondary);
+          box-shadow: 0 0 10px -6px var(--color-secondary);
+  border-radius: 10px;
+}
+
+.img-projets-school {
+  margin-top: 160px;
+}
+/*# sourceMappingURL=ProjectSchool.css.map */

@@ -1,0 +1,182 @@
+.disabled {
+  pointer-events: none;
+}
+
+.test-count {
+  font-weight: 900;
+}
+
+.content-all-projects {
+  margin: 50px 20px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.content-all-projects-1 {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.lien-projet {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.content-project {
+  margin: auto;
+  position: relative;
+  max-width: 520px;
+}
+
+.projet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-default);
+  background: white;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px -6px black;
+          box-shadow: 0 0 10px -6px black;
+  -webkit-transition: all .75s ease;
+  transition: all .75s ease;
+  max-width: 100%;
+  padding: 0 1rem 2rem;
+  border-radius: 30px;
+  margin: auto 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.projet:hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.projet:hover + .interact-project {
+  color: white;
+}
+
+.header-projet {
+  border-radius: 25px  27px 0 0;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+
+.header-projet h4 {
+  font-weight: 900;
+}
+
+.img-projets {
+  max-height: 250px;
+  margin-top: 115px;
+  max-width: 100%;
+}
+
+#img-projet-2 {
+  max-width: 250px;
+  background: white;
+}
+
+.desc-project {
+  margin: 30px auto;
+}
+
+.footer-projet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+}
+
+.interact-project {
+  position: absolute;
+  top: 287.43px;
+  color: transparent;
+}
+
+.interact-project-txt {
+  font-size: 3rem;
+}
+
+.test {
+  color: red;
+  padding: 150px 0 0;
+}
+
+@media screen and (min-width: 500px) {
+  .projet {
+    padding: 0 3rem 3rem;
+    height: 575px;
+  }
+}
+
+@media screen and (min-width: 754px) {
+  .interact-project-txt {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .page-projects {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 754px) and (max-width: 1323px) {
+  .content-all-projects {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  .content-all-projects-3 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .interact-project-txt {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1324px) {
+  .content-all-projects-2 {
+    margin-left: 15%;
+    margin-right: 15%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .content-all-projects-3 {
+    margin-left: 5%;
+    margin-right: 5%;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .projet {
+    /* width: 400px; */
+    height: 650px;
+  }
+  .interact-project-txt {
+    font-size: 5rem;
+  }
+}
+/*# sourceMappingURL=ProjectCustomer.css.map */

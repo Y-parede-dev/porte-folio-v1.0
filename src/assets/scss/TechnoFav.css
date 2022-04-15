@@ -1,0 +1,56 @@
+.techno-fav {
+  padding: 10px 30px 90px;
+  border-bottom: solid var(--color-secondary);
+  width: 80%;
+  margin: 0 auto 36px;
+}
+
+.tehcno-fav-h4 {
+  margin-bottom: 40px;
+}
+
+.techno:last-child {
+  grid-column-end: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+.techno {
+  -webkit-box-shadow: 0 0 4px -2px black;
+          box-shadow: 0 0 4px -2px black;
+  padding: 20px 55px;
+  margin: 40px 0;
+}
+
+.lien-techno {
+  color: var(--color-secondary);
+}
+
+img.tecnho-logo {
+  padding: 16px 0;
+}
+
+h5.techno-name {
+  font-size: larger;
+}
+
+@media screen and (min-width: 850px) {
+  .techno-content {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 4rem 2rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin: 20px;
+  }
+  .techno {
+    margin: 115px 0 -115px;
+  }
+  .techno:last-child {
+    margin: 115px 0 115px;
+  }
+  .techno:first-child, .techno:nth-child(3), .techno:nth-child(5) {
+    margin: 0px 0;
+  }
+}
+/*# sourceMappingURL=TechnoFav.css.map */

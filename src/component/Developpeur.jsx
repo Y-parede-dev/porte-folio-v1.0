@@ -19,12 +19,12 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
             fetch(urlProfil, InitReq("GET","application/json"))
                .then(res => res.json())
                .then((result) => {
-                   setDev(result.result);
+                   setDev(result.result)
                    localStorage.setItem('dev', result.result)
                    setIsLoaded(true);
                 },(err)=>{console.log(err)})
                 return ()=>{setDev([])}
-        },[setDev, setIsLoaded, connectApiUrlDev]);
+            },[setDev, setIsLoaded, connectApiUrlDev]);
        if(!isLoaded){
         return(
             <>
@@ -35,18 +35,32 @@ const Developpeur = ({connectApiUrlDev, isLoaded, setIsLoaded}) => {
        else{
             return (
                 <>
-                    {dev.map((it)=>(
+                <div>
+                {dev.map((it)=>(
+                    
+                        <div className='component-developpeur' key={`${it.nom} - ${it.prenom}`}>
+                            <h1><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h1>
+                            <p>Je suis <span>développeur react.js</span></p>
+                            <div className='img-profil'>
+                                <Link to='/profil'>
+                                    <DevSvg/>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                    {/* {dev.map((it)=>(
                         <div className='component-developpeur' key={`${it.nom} - ${it.prenom}`}>
                             <h1><span className='nom'>{it.nom}</span><span className='prenom'> {it.prenom} </span></h1>
                             <p>Je suis <span>{text}</span></p>
                             <div className='img-profil'>
-                                {/* <Link to='/profil'> */}
+                                <Link to='/profil'>
                                     <DevSvg/>
-                                    {/* <img className="img-dev" title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgDev}`}/> */}
-                                {/* </Link> */}
+                                    <img className="img-dev" title="Cliquez sur mon avatar pour voir mon profil" alt="développeur du site" src={`${imgDev}`}/>
+                                </Link>
                             </div>
                         </div>
-                    ))}
+                    ))} */}
+                    </div>
                 </>
             )
         }

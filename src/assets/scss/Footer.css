@@ -1,0 +1,116 @@
+#footer-principal {
+  border-top: solid var(--color-third);
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  position: fixed;
+  display: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 0;
+  margin-top: 55px;
+  text-align: center;
+}
+
+#footer-principal > div > ul {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .1fr 1fr;
+      grid-template-columns: 1fr .1fr 1fr;
+}
+
+#footer-principal > div > ul > a > li {
+  font-size: 1.2rem;
+  list-style: none;
+  padding: 2.5px 10px;
+  margin: 2.5px 10px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+
+#footer-principal > div > ul > a > li:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+#footer-principal > p > a {
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  padding: 2.5px;
+}
+
+#footer-principal > p > a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.img-fleche {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.img-fleche > img {
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 0px 2px var(--color-third));
+          filter: drop-shadow(0px 0px 2px var(--color-third));
+  padding: 0 10px 7px;
+}
+
+p.magin-code-footer.txt-footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1px;
+  display: inline;
+  padding: 0% 5px;
+}
+
+@media screen and (min-width: 850px) {
+  #footer-principal {
+    padding: 13px 0;
+  }
+  #footer-principal > div > ul {
+    padding-top: 0;
+  }
+  #footer-principal > div > ul > a > li {
+    font-size: 1.4rem;
+  }
+  p.magin-code-footer.txt-footer {
+    display: block;
+  }
+  .display-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .img-fleche {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */
