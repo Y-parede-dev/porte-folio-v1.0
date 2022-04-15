@@ -1,0 +1,31 @@
+.content-error-404 {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 34vh;
+}
+
+.content-error-404 h4 {
+  font-size: 2rem;
+}
+
+.content-error-404 p {
+  font-size: 1.2rem;
+  padding: 0 20px;
+}
+
+.mail.developeur {
+  color: Blue;
+}
+/*# sourceMappingURL=Error404.css.map */

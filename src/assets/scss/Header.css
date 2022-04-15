@@ -1,0 +1,35 @@
+.header-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  border-bottom: solid var(--color-third);
+  background: var(--color-secondary);
+  max-height: 180px;
+  min-height: 150px;
+}
+
+.logo-header {
+  width: 150px;
+  min-width: 150px;
+  max-width: 230px;
+  height: 150px;
+  min-height: 150px;
+  max-height: 230px;
+  border-radius: 300px;
+}
+
+.header-inside, .logo-header {
+  z-index: 5;
+}
+
+@media screen and (min-width: 850px) {
+  .header-principal {
+    border: none;
+    position: relative;
+    max-height: 240px;
+    min-height: 199px;
+  }
+}
+/*# sourceMappingURL=Header.css.map */
