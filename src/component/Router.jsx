@@ -28,8 +28,8 @@ const RouterReact=({
                 <Nav largeur={largeur} hauteur={hauteur}/>
                 <Suspense fallback={<>CHARGEMENT</>}>
                     <Switch>
-                        <Route path="/" exact component={()=><Reboot/>}/>
-                        {/* <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
+                        {/* <Route path="/" exact component={()=><Reboot/>}/> */}
+                        <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
                         <Route path='/projects' exact component={()=> 
                             <PortFolio userIsAdm={userIsAdm} url={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
                         <Route path='/project-perso' exact component={()=> 
@@ -38,7 +38,7 @@ const RouterReact=({
 
                         <Route path='/mentions' exact component={()=><Mentions/>}/>
                         <Route path='/rgpd' exact component={()=><Rgpd/>}/>
-                        <Route path='/about' exact component={()=><FormAbout apiUrl={apiUrl} />}/> */}
+                        <Route path='/about' exact component={()=><FormAbout apiUrl={apiUrl} />}/>
                         <Route component={Erreur404}/> 
                     </Switch>
                 </Suspense>
