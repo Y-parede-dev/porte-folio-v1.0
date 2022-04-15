@@ -32,9 +32,9 @@ const RouterReact=({
                         <Route path="/" exact component={()=><Main ConnectApiUrl={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
                         <Route path='/projects' exact component={()=> 
                             <PortFolio userIsAdm={userIsAdm} url={apiUrl} isLoaded={isLoaded} setIsLoaded={setIsLoaded}/>}/>
-                        <Route path='/project-perso' exact component={()=> 
+                        {/* <Route path='/project-perso' exact component={()=> 
                             <ProjetPerso />}/>
-                        <Route path='/offre' exact component={()=><Offre/>}/>
+                        <Route path='/offre' exact component={()=><Offre/>}/> */}
 
                         <Route path='/mentions' exact component={()=><Mentions/>}/>
                         <Route path='/rgpd' exact component={()=><Rgpd/>}/>

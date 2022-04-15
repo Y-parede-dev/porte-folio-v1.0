@@ -67,9 +67,9 @@ const Nav = ({largeur, hauteur}) => {
                 <Link to='/offre'>
                     <li className='list-nav-content'>offres</li>
                 </Link>
-                <Link to="/project-perso">
+                {/* <Link to="/project-perso">
                     <li className='list-nav-content'>projets perso</li>
-                </Link>
+                </Link> */}
                 <Link to="/about">
                     <li className='list-nav-content'>contact</li>
                 </Link>
